@@ -8,7 +8,7 @@ video{
 	vsync = 0   # vertical synchronization 1/0
 	fps = 60   # video frames per second
 	fullscreen = 0   # fullscreen enabled 1/0
-	enabled = 1   # video mode enabled 1/0; if set to 0
+	enabled = 0   # video mode enabled 1/0; if set to 0
 }
 
 gui{

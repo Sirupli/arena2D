@@ -117,7 +117,7 @@ class Agent:
 
 		# getting current time
 		self.last_time = time.perf_counter()
-		self.start_time = time.time();
+		self.start_time = time.time()
 
 		# reset state
 		self.reset()
@@ -160,7 +160,7 @@ class Agent:
 			self.mean_value_buffer.append(max_value.item())
 			action = int(act_v.item())
 
-		self.last_action = action;
+		self.last_action = action
 
 		return action
 	

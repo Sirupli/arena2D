@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/junhui/study/VIS/Arena_work2/arena2d-sim/engine/generator/settingsgenerator.c
+stdio.h
+-
+string.h
+-
+errno.h
+-
+../list.h
+/home/junhui/study/VIS/Arena_work2/arena2d-sim/engine/list.h
+
+/home/junhui/study/VIS/Arena_work2/arena2d-sim/engine/list.c
+list.h
+/home/junhui/study/VIS/Arena_work2/arena2d-sim/engine/list.h
+
+/home/junhui/study/VIS/Arena_work2/arena2d-sim/engine/list.h
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/junhui/study/VIS/Arena_work2/arena2d-sim/engine/generator/shadergenerator.c
+stdio.h
+-
+string.h
+-
+errno.h
+-
+stdlib.h
+-
+

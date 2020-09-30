@@ -41,7 +41,7 @@ class Agent:
 		# DQN does only work with one environment
 		assert(num_envs == 1)
 		self.device = torch.device(device)
-		print(self.device,self.device != torch.device('cuda'))
+		#print(self.device,self.device != torch.device('cuda'))
 		self.num_observations = num_observations
 		self.training_data_path = training_data_path
 		
@@ -49,7 +49,7 @@ class Agent:
 		numpy.random.seed(seed)
 		torch.manual_seed(seed)		
 		if torch.cuda.is_available():
-    			if self.device != 'cuda':
+    			if self.device != torch.device('cuda'):
         			print('WARNING: You have a CUDA device, so you should probably run with --cuda')
     			else:
         			torch.cuda.manual_seed_all(seed)

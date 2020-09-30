@@ -41,7 +41,7 @@ class Agent:
 		# DQN does only work with one environment
 		assert(num_envs == 1)
 		self.device = torch.device(device)
-		print(self.device != cuda)
+		print(self.device,self.device != cuda)
 		self.num_observations = num_observations
 		self.training_data_path = training_data_path
 		

@@ -57,7 +57,7 @@ class Agent:
 		torch.cuda.set_device(1)
 
 		# creating xp buffers on gpu for faster sampling
-		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE,num_observations+additional_state,dtype=torch.float).to(self.device)# state
+		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE,num_observations,dtype=torch.float).to(self.device)# state
 		self.tensor_reward_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.float).to(self.device)# rewards
 		self.tensor_action_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.long).to(self.device)# the action that was chosen
 		self.tensor_done_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.bool).to(self.device)# episode has ended
@@ -66,8 +66,8 @@ class Agent:
 
 
 		# creating net and target net
-		self.net = Gtrxl.TransformerDqn(num_observations+additional_state,NUM_ACTIONS,N_LAYERS)
-		self.tgt_net = Gtrxl.TransformerDqn(num_observations+additional_state,NUM_ACTIONS,N_LAYERS)
+		self.net = Gtrxl.TransformerDqn(num_observations,NUM_ACTIONS,N_LAYERS)
+		self.tgt_net = Gtrxl.TransformerDqn(num_observations,NUM_ACTIONS,N_LAYERS)
 
 		# copy to device
 		self.net.to(self.device)

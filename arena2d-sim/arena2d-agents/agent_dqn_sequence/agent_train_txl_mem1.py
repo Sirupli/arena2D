@@ -44,7 +44,7 @@ class Agent:
 		#print(self.device,self.device != torch.device('cuda'))
 		self.num_observations = num_observations
 		self.training_data_path = training_data_path
-		print(torch.cuda.device_count())
+		#print(torch.cuda.device_count())
 		
 		# Set the random seed manually for reproducibility
 		numpy.random.seed(seed)
@@ -54,6 +54,7 @@ class Agent:
         			print('WARNING: You have a CUDA device, so you should probably run with --cuda')
     			else:
         			torch.cuda.manual_seed_all(seed)
+		torch.cuda.set_device(1)
 
 		# creating xp buffers on gpu for faster sampling
 		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE,num_observations+additional_state,dtype=torch.float).to(self.device)# state

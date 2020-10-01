@@ -46,7 +46,7 @@ class Agent:
 		numpy.random.seed(seed)
 		torch.manual_seed(seed)		
 		if torch.cuda.is_available():
-    			if not self.device=='cuda':
+    			if self.device != torch.device('cuda'):
         			print('WARNING: You have a CUDA device, so you should probably run with --cuda')
     			else:
         			torch.cuda.manual_seed_all(seed)

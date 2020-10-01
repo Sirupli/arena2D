@@ -116,7 +116,7 @@ stage{
 	level_size = 4.0   # width and height of default levels
 	max_obstacle_size = 0.1   # maximum diameter of static obstacles
 	min_obstacle_size = 0.05   # minimum diameter of static obstacles
-	num_obstacles = 0  # number of static obstacles
+	num_obstacles = 8  # number of static obstacles
 	dynamic_obstacle_size = 0.25   # size of dynamic obstacle
 	num_dynamic_obstacles = 4   # number of dynamic obstacles in static_dynamic level
 	obstacle_speed = 0.08   # in m/s for dynamic obstacles

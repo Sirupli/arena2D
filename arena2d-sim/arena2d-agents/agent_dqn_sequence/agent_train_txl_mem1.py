@@ -139,7 +139,7 @@ class Agent:
 	def pre_step(self, observation):
 		# measuring gpu times only every 100 frames (better performance)
 		self.measure_gpu_times = (self.frame_idx%100 == 0)
-		self.last_observation =[self.last_reward,self.last_action]+observation
+		self.last_observation =observation
 		self.epsilon_decay()
 		self.start_gpu_measure()
 		# insert current state into buffer
@@ -170,7 +170,7 @@ class Agent:
 		self.start_gpu_measure()
 		idx = self.frame_idx%MEMORY_SIZE
 		if is_done: # save next state if done, because next pre_step will have different state
-			self.tensor_state_buffer[(idx+1)%MEMORY_SIZE] = torch.FloatTensor([reward,self.last_action]+new_observation)
+			self.tensor_state_buffer[(idx+1)%MEMORY_SIZE] = torch.FloatTensor(new_observation)
 		self.tensor_reward_buffer[idx] = reward
 		self.last_reward = reward
 		self.tensor_action_buffer[idx] = self.last_action

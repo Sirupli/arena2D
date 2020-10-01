@@ -44,6 +44,7 @@ class Agent:
 		#print(self.device,self.device != torch.device('cuda'))
 		self.num_observations = num_observations
 		self.training_data_path = training_data_path
+		print(torch.cuda.device_count())
 		
 		# Set the random seed manually for reproducibility
 		numpy.random.seed(seed)

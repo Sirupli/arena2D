@@ -26,7 +26,7 @@ MEMORY_SIZE = 1000000		# last X states will be stored in a buffer (memory), from
 N_STEPS = 2
 DOUBLE = True
 seed=1111111
-SEQ_LENGTH_MAX=280                     #64 10 # 32 20
+SEQ_LENGTH_MAX=288                     #64 10 # 32 20
 #######################
 
 AGENT_NAME="dqn_agent"
@@ -52,7 +52,7 @@ class Agent:
         			torch.cuda.manual_seed_all(seed)
 
 		# creating xp buffers on gpu for faster sampling
-		self.tensor_state_buffer = torch.rand(MEMORY_SIZE, num_observations ,dtype=torch.float).to(self.device)# state
+		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE, num_observations ,dtype=torch.float).to(self.device)# state
 		self.tensor_reward_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.float).to(self.device)# rewards
 		self.tensor_action_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.long).to(self.device)# the action that was chosen
 		self.tensor_done_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.bool).to(self.device)# episode has ended

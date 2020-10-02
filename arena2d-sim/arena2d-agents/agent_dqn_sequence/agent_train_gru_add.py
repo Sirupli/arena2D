@@ -25,7 +25,7 @@ TRAINING_START = 130		# start training only after the first X steps
 MEMORY_SIZE = 1000000		# last X states will be stored in a buffer (memory), from which the batches are sampled
 N_STEPS = 2
 DOUBLE = True
-SEQ_LENGTH_MAX=400
+SEQ_LENGTH_MAX=384
 seed=111111
 additional_state=2              #reward and action of the last step
 #######################

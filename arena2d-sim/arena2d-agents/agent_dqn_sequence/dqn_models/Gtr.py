@@ -66,9 +66,9 @@ class CartPoleEmbedder(nn.Module):
         #The dropout implementation in pytorch applies dropout differently per element in batch
         #which is what we want
 
-        #hidden = self.layer1(input)
-        #hidden = self.layer2(hidden)
-        return self.layer4(input)
+        hidden = self.layer1(input)
+        hidden = self.layer2(hidden)
+        return self.layer3(hidden)
 
 
 

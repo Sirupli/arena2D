@@ -26,7 +26,7 @@ MEMORY_SIZE = 10**6		# last X states will be stored in a buffer (memory), from w
 N_STEPS = 2
 N_LAYERS=3                      # number of encoder layers in transformer
 DOUBLE = True
-SEQ_LENGTH=300                     #64 10 # 32 20
+SEQ_LENGTH=100                     #64 10 # 32 20
 additional_state=2              #reward and action of the last step
 seed=1111111
 #######################

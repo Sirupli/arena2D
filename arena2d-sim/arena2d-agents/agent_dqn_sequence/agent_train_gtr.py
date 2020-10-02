@@ -51,13 +51,13 @@ class Agent:
 
 		# Set the random seed manually for reproducibility
 		numpy.random.seed(seed)
-		torch.manual_seed(seed)		
+		torch.cuda.set_device(1)		
 		if torch.cuda.is_available():
     			if self.device != torch.device('cuda'):
         			print('WARNING: You have a CUDA device, so you should probably run with --cuda')
     			else:
-        			torch.cuda.manual_seed_all(seed)
-		torch.cuda.set_device(1)
+        			torch.cuda.manual_seed_all(seed)		
+		torch.manual_seed(seed)
 
 
 		# creating net and target net

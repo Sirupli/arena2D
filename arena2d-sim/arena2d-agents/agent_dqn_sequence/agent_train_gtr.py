@@ -372,7 +372,7 @@ class Agent:
 				#print(sequence)
 			sequence_list.append(sequence)
 		# packing all together
-		sequence_list.append(torch.narrow(self.tensor_state_buffer, dim=0, start=0, length=500).flip([0]))
+		sequence_list.append(torch.narrow(self.tensor_state_buffer, dim=0, start=0, length=300).flip([0]))
 		pack_seq=pad_sequence(sequence_list,padding_value=10000.0).data.to(self.device).flip([0])
 		#print(pack_seq.shape)
 		return pack_seq #sequence_list.view(bs,SEQ_LENGTH,NUM_INPUTS).transpose(0,1).to(self.device)

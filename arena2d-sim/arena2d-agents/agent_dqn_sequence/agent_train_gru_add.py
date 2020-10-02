@@ -25,7 +25,7 @@ TRAINING_START = 130		# start training only after the first X steps
 MEMORY_SIZE = 1000000		# last X states will be stored in a buffer (memory), from which the batches are sampled
 N_STEPS = 2
 DOUBLE = True
-SEQ_LENGTH_MAX=500
+SEQ_LENGTH_MAX=400
 seed=111111
 additional_state=2              #reward and action of the last step
 #######################
@@ -53,7 +53,7 @@ class Agent:
         			torch.cuda.manual_seed_all(seed)
 
 		# creating xp buffers on gpu for faster sampling
-		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE, num_observations+additional_state ,dtype=torch.float).to(self.device)# state
+		self.tensor_state_buffer = torch.ones(MEMORY_SIZE, num_observations+additional_state ,dtype=torch.float).to(self.device)# state
 		self.tensor_reward_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.float).to(self.device)# rewards
 		self.tensor_action_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.long).to(self.device)# the action that was chosen
 		self.tensor_done_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.bool).to(self.device)# episode has ended

@@ -1,4 +1,0 @@
-Episode:       0
-Start episode: 0
-Frames:        0
-Mean reward:   0.000000

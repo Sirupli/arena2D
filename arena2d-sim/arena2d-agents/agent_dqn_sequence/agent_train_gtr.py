@@ -26,7 +26,7 @@ MEMORY_SIZE = 1000000		# last X states will be stored in a buffer (memory), from
 N_STEPS = 2
 DOUBLE = True
 seed=1111111
-SEQ_LENGTH_MAX=500                     #64 10 # 32 20
+SEQ_LENGTH_MAX=300                     #64 10 # 32 20
 #######################
 
 AGENT_NAME="dqn_agent"
@@ -368,7 +368,7 @@ class Agent:
 				sequence = torch.cat((seq1, seq2), 0).flip([0])
 				#print(sequence)
 			else:# continuous sequence 
-				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=300).flip([0])
+				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=episode_step_index+1).flip([0])
 				#print(sequence)
 			sequence_list.append(sequence)
 		# packing all together

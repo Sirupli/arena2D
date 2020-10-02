@@ -39,6 +39,7 @@ class Agent:
 		# DQN does only work with one environment
 		assert(num_envs == 1)
 		self.device = torch.device(device)
+		torch.cuda.set_device(1)
 		self.num_observations = num_observations
 		self.training_data_path = training_data_path
 
@@ -48,17 +49,14 @@ class Agent:
 		self.tensor_action_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.long).to(self.device)# the action that was chosen
 		self.tensor_done_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.bool).to(self.device)# episode has ended
 		self.tensor_step_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.int16).to(self.device)# step index in episode (starting at 0)
-
 		# Set the random seed manually for reproducibility
 		numpy.random.seed(seed)
-		torch.cuda.set_device(1)		
+		torch.manual_seed(seed)				
 		if torch.cuda.is_available():
     			if self.device != torch.device('cuda'):
         			print('WARNING: You have a CUDA device, so you should probably run with --cuda')
     			else:
-        			torch.cuda.manual_seed_all(seed)		
-		torch.manual_seed(seed)
-
+        			torch.cuda.manual_seed_all(seed)
 
 		# creating net and target net
 		self.net = Gtr.TransformerDqn(NUM_ACTIONS,num_observations)

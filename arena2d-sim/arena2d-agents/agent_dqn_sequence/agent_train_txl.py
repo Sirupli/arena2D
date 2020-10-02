@@ -52,8 +52,8 @@ class Agent:
 		if torch.cuda.is_available():
     			if self.device != torch.device('cuda'):
         			print('WARNING: You have a CUDA device, so you should probably run with --cuda')
-    			else:
-        			torch.cuda.manual_seed_all(seed)
+    			#else:
+        			#torch.cuda.manual_seed_all(seed)
 		torch.cuda.set_device(1)
 
 		# creating xp buffers on gpu for faster sampling

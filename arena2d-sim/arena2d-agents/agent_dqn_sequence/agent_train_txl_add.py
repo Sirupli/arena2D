@@ -22,7 +22,7 @@ EPSILON_MAX_STEPS = 10**5	# how many steps until epsilon reaches minimum influen
 EPSILON_END = 0.02			# min epsilon value
 BATCH_SIZE = 32				# batch size for training after every step
 TRAINING_START = 10		# start training only after the first X episodes
-MEMORY_SIZE = 10**6		# last X states will be stored in a buffer (memory), from which the batches are sampled
+MEMORY_SIZE = 10**6		# last X states will be stored in a buffer (memory), from which the batches are sampled (shorted for gated transformer xl)
 N_STEPS = 2
 N_LAYERS=3                      # number of encoder layers in transformer
 DOUBLE = True
@@ -41,10 +41,9 @@ class Agent:
 		# DQN does only work with one environment
 		assert(num_envs == 1)
 		self.device = torch.device(device)
-		#print(self.device,self.device != torch.device('cuda'))
+		#print(self.device)
 		self.num_observations = num_observations
 		self.training_data_path = training_data_path
-		#print(torch.cuda.device_count())
 		
 		# Set the random seed manually for reproducibility
 		numpy.random.seed(seed)
@@ -57,7 +56,7 @@ class Agent:
 		torch.cuda.set_device(1)
 
 		# creating xp buffers on gpu for faster sampling
-		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE,num_observations,dtype=torch.float).to(self.device)# state
+		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE,num_observations+additional_state,dtype=torch.float).to(self.device)# state
 		self.tensor_reward_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.float).to(self.device)# rewards
 		self.tensor_action_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.long).to(self.device)# the action that was chosen
 		self.tensor_done_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.bool).to(self.device)# episode has ended
@@ -66,8 +65,8 @@ class Agent:
 
 
 		# creating net and target net
-		self.net = Gtrxl.TransformerDqn(num_observations,NUM_ACTIONS,N_LAYERS)
-		self.tgt_net = Gtrxl.TransformerDqn(num_observations,NUM_ACTIONS,N_LAYERS)
+		self.net = Gtrxl.TransformerDqn(num_observations+additional_state,NUM_ACTIONS,N_LAYERS)
+		self.tgt_net = Gtrxl.TransformerDqn(num_observations+additional_state,NUM_ACTIONS,N_LAYERS)
 
 		# copy to device
 		self.net.to(self.device)
@@ -119,7 +118,7 @@ class Agent:
 
 		# getting current time
 		self.last_time = time.perf_counter()
-		self.start_time = time.time()
+		self.start_time = time.time();
 
 		# reset state
 		self.reset()
@@ -139,7 +138,7 @@ class Agent:
 	def pre_step(self, observation):
 		# measuring gpu times only every 100 frames (better performance)
 		self.measure_gpu_times = (self.frame_idx%100 == 0)
-		self.last_observation =observation
+		self.last_observation =[self.last_reward,self.last_action]+observation
 		self.epsilon_decay()
 		self.start_gpu_measure()
 		# insert current state into buffer
@@ -162,7 +161,7 @@ class Agent:
 			self.mean_value_buffer.append(max_value.item())
 			action = int(act_v.item())
 
-		self.last_action = action
+		self.last_action = action;
 
 		return action
 	
@@ -170,7 +169,7 @@ class Agent:
 		self.start_gpu_measure()
 		idx = self.frame_idx%MEMORY_SIZE
 		if is_done: # save next state if done, because next pre_step will have different state
-			self.tensor_state_buffer[(idx+1)%MEMORY_SIZE] = torch.FloatTensor(new_observation)
+			self.tensor_state_buffer[(idx+1)%MEMORY_SIZE] = torch.FloatTensor([reward,self.last_action]+new_observation)
 		self.tensor_reward_buffer[idx] = reward
 		self.last_reward = reward
 		self.tensor_action_buffer[idx] = self.last_action

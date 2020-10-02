@@ -42,13 +42,6 @@ class Agent:
 		torch.cuda.set_device(1)
 		self.num_observations = num_observations
 		self.training_data_path = training_data_path
-
-		# creating xp buffers on gpu for faster sampling
-		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE, num_observations ,dtype=torch.float).to(self.device)# state
-		self.tensor_reward_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.float).to(self.device)# rewards
-		self.tensor_action_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.long).to(self.device)# the action that was chosen
-		self.tensor_done_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.bool).to(self.device)# episode has ended
-		self.tensor_step_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.int16).to(self.device)# step index in episode (starting at 0)
 		# Set the random seed manually for reproducibility
 		numpy.random.seed(seed)
 		torch.manual_seed(seed)				
@@ -57,6 +50,14 @@ class Agent:
         			print('WARNING: You have a CUDA device, so you should probably run with --cuda')
     			else:
         			torch.cuda.manual_seed_all(seed)
+
+		# creating xp buffers on gpu for faster sampling
+		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE, num_observations ,dtype=torch.float).to(self.device)# state
+		self.tensor_reward_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.float).to(self.device)# rewards
+		self.tensor_action_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.long).to(self.device)# the action that was chosen
+		self.tensor_done_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.bool).to(self.device)# episode has ended
+		self.tensor_step_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.int16).to(self.device)# step index in episode (starting at 0)
+
 
 		# creating net and target net
 		self.net = Gtr.TransformerDqn(NUM_ACTIONS,num_observations)
@@ -371,6 +372,7 @@ class Agent:
 				#print(sequence)
 			sequence_list.append(sequence)
 		# packing all together
+		sequnce_list.append(torch.narrow(self.tensor_state_buffer, dim=0, start=0, length=500).flip([0]))
 		pack_seq=pad_sequence(sequence_list,padding_value=10000.0).data.to(self.device).flip([0])
 		#print(pack_seq.shape)
 		return pack_seq #sequence_list.view(bs,SEQ_LENGTH,NUM_INPUTS).transpose(0,1).to(self.device)

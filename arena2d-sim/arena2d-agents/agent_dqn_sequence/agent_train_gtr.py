@@ -52,7 +52,7 @@ class Agent:
         			torch.cuda.manual_seed_all(seed)
 
 		# creating xp buffers on gpu for faster sampling
-		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE, num_observations ,dtype=torch.float).to(self.device)# state
+		self.tensor_state_buffer = torch.rand(MEMORY_SIZE, num_observations ,dtype=torch.float).to(self.device)# state
 		self.tensor_reward_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.float).to(self.device)# rewards
 		self.tensor_action_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.long).to(self.device)# the action that was chosen
 		self.tensor_done_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.bool).to(self.device)# episode has ended
@@ -368,7 +368,7 @@ class Agent:
 				sequence = torch.cat((seq1, seq2), 0).flip([0])
 				#print(sequence)
 			else:# continuous sequence 
-				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=episode_step_index+1).flip([0])
+				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=300).flip([0])
 				#print(sequence)
 			sequence_list.append(sequence)
 		# packing all together

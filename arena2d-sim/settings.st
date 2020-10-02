@@ -39,7 +39,7 @@ keys{
 
 physics{
 	time_step = 0.1   # physics time step
-	step_iterations = 3   # how often to perform a physics update per step
+	step_iterations = 1   # how often to perform a physics update per step
 	fps = 60   # how many times per second a simulation step is performed with step_iterations sub steps
 	position_iterations = 8   # position iterations for each time step (higher value increases simulation accuracy)
 	velocity_iterations = 12   # velocity iterations for each time step (higher value increases simulation accuracy)
@@ -116,7 +116,7 @@ stage{
 	level_size = 4.0   # width and height of default levels
 	max_obstacle_size = 0.1   # maximum diameter of static obstacles
 	min_obstacle_size = 0.05   # minimum diameter of static obstacles
-	num_obstacles = 0  # number of static obstacles
+	num_obstacles = 8  # number of static obstacles
 	dynamic_obstacle_size = 0.25   # size of dynamic obstacle
 	num_dynamic_obstacles = 4   # number of dynamic obstacles in static_dynamic level
 	obstacle_speed = 0.08   # in m/s for dynamic obstacles

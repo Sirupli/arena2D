@@ -373,7 +373,7 @@ class Agent:
 				seq2 = torch.narrow(self.tensor_state_buffer, dim=0, start=0, length=i+1)
 				sequence = torch.cat((seq1, seq2), 0)
 			else:# continuous sequence 
-				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=300)
+				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=500)
 			# add sequence to list
 			sequence_list.append(sequence)
 		# packing all together

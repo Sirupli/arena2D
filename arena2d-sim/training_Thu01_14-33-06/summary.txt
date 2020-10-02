@@ -1,0 +1,8 @@
+### Training Summary ###
+Script:   ./arena2d-agents/agent_dqn_sequence/agent_train_txl_mem1.py
+Started:  Thu Oct  1 14:33:06 2020
+Episodes: 10
+Time:     1s
+
+# Agent Info #
+-

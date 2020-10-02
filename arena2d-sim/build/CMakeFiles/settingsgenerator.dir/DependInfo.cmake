@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/junhui/study/VIS/Arena_work2/arena2d-sim/engine/generator/settingsgenerator.c" "/home/junhui/study/VIS/Arena_work2/arena2d-sim/build/CMakeFiles/settingsgenerator.dir/engine/generator/settingsgenerator.c.o"
-  "/home/junhui/study/VIS/Arena_work2/arena2d-sim/engine/list.c" "/home/junhui/study/VIS/Arena_work2/arena2d-sim/build/CMakeFiles/settingsgenerator.dir/engine/list.c.o"
+  "/home/junhui/arena2d/arena2d-sim/engine/generator/settingsgenerator.c" "/home/junhui/arena2d/arena2d-sim/build/CMakeFiles/settingsgenerator.dir/engine/generator/settingsgenerator.c.o"
+  "/home/junhui/arena2d/arena2d-sim/engine/list.c" "/home/junhui/arena2d/arena2d-sim/build/CMakeFiles/settingsgenerator.dir/engine/list.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -16,7 +16,8 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
   "generated"
   "/usr/include/SDL2"
   "/usr/include/freetype2"
-  "/usr/include/python3.6m"
+  "/usr/include/x86_64-linux-gnu/freetype2"
+  "/usr/include/python3.8"
   )
 
 # Targets to which this target links.

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/shadergenerator.dir/engine/generator/shadergenerator.c.o"
-  "shadergenerator.pdb"
   "shadergenerator"
+  "shadergenerator.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -22,7 +22,7 @@ transformer encoder
 #embedder_params={'dropout':0.1,'B':3,}
 #encoder_layer_params={'d_model':256,'nhead':8}
 class CartPoleEmbedder(nn.Module):
-    def __init__(self,input_size,dropout=0.1, B=1, embedding_size=384):
+    def __init__(self,input_size,dropout=0.1, B=1, embedding_size=512):
         '''
         :param B: Number of times we embed each state (with dropout each time)
 
@@ -84,8 +84,8 @@ class TransformerDqn(nn.Module):
 
         super(TransformerDqn, self).__init__()
         self.embedder = CartPoleEmbedder(input_size=input_size)
-        self.pos_encoder = PositionalEncoding(d_model=384, dropout=0.1)
-        self.encoder_layer = vtxl.StableTransformerLayer(d_model=384,nhead=6,dim_feedforward=256, dropout=0.1, use_gate = True)
+        self.pos_encoder = PositionalEncoding(d_model=512, dropout=0.1)
+        self.encoder_layer = vtxl.StableTransformerLayer(d_model=512,nhead=8,dim_feedforward=256, dropout=0.1, use_gate = True)
         self.encoder = vtxl.TransformerEncoder(encoder_layer=self.encoder_layer,num_layers=num_encoder_layers)
         self.output_layer = nn.Linear(hidden_size,output_size)
 

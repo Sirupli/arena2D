@@ -80,7 +80,7 @@ class TransformerDqn(nn.Module):
         '''
 
         #dropout = 0.1
-        hidden_size=384
+        hidden_size=512
 
         super(TransformerDqn, self).__init__()
         self.embedder = CartPoleEmbedder(input_size=input_size)

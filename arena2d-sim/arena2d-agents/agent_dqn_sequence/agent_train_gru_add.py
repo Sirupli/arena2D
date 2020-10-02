@@ -25,6 +25,7 @@ TRAINING_START = 130		# start training only after the first X steps
 MEMORY_SIZE = 1000000		# last X states will be stored in a buffer (memory), from which the batches are sampled
 N_STEPS = 2
 DOUBLE = True
+SEQ_LENGTH_MAX=500
 seed=111111
 additional_state=2              #reward and action of the last step
 #######################
@@ -361,7 +362,10 @@ class Agent:
 			episode_step_index = int(self.tensor_step_buffer[i])
 			#print('episode_step_index',episode_step_index)
 			#seq_length=random.randrange(20)
-			start_index = i-episode_step_index
+			if episode_step_index > SEQ_LENGTH_MAX-1:
+				start_index= i-(SEQ_LENGTH_MAX-1)
+			else:
+				start_index = i-episode_step_index			
 			if start_index < 0: # wrap around -> two part sequence
 				# sequence part 1
 				seq1 = torch.narrow(self.tensor_state_buffer, dim=0, start=int(MEMORY_SIZE+start_index), length=-start_index)

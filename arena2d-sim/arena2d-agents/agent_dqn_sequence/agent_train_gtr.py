@@ -26,7 +26,7 @@ MEMORY_SIZE = 1000000		# last X states will be stored in a buffer (memory), from
 N_STEPS = 2
 DOUBLE = True
 seed=1111111
-#SEQ_LENGTH=300                     #64 10 # 32 20
+SEQ_LENGTH_MAX=500                     #64 10 # 32 20
 #######################
 
 AGENT_NAME="dqn_agent"
@@ -357,8 +357,10 @@ class Agent:
 		for i in indicies:
 			sequence = None
 			episode_step_index = int(self.tensor_step_buffer[i])			
-			#print('episode_step_index',episode_step_index)
-			start_index = i-episode_step_index
+			if episode_step_index > SEQ_LENGTH_MAX-1:
+				start_index= i-(SEQ_LENGTH_MAX-1)
+			else:
+				start_index = i-episode_step_index	
 			if start_index < 0: # wrap around -> two part sequence
 				# sequence part 1
 				seq1 = torch.narrow(self.tensor_state_buffer, dim=0, start=int(MEMORY_SIZE+start_index), length=-start_index)

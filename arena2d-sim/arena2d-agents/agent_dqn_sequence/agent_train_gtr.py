@@ -368,7 +368,7 @@ class Agent:
 				sequence = torch.cat((seq1, seq2), 0).flip([0])
 				#print(sequence)
 			else:# continuous sequence 
-				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=episode_step_index-int(start_index)).flip([0])
+				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=i-int(start_index)+1).flip([0])
 				#print(sequence)
 			sequence_list.append(sequence)
 		# packing all together

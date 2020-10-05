@@ -39,7 +39,7 @@ keys{
 
 physics{
 	time_step = 0.1   # physics time step
-	step_iterations = 1   # how often to perform a physics update per step
+	step_iterations = 2   # how often to perform a physics update per step
 	fps = 60   # how many times per second a simulation step is performed with step_iterations sub steps
 	position_iterations = 8   # position iterations for each time step (higher value increases simulation accuracy)
 	velocity_iterations = 12   # velocity iterations for each time step (higher value increases simulation accuracy)

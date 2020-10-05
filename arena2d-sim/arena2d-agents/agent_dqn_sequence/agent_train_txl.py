@@ -425,6 +425,7 @@ class Agent:
 		self.start_gpu_measure()
 		l = nn.MSELoss()(state_action_values, expected_state_action_values)
 		self.stop_gpu_measure(self.loss_calc_times)
+		k=l.item()
 		self.mean_loss_buffer.append(l.item())
 		return l
 

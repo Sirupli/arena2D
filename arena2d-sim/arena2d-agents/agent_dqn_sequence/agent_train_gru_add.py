@@ -368,12 +368,12 @@ class Agent:
 				start_index = i-episode_step_index			
 			if start_index < 0: # wrap around -> two part sequence
 				# sequence part 1
-				seq1 = torch.narrow(self.tensor_state_buffer, dim=0, start=int(MEMORY_SIZE+start_index), length=-start_index)
+				seq1 = torch.narrow(self.tensor_state_buffer, dim=0, start=int(MEMORY_SIZE+start_index), length=-int(start_index))
 				# sequence part 2
 				seq2 = torch.narrow(self.tensor_state_buffer, dim=0, start=0, length=i+1)
 				sequence = torch.cat((seq1, seq2), 0)
 			else:# continuous sequence 
-				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=episode_step_index-start_index)
+				sequence = torch.narrow(self.tensor_state_buffer, dim=0, start=int(start_index), length=episode_step_index-int(start_index))
 			# add sequence to list
 			sequence_list.append(sequence)
 		# packing all together

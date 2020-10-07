@@ -1,0 +1,19 @@
+Episode:       193
+Start episode: 0
+Frames:        18173
+Mean reward:   -100.756004
+Mean success:  0.020000
+Mean collision:  0.980000
+Epsilon:       0.818280
+Duration:      0h 50min 18sec
+GRUModel(
+  (embedding): Sequential(
+    (0): Linear(in_features=364, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (gru): GRU(64, 64, num_layers=3)
+  (fc): Sequential(
+    (0): Linear(in_features=64, out_features=5, bias=True)
+  )
+)

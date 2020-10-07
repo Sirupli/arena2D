@@ -1,0 +1,19 @@
+Episode:       3097
+Start episode: 0
+Frames:        950148
+Mean reward:   -57.596024
+Mean success:  0.260000
+Mean collision:  0.730000
+Epsilon:       0.020000
+Duration:      55h 47min 48sec
+GRUModel(
+  (embedding): Sequential(
+    (0): Linear(in_features=364, out_features=128, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=128, out_features=64, bias=True)
+  )
+  (gru): GRU(64, 64, num_layers=3)
+  (fc): Sequential(
+    (0): Linear(in_features=64, out_features=5, bias=True)
+  )
+)

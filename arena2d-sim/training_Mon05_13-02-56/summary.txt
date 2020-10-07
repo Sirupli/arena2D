@@ -1,0 +1,8 @@
+### Training Summary ###
+Script:   ./arena2d-agents/agent_dqn_sequence/agent_train_gtr.py
+Started:  Mon Oct  5 13:02:56 2020
+Episodes: 231
+Time:     1h 31m 23s
+
+# Agent Info #
+-

@@ -5,7 +5,6 @@ import torch.nn as nn
 import torch
 import math
 from torch.autograd import Variable
-
 ### hyper parameters ###
 n_head = 4	                # number of heads for multi-head self attention
 d_ff = 256	                # number of neurons in feedforward layer of transformer

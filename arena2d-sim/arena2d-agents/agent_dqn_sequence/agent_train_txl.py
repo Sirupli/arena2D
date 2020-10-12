@@ -33,7 +33,7 @@ seed=1111111
 
 AGENT_NAME="dqn_agent"
 
-
+torch.autograd.detect_anomaly(True)
 
 class Agent:
 	def __init__(self, device, model_name, num_observations, num_envs, num_threads, training_data_path):

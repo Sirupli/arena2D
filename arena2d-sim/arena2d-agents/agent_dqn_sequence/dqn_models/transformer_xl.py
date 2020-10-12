@@ -368,12 +368,12 @@ class MemTransformerLM(nn.Module):
 
         self.layers = nn.ModuleList()
 
-        for i in range(n_layer):
+        for i in range(self.n_layer):
             self.layers.append(
                 RelPartialLearnableDecoderLayer(
-                    n_head, d_model, d_head, d_inner, dropout,
+                    self.n_head, self.d_model,self.d_head, d_inner, dropout,
                     use_stable_version=use_stable_version, use_gate=use_gate,
-                    tgt_len=tgt_len, ext_len=ext_len, mem_len=mem_len,
+                    tgt_len=tgt_len, ext_len=ext_len, mem_len=self.mem_len,
                     dropatt=dropatt)
             )
 
@@ -493,6 +493,7 @@ class MemTransformerLM(nn.Module):
             #print('from txl483 shapes : ', core_out.shape, pos_emb.shape, self.r_w_bias.shape, self.r_r_bias.shape, dec_attn_mask.shape, mems_i.shape)
             core_out = layer(core_out, pos_emb, self.r_w_bias,
                     self.r_r_bias, dec_attn_mask=dec_attn_mask, mems=mems_i)
+            core_out = core_out +10e-6
             hids.append(core_out)
 
 

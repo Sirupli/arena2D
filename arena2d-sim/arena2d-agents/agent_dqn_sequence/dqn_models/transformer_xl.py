@@ -481,6 +481,7 @@ class MemTransformerLM(nn.Module):
         core_out = core_out +10e-4
         print("core_out",core_out)
         pos_emb = self.drop(pos_emb)
+        pos_emb = pos_emb +10e-4
         print("pos_emb",pos_emb)
 
         hids.append(core_out)

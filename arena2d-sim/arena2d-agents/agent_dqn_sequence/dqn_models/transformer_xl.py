@@ -458,7 +458,7 @@ class MemTransformerLM(nn.Module):
 
         if mems is not None:
             mlen = mems[0].size(0)
-            # print('HERE: mlen: {}, len mems: {}, mems[0] shape: {}'.format(mlen, len(mems),mems[0].shape))
+            #print('HERE: mlen: {}, len mems: {}, mems[0] shape: {}'.format(mlen, len(mems),mems[0].shape))
         else:
             mlen = 0
         # mlen = mems[0].size(0) if mems is not None else 0
@@ -477,17 +477,18 @@ class MemTransformerLM(nn.Module):
         pos_emb = self.pos_emb(pos_seq)
 
         core_out = self.drop(obs_emb)
+        #print()
         pos_emb = self.drop(pos_emb)
 
         hids.append(core_out)
         #SEEMS THAT THEY store memory per layer which makes sense to attend to (for ex if at first layer, if we were
         #applying attention to memory and this new data, this would give us the same result.
         for i, layer in enumerate(self.layers):
-            #print('HIDDEN iter: {}, output: {}'.format(i, core_out[-1,0, :10]))
+            print('HIDDEN iter: {}, output: {}'.format(i, core_out[-1,0, :10]))
 
             # TODO : The memory should be the same hidden layer's state of the previous T timesteps
             mems_i = None if mems is None else mems[i]
-            # print('from txl483 shapes : ', core_out.shape, pos_emb.shape, self.r_w_bias.shape, self.r_r_bias.shape, dec_attn_mask.shape, mems_i.shape)
+            #print('from txl483 shapes : ', core_out.shape, pos_emb.shape, self.r_w_bias.shape, self.r_r_bias.shape, dec_attn_mask.shape, mems_i.shape)
             core_out = layer(core_out, pos_emb, self.r_w_bias,
                     self.r_r_bias, dec_attn_mask=dec_attn_mask, mems=mems_i)
             hids.append(core_out)

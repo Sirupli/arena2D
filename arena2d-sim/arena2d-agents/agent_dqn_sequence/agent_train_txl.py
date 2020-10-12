@@ -159,7 +159,12 @@ class Agent:
 			print("new_mem[0].shape",new_mem[0].shape)
 			# save new memory in buffer
 			for i in range(N_LAYERS+1):
-				self.tensor_memory_buffer[i][idx] = new_mem[i].squeeze(1)
+				t_mem=new_mem[i].squeeze(1)
+				size_mem=t_mem.shape[0]
+				if size_mem< Gtrxl.men_len:
+					self.tensor_memory_buffer[i][idx,:size_mem,:] = new_mem[i].squeeze(1)
+				else:
+				    self.tensor_memory_buffer[i][idx] = new_mem[i].squeeze(1)
 			max_value, act_v = torch.max(q_vals_v, dim=1)
 			print(max_value.item())
 			self.mean_value_buffer.append(max_value.item())
@@ -429,7 +434,7 @@ class Agent:
 		# loss function
 		self.start_gpu_measure()
 		print("state_action_values",state_action_values,"expected_state_action_values",expected_state_action_values)
-		l = nn.MSELoss()(state_action_values, expected_state_action_values+10e-3)
+		l = nn.MSELoss()(state_action_values, expected_state_action_values)
 		self.stop_gpu_measure(self.loss_calc_times)
 		#k=l.item()
 		#print(k)		

@@ -63,7 +63,7 @@ class Agent:
 		self.tensor_action_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.long).to(self.device)# the action that was chosen
 		self.tensor_done_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.bool).to(self.device)# episode has ended
 		self.tensor_step_buffer = torch.zeros(MEMORY_SIZE, dtype=torch.int16).to(self.device)# step index in episode (starting at 0)
-		self.tensor_memory_buffer = [torch.zeros(MEMORY_SIZE,Gtrxl.men_len,Gtrxl.embedding_size, dtype=torch.float).to(self.device)]*(N_LAYERS+1) # transformer memory		
+		self.tensor_memory_buffer = [torch.ones(MEMORY_SIZE,Gtrxl.men_len,Gtrxl.embedding_size, dtype=torch.float).to(self.device)]*(N_LAYERS+1) # transformer memory		
 
 
 		# creating net and target net

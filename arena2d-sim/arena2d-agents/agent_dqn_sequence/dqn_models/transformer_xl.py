@@ -455,7 +455,7 @@ class MemTransformerLM(nn.Module):
     def _forward(self, obs_emb, mems=None):
 
         qlen, bsz, _ = obs_emb.size() #qlen is number of characters in input ex
-        print("obs_emb",obs_emb)
+        #print("obs_emb",obs_emb)
 
         if mems is not None:
             mlen = mems[0].size(0)
@@ -478,8 +478,9 @@ class MemTransformerLM(nn.Module):
         pos_emb = self.pos_emb(pos_seq)
 
         core_out = self.drop(obs_emb)
-        #print()
+        print("core_out",core_out)
         pos_emb = self.drop(pos_emb)
+        print("pos_emb",pos_emb)
 
         hids.append(core_out)
         #SEEMS THAT THEY store memory per layer which makes sense to attend to (for ex if at first layer, if we were

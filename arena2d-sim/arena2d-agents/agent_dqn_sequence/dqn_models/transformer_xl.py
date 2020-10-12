@@ -455,6 +455,7 @@ class MemTransformerLM(nn.Module):
     def _forward(self, obs_emb, mems=None):
 
         qlen, bsz, _ = obs_emb.size() #qlen is number of characters in input ex
+        print("obs_emb",obs_emb)
 
         if mems is not None:
             mlen = mems[0].size(0)

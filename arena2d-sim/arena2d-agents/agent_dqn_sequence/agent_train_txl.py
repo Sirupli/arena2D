@@ -45,7 +45,7 @@ class Agent:
 		self.num_observations = num_observations
 		self.training_data_path = training_data_path
 		#print(torch.cuda.device_count())
-		torch.autograd.detect_anomaly(True)
+		#torch.autograd.detect_anomaly(True)
 		# Set the random seed manually for reproducibility
 		numpy.random.seed(seed)
 		torch.manual_seed(seed)		

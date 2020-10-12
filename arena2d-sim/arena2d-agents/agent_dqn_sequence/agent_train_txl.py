@@ -231,7 +231,7 @@ class Agent:
 			self.stop_gpu_measure(self.sampling_times)
 
 			loss_t = self.calc_loss(*batch)
-			#print(loss_t.item())
+			print(loss_t.item())
 			self.mean_loss_buffer.append(loss_t.item())
 			
 			self.start_gpu_measure()

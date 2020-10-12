@@ -160,6 +160,7 @@ class Agent:
 			for i in range(N_LAYERS+1):
 				self.tensor_memory_buffer[i][idx] = new_mem[i].squeeze(1)
 			max_value, act_v = torch.max(q_vals_v, dim=1)
+			print(max_value.item())
 			self.mean_value_buffer.append(max_value.item())
 			action = int(act_v.item())
 
@@ -230,7 +231,7 @@ class Agent:
 			self.stop_gpu_measure(self.sampling_times)
 
 			loss_t = self.calc_loss(*batch)
-			print(loss_t.item())
+			#print(loss_t.item())
 			self.mean_loss_buffer.append(loss_t.item())
 			
 			self.start_gpu_measure()

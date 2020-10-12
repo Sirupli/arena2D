@@ -54,7 +54,7 @@ class Agent:
         			print('WARNING: You have a CUDA device, so you should probably run with --cuda')
     			#else:
         			#torch.cuda.manual_seed_all(seed)
-		#torch.cuda.set_device(1)
+		torch.cuda.set_device(1)
 
 		# creating xp buffers on gpu for faster sampling
 		self.tensor_state_buffer = torch.zeros(MEMORY_SIZE,num_observations,dtype=torch.float).to(self.device)# state

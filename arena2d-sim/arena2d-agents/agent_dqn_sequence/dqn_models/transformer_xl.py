@@ -478,6 +478,7 @@ class MemTransformerLM(nn.Module):
         pos_emb = self.pos_emb(pos_seq)
 
         core_out = self.drop(obs_emb)
+        core_out = core_out +10e-4
         print("core_out",core_out)
         pos_emb = self.drop(pos_emb)
         print("pos_emb",pos_emb)
@@ -492,8 +493,7 @@ class MemTransformerLM(nn.Module):
             mems_i = None if mems is None else mems[i]
             #print('from txl483 shapes : ', core_out.shape, pos_emb.shape, self.r_w_bias.shape, self.r_r_bias.shape, dec_attn_mask.shape, mems_i.shape)
             core_out = layer(core_out, pos_emb, self.r_w_bias,
-                    self.r_r_bias, dec_attn_mask=dec_attn_mask, mems=mems_i)
-            core_out = core_out +10e-4
+                    self.r_r_bias, dec_attn_mask=dec_attn_mask, mems=mems_i)            
             hids.append(core_out)
 
 

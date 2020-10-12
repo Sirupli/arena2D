@@ -156,7 +156,7 @@ class Agent:
 			state_v=self.pack_episodes([idx])
 			# forward
 			q_vals_v, new_mem = self.net(state_v, None)
-			#print(new_mem[0].shape)
+			print("new_mem[0].shape",new_mem[0].shape)
 			# save new memory in buffer
 			for i in range(N_LAYERS+1):
 				self.tensor_memory_buffer[i][idx] = new_mem[i].squeeze(1)

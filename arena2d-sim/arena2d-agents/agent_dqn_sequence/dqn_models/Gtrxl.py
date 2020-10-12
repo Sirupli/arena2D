@@ -35,7 +35,7 @@ class TransformerDqn(nn.Module):
 		# sequences with different lengths
                 embedding=self.embedding(x.data)                
                 x_transform, new_mem = self.transformer(embedding, mem)
-				print("x_transform",x_transform)
+				print("x_transform",x_transform);
                 q_vals = self.linear(x_transform[-1])
                 return q_vals, new_mem
                 

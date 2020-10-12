@@ -12,7 +12,7 @@ d_ff = 256	                # number of neurons in feedforward layer of transform
 embedding_size=256              # number of output neurons of the embedding layer
 dropout = 0.1	                # dropout applied for feedforward layer
 dropatt= 0.1                    # dropout applied for attention layer
-men_len= 2                      # sequence length of memory
+men_len= 8                      # sequence length of memory
 ##################################
 
 class TransformerDqn(nn.Module):

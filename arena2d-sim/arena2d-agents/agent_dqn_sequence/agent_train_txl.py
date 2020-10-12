@@ -429,7 +429,7 @@ class Agent:
 		# loss function
 		self.start_gpu_measure()
 		#print("state_action_values",state_action_values,"expected_state_action_values",expected_state_action_values)
-		l = nn.MSELoss()(state_action_values+10e-6, expected_state_action_values)
+		l = nn.MSELoss()(state_action_values+10e-3, expected_state_action_values)
 		self.stop_gpu_measure(self.loss_calc_times)
 		#k=l.item()
 		#print(k)		

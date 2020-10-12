@@ -1,11 +1,11 @@
-Episode:       6275
+Episode:       10726
 Start episode: 0
-Frames:        899505
-Mean reward:   59.770000
-Mean success:  0.760000
-Mean collision:  0.180000
+Frames:        1463117
+Mean reward:   74.003975
+Mean success:  0.850000
+Mean collision:  0.140000
 Epsilon:       0.020000
-Duration:      68h 11min 46sec
+Duration:      111h 15min 27sec
 TransformerDqn(
   (embedder): CartPoleEmbedder(
     (layer1): Sequential(

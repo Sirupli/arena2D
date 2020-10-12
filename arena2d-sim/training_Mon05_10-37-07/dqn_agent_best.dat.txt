@@ -1,11 +1,11 @@
-Episode:       4008
+Episode:       9636
 Start episode: 0
-Frames:        1471362
-Mean reward:   44.208984
-Mean success:  0.700000
-Mean collision:  0.270000
+Frames:        2953115
+Mean reward:   64.135002
+Mean success:  0.780000
+Mean collision:  0.200000
 Epsilon:       0.020000
-Duration:      72h 16min 33sec
+Duration:      153h 49min 0sec
 GRUModel(
   (embedding): Sequential(
     (0): Linear(in_features=364, out_features=128, bias=True)

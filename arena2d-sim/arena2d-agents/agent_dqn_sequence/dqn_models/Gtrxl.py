@@ -19,7 +19,10 @@ class TransformerDqn(nn.Module):
 	def __init__(self, input_size, output_size,n_layer):
 		super(TransformerDqn, self).__init__()
 		
-		self.embedding = nn.Linear(input_size,embedding_size)
+		self.embedding = nn.Sequential(
+            nn.Linear(input_size, embedding_size),
+            nn.ReLU()            
+        )
 
 		# create transformer with N layers											
 		self.transformer = txl.MemTransformerLM(n_layer,n_head,embedding_size,embedding_size//n_head, d_ff,dropout, dropatt,men_len)

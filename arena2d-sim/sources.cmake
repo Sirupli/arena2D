@@ -39,8 +39,10 @@ set(ARENA_SOURCES
 	level/LevelCustom.hpp
 	level/LevelSVG.cpp
 	level/LevelSVG.hpp
-	level/LevelMaze.hpp                       #added 
-	level/LevelMaze.cpp			  #added
+	level/LevelMaze.hpp                        
+	level/LevelMaze.cpp			  
+	level/Wanderers.hpp
+	level/Wanderers.cpp
 	level/Wanderer.cpp
 	level/Wanderer.hpp
 	level/WandererBipedal.cpp

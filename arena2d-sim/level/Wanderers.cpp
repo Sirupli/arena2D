@@ -23,7 +23,6 @@ void Wanderers::reset(RectSpawn & _dynamicSpawn){
     _old_observed_wanderers.clear();
     _infos_of_wanderers.clear();
     _observed_wanderers.clear();
-    _distance_evaluation.clear();
 
     calculateDistanceAngle();
     getClosestWanderers();
@@ -103,10 +102,8 @@ void Wanderers::calculateDistanceAngle(){
         
         _infos_of_wanderers.push_back(WandererInfo(i, dist, angle));
 
-        //save distances for evaluation
-        _distance_evaluation.push_back(dist);
     }
-    _evaluation.saveDistance(_distance_evaluation);
+
 }
 
 void Wanderers::getClosestWanderers(){

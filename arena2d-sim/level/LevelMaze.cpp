@@ -36,7 +36,7 @@ void LevelMaze::reset(bool robot_position_reset)
 	createBorder(half_width, half_height);
 
 	if(robot_position_reset){
-		resetRobotToCenter();
+		resetRobotMaze();
 	}
 
         // calculate spawn area for static obstacles

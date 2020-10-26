@@ -175,8 +175,8 @@ protected:
 
 	/* reset robot position to (-0.5,-0.5) with random orientation
 	 */
-	//void resetRobotToCenter(){_levelDef.robot->reset(b2Vec2_zero, f_frandomRange(0, 2*M_PI));}
-	void resetRobotToCenter(){_levelDef.robot->reset(b2Vec2(-0.5,-0.5), f_frandomRange(0, 2*M_PI));}              //reset new robot position(-0.5, -0.5)
+	void resetRobotToCenter(){_levelDef.robot->reset(b2Vec2_zero, f_frandomRange(0, 2*M_PI));}
+	void resetRobotMaze(){_levelDef.robot->reset(b2Vec2(-0.5,-0.5), f_frandomRange(0, 2*M_PI));}              //reset new robot position(-0.5, -0.5)
 
 	/* destroy all bodies in _bodyList and clear list, clears goal spawn area
 	 */

@@ -119,7 +119,7 @@ void Environment::initializeTraining()
 {
 	_totalReward = 0;
 	_episodeCount = 0;
-	_robot->reset(b2Vec2(-1.5,-1.5));
+	_robot->reset(b2Vec2(-0.5,-0.5)); //(0,0) origin
 	reset(true);
 }
 

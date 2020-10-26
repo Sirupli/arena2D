@@ -136,7 +136,7 @@ void Robot::resetTrail()
 	_trailVertexCount = 1;
 	_numberSharpCorner= 0;
 	_lastTrailPosition = _base->GetTransform().p;    //first vertex of the corner
-	_secondTrailPosition=_lastTrailPosition;        //seocnd vertex of the corner		
+	_secondTrailPosition=_lastTrailPosition;         //seocnd vertex of the corner		
 	glBindBuffer(GL_ARRAY_BUFFER, _trailBuffer);
 	glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(float)*2, &_lastTrailPosition);
 }

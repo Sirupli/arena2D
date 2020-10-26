@@ -159,11 +159,11 @@ void Wanderers::getWandererData(std::vector<float> & data){
     for(int i = 0; i < _SETTINGS->training.num_obs_humans; i++){
         if(i < _observed_wanderers.size()){
             data.push_back(_observed_wanderers[i].distance);		// distance to closest
-		    data.push_back(_observed_wanderers[i].angle);		// angle to closest (relative from robot)
+	    data.push_back(_observed_wanderers[i].angle);		// angle to closest (relative from robot)
         }else{
             //Fill with default values
             data.push_back(2*_SETTINGS->stage.level_size);		// largest distance in level
-			data.push_back(0.);		// wanderer is in front of robot
+	    data.push_back(0.);		// wanderer is in front of robot
         }
     }
 }

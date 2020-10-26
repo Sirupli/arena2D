@@ -2,13 +2,15 @@
 
 LidarCast::LidarCast(int num_samples, float max_distance, float start_angle, float end_angle, float noise, b2Body * filter_body):  _numSamples(num_samples), _maxDistance(max_distance), _startAngle(start_angle), _endAngle(end_angle), _noise(noise), _filterBody(filter_body)
 {
-	_distances = new float[_numSamples];
+	_distances = new float[_numSamples];        
+        _distancesBetweeenPoints= new float[_numSamples-1]; //distances between laser points
 	_points = new b2Vec2[_numSamples+2];
 }
 
 LidarCast::~LidarCast()
 {
 	delete[] _distances;
+        delete[] _distancesBetweenPoints;
 	delete[] _points;
 }
 
@@ -47,4 +49,7 @@ void LidarCast::scan(const b2World * world, const b2Vec2 & start_point, float ze
 	}
 	// last point is first point
 	_points[_numSamples+1] = _points[1];
+       for(int i=1;i < _numSamples;i++){
+               _distancesBetweenPoints[i-1]=(_points[i]-_points[i+1]).Length();
+       }
 }

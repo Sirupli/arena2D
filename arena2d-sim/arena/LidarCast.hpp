@@ -28,6 +28,7 @@ public:
 	void scan(const b2World * world, const b2Vec2 & start_point, float zero_angle);
 	// getter
 	const float* getDistances(){return _distances;}
+        const float* getDistancesBetweenPoints(){return _distancesBetweenPoints;}
 	const b2Vec2* getPoints(){return &_points[1];}
 	const b2Vec2* getPointsWithCenter(){return _points;}
 	int getNumSamples(){return _numSamples;}
@@ -47,6 +48,7 @@ public:
 private:
 	b2Vec2 _lastPoint;
 	float *_distances;
+        float *_distancesBetweenPoints;
 	b2Vec2 * _points;
 	int _closestPoint;// index of closest point
 	int _numSamples;

@@ -1,8 +1,0 @@
-### Training Summary ###
-Script:   ./arena2d-agents/agent_dqn_sequence/agent_train_gru_add.py
-Started:  Fri Oct  2 17:55:47 2020
-Episodes: 322
-Time:     1h 36m 57s
-
-# Agent Info #
--

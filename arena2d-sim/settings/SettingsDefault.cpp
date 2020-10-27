@@ -52,6 +52,11 @@ void GlobalSettings::setToDefault()
 	_settings.training.reward_away_from_goal = -0.2f;
 	_settings.training.reward_hit = -100.0f;
 	_settings.training.reward_time_out = 0.f;
+	_settings.training.safety_distance_human = 0.2f;
+	_settings.training.reward_exceed_safety_distance = -1.0f;
+	_settings.training.reward_distance_to_human_increased = 0.f;
+        _settings.training.num_obs_humans = 3;
+	_settings.training.reward_time_out = 0.f;
 	_settings.training.num_envs = 1;
 	_settings.training.num_threads = -1;
 	_settings.training.agent_class = "Agent";
@@ -64,8 +69,8 @@ void GlobalSettings::setToDefault()
 	_settings.stage.dynamic_obstacle_size = 0.3;
 	_settings.stage.num_dynamic_obstacles = 4;
 	_settings.stage.num_obstacles = 8;
-	_settings.stage.min_obstacle_size = 0.1;
-	_settings.stage.max_obstacle_size = 1.0;
+	_settings.stage.min_obstacle_size = 0.05;
+	_settings.stage.max_obstacle_size = 0.1;
 	_settings.stage.goal_size = 0.1;
 	_settings.stage.svg_path = "svg_levels/";
 

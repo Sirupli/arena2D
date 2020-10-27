@@ -163,7 +163,7 @@ void Wanderers::getWandererData(std::vector<float> & data){
         }else{
             //Fill with default values
             data.push_back(2*_SETTINGS->stage.level_size);		// largest distance in level
-	    data.push_back(0.);		// wanderer is in front of robot
+	    data.push_back(0.);		                                // wanderer is in front of robot
         }
     }
 }

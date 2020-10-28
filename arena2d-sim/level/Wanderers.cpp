@@ -111,14 +111,14 @@ void Wanderers::getClosestWanderers(){
     _infos_of_wanderers.sort();
 
     //Get only Wanderers inside the camera view
-    float half_camera_angle = _SETTINGS->robot.camera_angle/2.;
+    //float half_camera_angle = _SETTINGS->robot.camera_angle/2.;
     int i = 0;
     for(std::list<WandererInfo>::iterator it = _infos_of_wanderers.begin(); it != _infos_of_wanderers.end(); it++){
         if(i < _SETTINGS->training.num_obs_humans){
-            if(it->angle < half_camera_angle && it->angle > -half_camera_angle){
-                _observed_wanderers.push_back(*it);
-                i++;
-            }
+            //if(it->angle < half_camera_angle && it->angle > -half_camera_angle){
+            _observed_wanderers.push_back(*it);
+            i++;
+            //}
         }
     }
 }
@@ -179,4 +179,11 @@ bool Wanderers::checkHumanContact(b2Fixture* other_fixture){
     }
     return humanContact;
 }
+/*
+void Wanderers::getClosestHuman(float & l2_h, float & angle_h){
+     _infos_of_wanderers.sort();
+     l2_h=_infos_of_wanderers.front()->distance;
+     angle_h=_infos_of_wanderers.front()->angle;
+}
+*/
 

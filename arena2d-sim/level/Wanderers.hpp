@@ -90,6 +90,13 @@ public:
  	 * @return true if contact with human and false otherwise
 	 */
     bool checkHumanContact(b2Fixture* other_fixture);
+
+    /* get the current closest to robot human of all humans
+	 * @param relative distance and angle to the robot of the closest human 
+	 */
+
+    void getClosestHumanDistance(float & l2_h, float & angle_h)
+
     
 private:
     /* calculate distance and angle of all wanderers relativ to the robot

@@ -9,10 +9,10 @@
 
 /* robot constants */
 #define BURGER_MOTOR_FORCE_FACTOR 	5 			// robot acceleration multiplier
-#define BURGER_LIDAR_POINT_COLOR	0xFF1020FF 	// color of laser scan sample points
-#define BURGER_LIDAR_AREA_COLOR		0xFF102040	// color of laser scan area
+#define BURGER_LIDAR_POINT_COLOR	0xFF1020FF 	        // color of laser scan sample points
+#define BURGER_LIDAR_AREA_COLOR		0xFF102040	        // color of laser scan area
 #define BURGER_LIDAR_POINT_SIZE		4			// size of laser scan sample points
-#define BURGER_TRAIL_WIDTH			2			// width of trail line
+#define BURGER_TRAIL_WIDTH			2		// width of trail line
 #define BURGER_TRAIL_COLOR			0x2255FFFF	// color of trail line
 #define BURGER_TRAIL_SEGMENT_SIZE 	0.05 		// distance to travel until a new trail segment is created
 #define BURGER_TRAIL_BUFFER_SIZE 	1024 		// maximum number of segments in trail buffer

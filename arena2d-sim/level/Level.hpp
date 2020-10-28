@@ -173,9 +173,12 @@ protected:
 	 */
 	b2Body* addShape(const std::vector<b2Shape*> shapes);
 
-	/* reset robot position to (-0.5,-0.5) with random orientation
+	/* reset robot position to (0,0) with random orientation
 	 */
 	void resetRobotToCenter(){_levelDef.robot->reset(b2Vec2_zero, f_frandomRange(0, 2*M_PI));}
+
+	/* reset robot position to (-.5,-.5) with random orientation for maze
+	 */
 	void resetRobotMaze(){_levelDef.robot->reset(b2Vec2(-0.5,-0.5), f_frandomRange(0, 2*M_PI));}              //reset new robot position(-0.5, -0.5)
 
 	/* destroy all bodies in _bodyList and clear list, clears goal spawn area
@@ -189,7 +192,8 @@ protected:
 	std::list<b2Body*> _bodyList; 	
 
 	/* body of goal */
-	b2Body * _goal; 				
+	b2Body * _goal;
+				
 
 	/* spawn area of goal represented by multiple axis aligned rects*/
 	RectSpawn _goalSpawnArea;

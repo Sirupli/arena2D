@@ -108,6 +108,7 @@ robot{
 		linear = -0.1
 		angular = 0.0
 	}
+        camera_angle = 90.0   # camera view in degree
 }
 
 stage{

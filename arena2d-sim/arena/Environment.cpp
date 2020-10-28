@@ -191,6 +191,17 @@ void Environment::getGoalDistance(float & l2, float & angle)
 		angle = f_deg(zVector2D::signedAngle(zVector2D(0, 1), zVector2D(goal_pos.x, goal_pos.y)));
 	}
 }
+/*
+void Environment::getClosestHumanDistance(float & l2_h, float & angle_h)
+{
+	if(_level != NULL && _level->getClosestHuman() != NULL){
+		b2Vec2 human_pos = _level->getHumanPosition();
+		human_pos = _robot->getBody()->GetLocalPoint(human_pos);
+		l2_h = human_pos.Length();
+		angle_h = f_deg(zVector2D::signedAngle(zVector2D(0, 1), zVector2D(human_pos.x, human_pos.y)));
+	}
+}
+*/
 
 void Environment::reset(bool robot_position_reset)
 {

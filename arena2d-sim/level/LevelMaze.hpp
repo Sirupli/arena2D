@@ -58,6 +58,32 @@ public:
 	//b2Body* generateRandomBody(float min_radius, float max_radius, zRect * aabb);
         b2Body* generateRandomWalls11(int index, zRect * aabb);
    	b2Body* generateRandomWalls22(int index, int numm, zRect * aabb);
+   	
+   	void getClosestHumanDistance(float & l2_h, float & angle_h)
+
+	/* get the closest human 
+	 * @return Box2D fixture of the goal or NULL if goal does not exist
+	 */
+	//b2Fixture* getClosestHuman(){return (_human == NULL) ? NULL : _human->GetFixtureList();}
+
+	/* get the closest human position
+	 * @return current position of the goal or (0,0) if goal does not exist
+	 */
+	//b2Vec2 getClosestHumanPosition(){return (_human ==  NULL) ? b2Vec2(0,0) : _human->GetTransform().p;}
+	
+	/* get the current closest to robot human of all humans
+	 * @param relative distance and angle to the robot of the closest human 
+	 */
+
+        void getClosestHumanDistanceAngle(float & l2_h, float & angle_h){
+             if(_dynamic){
+                   wanderers.getClosestHumanDistance(l2_h,angle_h);
+             }else{
+                  l2_h=2*_SETTINGS->stage.level_size;
+             
+             }
+        }
+
 
 
 private:
@@ -76,6 +102,9 @@ private:
 
 	/* handles all wanderers for dynamic level */
 	Wanderers wanderers;
+
+	/* body of the closest humans */
+	//Wanderers * _human;
 
 	/* spawn area for dynamic obstacles */
 	RectSpawn _dynamicSpawn;

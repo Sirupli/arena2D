@@ -89,16 +89,20 @@ void Wanderers::calculateDistanceAngle(){
 
     //calculate distance and angle of all wanderers relativ to robot
     for(int i = 0; i < _wanderers.size(); i++){
-        b2Transform robot_transform = _levelDef.robot->getBody()->GetTransform();
+        //b2Transform robot_transform = _levelDef.robot->getBody()->GetTransform();
 
         // calculate distance from (_wanderers[i]+safetyDistance) to robot
-        b2Vec2 robot_to_wanderer = _wanderers[i]->getPosition() - robot_transform.p;
-        float dist = robot_to_wanderer.Length() - _levelDef.robot->getRadius() - _wanderers[i]->getRadius();
+        //b2Vec2 robot_to_wanderer = _wanderers[i]->getPosition() - robot_transform.p;
+        //float dist = robot_to_wanderer.Length() - _levelDef.robot->getRadius() - _wanderers[i]->getRadius();
         
         //calculate angle of wanderer relativ to the robots facing direction
-        zVector2D robot_facing(0, 1);
-        robot_facing.rotate(robot_transform.q.GetAngle());// robot facing vector
-        float angle = f_deg(zVector2D::signedAngle(robot_facing, zVector2D(robot_to_wanderer.x, robot_to_wanderer.y)));// angle between robot facing vector and robot to wanderer
+        //zVector2D robot_facing(0, 1);
+        //robot_facing.rotate(robot_transform.q.GetAngle());// robot facing vector
+        //float angle = f_deg(zVector2D::signedAngle(robot_facing, zVector2D(robot_to_wanderer.x, robot_to_wanderer.y)));// angle between robot facing vector and robot to wanderer
+        
+        _wanderers_pos = _levelDef.robot->getBody()->GetLocalPoint(_wanderers[i]->getPosition());
+        float dist = _wanderers_pos.Length()- _levelDef.robot->getRadius() - _wanderers[i]->getRadius();
+	float angle = f_deg(zVector2D::signedAngle(zVector2D(0, 1), zVector2D(_wanderers_pos.x, _wanderers_pos.y)));
         
         _infos_of_wanderers.push_back(WandererInfo(i, dist, angle));
 

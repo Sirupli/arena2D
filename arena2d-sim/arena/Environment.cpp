@@ -128,6 +128,9 @@ void Environment::pre_step(const Twist & t)
 	_reward = 0.0f;
 	_action = t;
 	getGoalDistance(_distance, _angle);
+        if(_level.dynamic!=NULL&&_level.dynamic==True){
+              getClosestHumanDistance(_distance_h,_angle_h);
+        }
 }
 
 void Environment::step()
@@ -160,6 +163,17 @@ void Environment::post_step()
 	float distance_after = 0.f;
 	float angle_after = 0.f;
 	getGoalDistance(distance_after, angle_after);
+	
+	float distance_h_after=0.f;
+	float angle_h_after=0.f;
+	if(_level.dynamic!=NULL&&_level.dynamic==True){
+              getClosestHumanDistance(distance_h_after,angle_h_after);
+              if(distance_h_after<_trainingSettings.safety_distance_human){
+                 _reward += _trainingSettings.reward_exceed_safety_distance;
+                 if(_SETTINGS->training.episode_over_on_human){
+                     _episodeState = NEGATIVE_END_HUMAN_TOO_CLOSE;}  //too close to human  
+              }
+        }
 
 	// checking reward for distance to goal decreased/increased
 	if(distance_after < _distance){
@@ -191,23 +205,22 @@ void Environment::getGoalDistance(float & l2, float & angle)
 		angle = f_deg(zVector2D::signedAngle(zVector2D(0, 1), zVector2D(goal_pos.x, goal_pos.y)));
 	}
 }
-/*
+
 void Environment::getClosestHumanDistance(float & l2_h, float & angle_h)
 {
-	if(_level != NULL && _level->getClosestHuman() != NULL){
-		b2Vec2 human_pos = _level->getHumanPosition();
-		human_pos = _robot->getBody()->GetLocalPoint(human_pos);
-		l2_h = human_pos.Length();
-		angle_h = f_deg(zVector2D::signedAngle(zVector2D(0, 1), zVector2D(human_pos.x, human_pos.y)));
+	if(_level != NULL){
+	    _level->getAgentData(closestHumanData);
+	    l2_h=closestHumanData[0];	    
+	    angle_h=closestHumanData[1];
 	}
 }
-*/
+
 
 void Environment::reset(bool robot_position_reset)
 {
 	// reset level
 	if(_level != NULL)
-		_level->reset(_episodeState == NEGATIVE_END_WALL_HIT || _episodeState == NEGATIVE_END_TIME_UP || robot_position_reset);
+		_level->reset(_episodeState == NEGATIVE_END_WALL_HIT || _episodeState == NEGATIVE_END_TIME_UP ||_episodeState == NEGATIVE_END_HUMAN_TOO_CLOSE || robot_position_reset);
 	
 	// reset trail
 	if(_SETTINGS->video.enabled)

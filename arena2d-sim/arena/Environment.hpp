@@ -76,7 +76,8 @@ public:
 	enum EpisodeState{	RUNNING,		// episode is still running
 						POSITIVE_END,	// episode is over, goal reached
 						NEGATIVE_END_TIME_UP,	// episode is over, timeout 
-                                                NEGATIVE_END_WALL_HIT  // episode is over, obstacle hit
+                                                NEGATIVE_END_WALL_HIT,  // episode is over, obstacle hit
+                                                NEGATIVE_END_HUMAN_TOO_CLOSE  // episode is over, too close to human
 	};
 
 	/* constructor */
@@ -137,7 +138,7 @@ public:
 	 * @param l2 is set to the l2 distance from robot to the closest human
 	 * @param angle is set to the angle (degree) from the robot's facing direction to the closest human
 	 */
-	void getGoalDistance(float & l2_h, float & angle_h);
+	//void getHumanDistance(float & l2_h, float & angle_h);
 
 	/* get scan observation
 	 * @param num_samples is set to the number of samples in the returned array
@@ -222,6 +223,9 @@ private:
 
 	/* state of episode */
 	EpisodeState _episodeState;
+
+        /*relative distance and angle human to robot provided by level*/
+        std::vector<float> closestHumanData;
 };
 
 #endif

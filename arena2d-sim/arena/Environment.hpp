@@ -164,6 +164,10 @@ public:
 	 * @return current level
 	 */
 	 Level* getLevel(){return _level;}
+	 /* get robot controlled by agent/user 
+	  *@return robot
+	  */
+	 Robot * getRobot(){return _robot;}
 
 	/*get sharp corner of the robot trail*/
 	int getSharpCorner(){return _robot->getSharpCorner();}
@@ -172,7 +176,7 @@ public:
          * @param velocity is set to the relative velocity from robot to the closest human
 	 * @param w is set to the relative angle velocity (degree/second) from the robot's facing direction to the closest human
 	 */
-	void getVelocityClosestHuman(float & v, float & w);
+	//void getVelocityClosestHuman(float & v, float & w);
 
 
 

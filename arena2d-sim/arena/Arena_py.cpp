@@ -18,26 +18,35 @@ PyObject* Arena::packPyObservation(int env_index)
 	if(level != NULL){
 		level->getAgentData(additional_data);
 	}
+	// get augmented data provided by robot
+        float angle_closest_point = 0;
+	float distance_closest_point = _SETTINGS->stage.level_size;
+	Robot * robot =_envs[env_index].getRobot();
+	if(robot != NULL){
+		robot->getClosestPointDistance(float & angle_closest_point, float & distance_closest_point);
+	}
 
 	// creating new list that contains all the oservational data (distance and laser samples + additional data)
-	PyObject * obs = PyList_New(num_samples+2+additional_data.size());
+	PyObject * obs = PyList_New(num_samples+4+additional_data.size());
 
 	// pack goal position
 	float angle = 0;
 	float distance = 0;
 	_envs[env_index].getGoalDistance(distance, angle);
 	PyList_SET_ITEM(obs, 0, PyFloat_FromDouble(distance));
-	PyList_SET_ITEM(obs, 1, PyFloat_FromDouble(angle));        
-
+	PyList_SET_ITEM(obs, 1, PyFloat_FromDouble(angle));
+	// pack augmented data provided by robot        
+	PyList_SET_ITEM(obs, 2, PyFloat_FromDouble(distance_closest_point));
+	PyList_SET_ITEM(obs, 3, PyFloat_FromDouble(angle_closest_point));
 	// pack laser samples
 	for(int i = 0; i < num_samples; i++){
-		PyList_SET_ITEM(obs, 2+i, PyFloat_FromDouble(laser_data[i]));
+		PyList_SET_ITEM(obs, 4+i, PyFloat_FromDouble(laser_data[i]));
 	}
 
 	// pack additional data
 	int num_additional=(int)additional_data.size()
 	for(int i = 0; i < num_additional; i++){
-		PyList_SET_ITEM(obs, num_samples+2+i, PyFloat_FromDouble(additional_data[i]));	
+		PyList_SET_ITEM(obs, num_samples+4+i, PyFloat_FromDouble(additional_data[i]));	
 	}
         // pack relative angular velocity and relative linear velocity (human to robot) Todo
         
@@ -53,7 +62,7 @@ int Arena::getPyObservationSize(){
 	}
 	int num_samples;
 	_envs[0].getScan(num_samples);
-	return num_samples+2+additional_data.size();
+	return num_samples+4+additional_data.size();
 }
 
 PyObject* Arena::packAllPyObservation()

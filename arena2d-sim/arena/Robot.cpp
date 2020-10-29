@@ -304,3 +304,12 @@ void Robot::performAction(const Twist & t)
 	b2Vec2 force_right = 5*mass*vel_right;
 	_base->ApplyForce(force_right, _base->GetWorldPoint(_wheelPosition[RIGHT]), false);
 }
+
+void Robot::getClosestPointDistance(float & l2, float & angle){
+       if(_lidar!=NULL){
+            int i = _lidar->getClosestIndex();
+            float *_distances=_lidar->getDistances();
+            l2=_distances[i];
+            angle=_lidar->getAngleFromIndex(i)
+       }
+}

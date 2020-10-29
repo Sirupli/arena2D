@@ -1,6 +1,6 @@
 /* Author: Cornelius Marx */
 #include "Environment.hpp"
-
+//#include <engine/f_math.h>
 // EnvironmentThread
 EnvironmentThread::EnvironmentThread(){
 	state = WAITING;
@@ -166,8 +166,11 @@ void Environment::post_step()
 	
 	float distance_h_after=0.f;
 	float angle_h_after=0.f;
-	if(_level.dynamic!=NULL&&_level.dynamic==True){
+	if(_level != NULL&&_level.dynamic!=NULL&&_level.dynamic==True){
+	
               getClosestHumanDistance(distance_h_after,angle_h_after);
+              
+              
               if(distance_h_after<_trainingSettings.safety_distance_human){
                  _reward += _trainingSettings.reward_exceed_safety_distance;
                  if(_SETTINGS->training.episode_over_on_human){
@@ -207,14 +210,17 @@ void Environment::getGoalDistance(float & l2, float & angle)
 }
 
 void Environment::getClosestHumanDistance(float & l2_h, float & angle_h)
-{
-	if(_level != NULL){
-	    _level->getAgentData(closestHumanData);
-	    l2_h=closestHumanData[0];	    
-	    angle_h=closestHumanData[1];
-	}
+{	
+        _level->getAgentData(closestHumanData);
+        l2_h=closestHumanData[0];	    
+        angle_h=closestHumanData[1];	
 }
-
+/*
+void Environment::getVelocityClosestHuman(float & v, float & w){
+     v=fabs(v-_distance_h)/_physicsSettings.time_step;
+     w=fabs(w-_angle_h)/_physicsSettings.time_step;
+}
+*/
 
 void Environment::reset(bool robot_position_reset)
 {

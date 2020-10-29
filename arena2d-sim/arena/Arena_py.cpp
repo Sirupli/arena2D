@@ -27,7 +27,7 @@ PyObject* Arena::packPyObservation(int env_index)
 	float distance = 0;
 	_envs[env_index].getGoalDistance(distance, angle);
 	PyList_SET_ITEM(obs, 0, PyFloat_FromDouble(distance));
-	PyList_SET_ITEM(obs, 1, PyFloat_FromDouble(angle));
+	PyList_SET_ITEM(obs, 1, PyFloat_FromDouble(angle));        
 
 	// pack laser samples
 	for(int i = 0; i < num_samples; i++){
@@ -35,9 +35,12 @@ PyObject* Arena::packPyObservation(int env_index)
 	}
 
 	// pack additional data
-	for(int i = 0; i < (int)additional_data.size(); i++){
+	int num_additional=(int)additional_data.size()
+	for(int i = 0; i < num_additional; i++){
 		PyList_SET_ITEM(obs, num_samples+2+i, PyFloat_FromDouble(additional_data[i]));	
 	}
+        // pack relative angular velocity and relative linear velocity (human to robot) Todo
+        
 
 	return obs;
 }

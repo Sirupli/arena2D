@@ -45,7 +45,7 @@ public:
 	 * use this function to implement custom reward functions that depend on additional metrics in the level
 	 * @return agent reward 
 	 */
-	float getReward() override;
+	//float getReward() override;
 
 	/* check if robot had contact with a human
  	 * @return true if contact with human and false otherwise

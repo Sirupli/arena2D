@@ -171,7 +171,7 @@ void Wanderers::getWandererData(std::vector<float> & data){
         }
     }
 }
-
+/*
 bool Wanderers::checkHumanContact(b2Fixture* other_fixture){
     bool humanContact = false;
     for(int i = 0; i < _wanderers.size(); i++){
@@ -183,6 +183,7 @@ bool Wanderers::checkHumanContact(b2Fixture* other_fixture){
     }
     return humanContact;
 }
+*/
 /*
 void Wanderers::getClosestHuman(float & l2_h, float & angle_h){
      _infos_of_wanderers.sort();

@@ -164,8 +164,17 @@ public:
 	 * @return current level
 	 */
 	 Level* getLevel(){return _level;}
-	
+
+	/*get sharp corner of the robot trail*/
 	int getSharpCorner(){return _robot->getSharpCorner();}
+	
+	/*get relative angular velocity and relative linear velocity (human to robot)
+         * @param velocity is set to the relative velocity from robot to the closest human
+	 * @param w is set to the relative angle velocity (degree/second) from the robot's facing direction to the closest human
+	 */
+	void getVelocityClosestHuman(float & v, float & w);
+
+
 
 
 private:
@@ -202,6 +211,12 @@ private:
 
 	/* angle to goal before step */
 	float _angle;
+	
+	/* distance to closest human before step */
+	float _distance_h;
+
+	/* angle to closest human before step */
+	float _angle_h;
 
 	/* reward gained from last step */
 	float _reward;

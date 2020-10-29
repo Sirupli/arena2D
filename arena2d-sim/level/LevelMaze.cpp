@@ -92,7 +92,7 @@ void LevelMaze::renderGoalSpawn()
 	_dynamicSpawn.render();
 }
 
-
+/*
 float LevelMaze::getReward()
 {
 	float reward = 0;
@@ -136,7 +136,7 @@ float LevelMaze::getReward()
 	}
 	return reward;
 }
-
+*/
 
 // functions to generate four short walls in four specific areas
 b2Body* LevelMaze::generateRandomWalls11(int index, zRect * aabb){

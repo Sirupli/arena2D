@@ -21,7 +21,7 @@ void LevelMaze::reset(bool robot_position_reset)
 	const float half_width = _SETTINGS->stage.level_size/2.f;
 	const float half_height = _SETTINGS->stage.level_size/2.f;
 	const float half_goal_size = _SETTINGS->stage.goal_size/2.f;
-	const float dynamic_radius = _SETTINGS->stage.dynamic_obstacle_size/2.f;
+	const float dynamic_radius = _SETTINGS->stage.dynamic_obstacle_size/2.f+_SETTINGS->training.safety_distance_human;
 	const float dynamic_speed = _SETTINGS->stage.obstacle_speed;
 	const int num_obstacles = _SETTINGS->stage.num_obstacles;
 	const int num_dynamic_obstacles = _SETTINGS->stage.num_dynamic_obstacles;

@@ -51,12 +51,12 @@ training{
 	episode_over_on_human = 1   # if set to 1 episode ends if a human is too close
 	reward_goal = 95.0   # reward for reaching goal
 	reward_towards_goal = 0.2   # reward when distance to goal decreases
-	reward_away_from_goal = -0.2   # reward when distance to goal increases
+	reward_away_from_goal = -0.1   # reward when distance to goal increases
 	reward_hit = -90.0   # reward for hitting obstacle
 	safety_distance_human = 0.2   # safty distance to human, which should be always fullfilled
 	reward_exceed_safety_distance = -100.0   #float reward_distance_to_human_increased;  // reward when distance to human increases
 	num_obs_humans = 2.0   # maximum number of humans the agent can observe inside the camera view
-	reward_time_out = 0.0   # reward when episode timed out (after max_time seconds)
+	reward_time_out = -5.0   # reward when episode timed out (after max_time seconds)
 	num_envs = 1   # number of parallel environments
 	num_threads = -1   # number of threads to run in parallel, if set to -1 number of cpu cores will be detected automatically
 	agent_class = "Agent"   # name of class in agent python script

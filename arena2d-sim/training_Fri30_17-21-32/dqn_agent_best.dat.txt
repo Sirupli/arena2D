@@ -1,11 +1,11 @@
-Episode:       374
+Episode:       235
 Start episode: 0
-Frames:        14991
-Mean reward:   -83.143997
-Mean success:  0.040000
-Mean collision:  0.900000
-Epsilon:       0.850100
-Duration:      0h 15min 34sec
+Frames:        9558
+Mean reward:   -85.634010
+Mean success:  0.020000
+Mean collision:  0.850000
+Epsilon:       0.904430
+Duration:      0h 9min 21sec
 GRUModel(
   (embedding): Sequential(
     (0): Linear(in_features=374, out_features=128, bias=True)

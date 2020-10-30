@@ -1,8 +1,8 @@
 video{
-	resolution_w = 1389   # window width
-	resolution_h = 759   # window height
-	window_x = 298   # window x position on startup -1 for centered
-	window_y = 144   # window y position on startup -1 for centered
+	resolution_w = 1853   # window width
+	resolution_h = 1025   # window height
+	window_x = 67   # window x position on startup -1 for centered
+	window_y = 55   # window y position on startup -1 for centered
 	maximized = 0   # start window maximized 1/0
 	msaa = 4   # multisampling anti-aliasing 2,4,8,16
 	vsync = 0   # vertical synchronization 1/0
@@ -23,7 +23,7 @@ gui{
 	camera_follow = 0   # if == 1 camera follows robot, (if == 2, rotation is also taken into acount)
 	camera_x = 0.0   # initial position of camera
 	camera_y = 0.0   # initial position of camera
-	camera_zoom = 0.266272   # initial zoom of camera (zoom actually means scaling of the view -> camera_zoom < 1 means zooming out)
+	camera_zoom = 0.45   # initial zoom of camera (zoom actually means scaling of the view -> camera_zoom < 1 means zooming out)
 	camera_rotation = 0.0   # view rotation in degree
 	camera_zoom_factor = 1.3   # how does scaling increase/decrease with each zoom step
 }
@@ -49,14 +49,14 @@ training{
 	max_time = 150.0   # maximum time per episode (actual time, so physics.time_step influences maximum number of steps per episode)
 	episode_over_on_hit = 1   # if set to 1 episode ends if an obstacle is hit
 	episode_over_on_human = 1   # if set to 1 episode ends if a human is too close
-	reward_goal = 90.0   # reward for reaching goal
+	reward_goal = 95.0   # reward for reaching goal
 	reward_towards_goal = 0.2   # reward when distance to goal decreases
-	reward_away_from_goal = -0.2   # reward when distance to goal increases
+	reward_away_from_goal = -0.1   # reward when distance to goal increases
 	reward_hit = -90.0   # reward for hitting obstacle
 	safety_distance_human = 0.2   # safty distance to human, which should be always fullfilled
 	reward_exceed_safety_distance = -100.0   #float reward_distance_to_human_increased;  // reward when distance to human increases
 	num_obs_humans = 2.0   # maximum number of humans the agent can observe inside the camera view
-	reward_time_out = 0.0   # reward when episode timed out (after max_time seconds)
+	reward_time_out = -5.0   # reward when episode timed out (after max_time seconds)
 	num_envs = 1   # number of parallel environments
 	num_threads = -1   # number of threads to run in parallel, if set to -1 number of cpu cores will be detected automatically
 	agent_class = "Agent"   # name of class in agent python script

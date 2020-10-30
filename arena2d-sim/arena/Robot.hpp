@@ -153,7 +153,7 @@ public:
 	int getSharpCorner(){return _numberSharpCorner;}
 
         /*get the closest point to obstacles */
-        void getClosestPointDistance(float & l2, float & angle) 
+        void getClosestPointDistance(float & l2, float & angle); 
 
 
 private:

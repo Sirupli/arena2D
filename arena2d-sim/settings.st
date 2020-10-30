@@ -1,14 +1,14 @@
 video{
-	resolution_w = 2141   # window width
-	resolution_h = 1097   # window height
-	window_x = 4258   # window x position on startup -1 for centered
-	window_y = 1423   # window y position on startup -1 for centered
+	resolution_w = 800   # window width
+	resolution_h = 600   # window height
+	window_x = -1   # window x position on startup -1 for centered
+	window_y = -1   # window y position on startup -1 for centered
 	maximized = 0   # start window maximized 1/0
 	msaa = 4   # multisampling anti-aliasing 2,4,8,16
 	vsync = 0   # vertical synchronization 1/0
 	fps = 60   # video frames per second
 	fullscreen = 0   # fullscreen enabled 1/0
-	enabled = 0   # video mode enabled 1/0; if set to 0
+	enabled = 1   # video mode enabled 1/0; if set to 0
 }
 
 gui{
@@ -48,10 +48,14 @@ physics{
 training{
 	max_time = 100.0   # maximum time per episode (actual time, so physics.time_step influences maximum number of steps per episode)
 	episode_over_on_hit = 1   # if set to 1 episode ends if an obstacle is hit
-	reward_goal = 100.0   # reward for reaching goal
-	reward_towards_goal = 0.1   # reward when distance to goal decreases
+	episode_over_on_human = 1   # if set to 1 episode ends if a human is too close
+	reward_goal = 90.0   # reward for reaching goal
+	reward_towards_goal = 0.2   # reward when distance to goal decreases
 	reward_away_from_goal = -0.2   # reward when distance to goal increases
-	reward_hit = -100.0   # reward for hitting obstacle
+	reward_hit = -90.0   # reward for hitting obstacle
+	safety_distance_human = 0.2   # safty distance to human, which should be always fullfilled
+	reward_exceed_safety_distance = -100.0   #float reward_distance_to_human_increased;  // reward when distance to human increases
+	num_obs_humans = 2.0   # maximum number of humans the agent can observe inside the camera view
 	reward_time_out = 0.0   # reward when episode timed out (after max_time seconds)
 	num_envs = 1   # number of parallel environments
 	num_threads = -1   # number of threads to run in parallel, if set to -1 number of cpu cores will be detected automatically
@@ -108,18 +112,18 @@ robot{
 		linear = -0.1
 		angular = 0.0
 	}
-        camera_angle = 90.0   # camera view in degree
 }
 
 stage{
 	random_seed = 0   # seed for pseudo random generator
-	initial_level = "maze"   # level loaded on startup (-1 for none)
+	initial_level = "maze --dynamic"   # level loaded on startup (-1 for none)
 	level_size = 4.0   # width and height of default levels
 	max_obstacle_size = 0.1   # maximum diameter of static obstacles
 	min_obstacle_size = 0.05   # minimum diameter of static obstacles
-	num_obstacles = 0  # number of static obstacles
-	dynamic_obstacle_size = 0.25   # size of dynamic obstacle
+	num_obstacles = 0   # number of static obstacles
+	dynamic_obstacle_size = 0.3   # size of dynamic obstacle
 	num_dynamic_obstacles = 4   # number of dynamic obstacles in static_dynamic level
+	max_time_chatting = 50.0   # maximum time for chatting between two wanderers
 	obstacle_speed = 0.08   # in m/s for dynamic obstacles
 	goal_size = 0.1   # diameter of circular goal to reach
 	svg_path = "svg_levels/"   # path to folder where svg files are stored

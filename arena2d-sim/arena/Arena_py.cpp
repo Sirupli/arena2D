@@ -23,7 +23,7 @@ PyObject* Arena::packPyObservation(int env_index)
 	float distance_closest_point = _SETTINGS->stage.level_size;
 	Robot * robot =_envs[env_index].getRobot();
 	if(robot != NULL){
-		robot->getClosestPointDistance(float & angle_closest_point, float & distance_closest_point);
+		robot->getClosestPointDistance(angle_closest_point, distance_closest_point);
 	}
 
 	// creating new list that contains all the oservational data (distance and laser samples + additional data)
@@ -44,7 +44,7 @@ PyObject* Arena::packPyObservation(int env_index)
 	}
 
 	// pack additional data
-	int num_additional=(int)additional_data.size()
+	int num_additional=(int)additional_data.size();
 	for(int i = 0; i < num_additional; i++){
 		PyList_SET_ITEM(obs, num_samples+4+i, PyFloat_FromDouble(additional_data[i]));	
 	}

@@ -138,7 +138,7 @@ public:
 	 * @param l2 is set to the l2 distance from robot to the closest human
 	 * @param angle is set to the angle (degree) from the robot's facing direction to the closest human
 	 */
-	//void getHumanDistance(float & l2_h, float & angle_h);
+	void getClosestHumanDistance(float & l2_h, float & angle_h);
 
 	/* get scan observation
 	 * @param num_samples is set to the number of samples in the returned array

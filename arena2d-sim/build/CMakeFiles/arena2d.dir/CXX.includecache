@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../arena/Command.hpp
+.././arena/Command.hpp
 string
 -
 string.h
@@ -18,11 +18,11 @@ list
 engine/zLogfile.hpp
 -
 CommandStatus.hpp
-../arena/CommandStatus.hpp
+.././arena/CommandStatus.hpp
 
-../arena/CommandRegister.hpp
+.././arena/CommandRegister.hpp
 Command.hpp
-../arena/Command.hpp
+.././arena/Command.hpp
 engine/zLogfile.hpp
 -
 list
@@ -30,9 +30,9 @@ list
 unordered_map
 -
 
-../arena/CommandStatus.hpp
+.././arena/CommandStatus.hpp
 
-../arena/ConsoleParameters.hpp
+.././arena/ConsoleParameters.hpp
 stdio.h
 -
 stdlib.h
@@ -42,13 +42,13 @@ string.h
 string
 -
 
-../arena/LidarCast.hpp
+.././arena/LidarCast.hpp
 box2d/box2d.h
 -
 engine/f_math.h
 -
 
-../arena/PhysicsWorld.hpp
+.././arena/PhysicsWorld.hpp
 engine/Renderer.hpp
 -
 engine/zSingleton.hpp
@@ -70,7 +70,7 @@ engine/zColor.hpp
 list
 -
 
-../arena/RectSpawn.hpp
+.././arena/RectSpawn.hpp
 engine/zRect.hpp
 -
 engine/Renderer.hpp
@@ -84,143 +84,143 @@ engine/zVector2d.hpp
 box2d/box2d.h
 -
 
-../arena/Robot.hpp
+.././arena/Robot.hpp
 PhysicsWorld.hpp
-../arena/PhysicsWorld.hpp
+.././arena/PhysicsWorld.hpp
 LidarCast.hpp
-../arena/LidarCast.hpp
+.././arena/LidarCast.hpp
 engine/zColor.hpp
 -
 engine/GlobalSettings.hpp
 -
 
-../box2d/include/box2d/b2_block_allocator.h
+.././box2d/include/box2d/b2_block_allocator.h
 box2d/b2_settings.h
-../box2d/include/box2d/box2d/b2_settings.h
+.././box2d/include/box2d/box2d/b2_settings.h
 
-../box2d/include/box2d/b2_body.h
+.././box2d/include/box2d/b2_body.h
 b2_math.h
-../box2d/include/box2d/b2_math.h
+.././box2d/include/box2d/b2_math.h
 b2_shape.h
-../box2d/include/box2d/b2_shape.h
+.././box2d/include/box2d/b2_shape.h
 
-../box2d/include/box2d/b2_broad_phase.h
+.././box2d/include/box2d/b2_broad_phase.h
 b2_settings.h
-../box2d/include/box2d/b2_settings.h
+.././box2d/include/box2d/b2_settings.h
 b2_collision.h
-../box2d/include/box2d/b2_collision.h
+.././box2d/include/box2d/b2_collision.h
 b2_dynamic_tree.h
-../box2d/include/box2d/b2_dynamic_tree.h
+.././box2d/include/box2d/b2_dynamic_tree.h
 algorithm
 -
 
-../box2d/include/box2d/b2_chain_shape.h
+.././box2d/include/box2d/b2_chain_shape.h
 b2_shape.h
-../box2d/include/box2d/b2_shape.h
+.././box2d/include/box2d/b2_shape.h
 
-../box2d/include/box2d/b2_circle_shape.h
+.././box2d/include/box2d/b2_circle_shape.h
 b2_shape.h
-../box2d/include/box2d/b2_shape.h
+.././box2d/include/box2d/b2_shape.h
 
-../box2d/include/box2d/b2_collision.h
+.././box2d/include/box2d/b2_collision.h
 b2_math.h
-../box2d/include/box2d/b2_math.h
+.././box2d/include/box2d/b2_math.h
 limits.h
 -
 
-../box2d/include/box2d/b2_contact.h
+.././box2d/include/box2d/b2_contact.h
 b2_collision.h
-../box2d/include/box2d/b2_collision.h
+.././box2d/include/box2d/b2_collision.h
 b2_fixture.h
-../box2d/include/box2d/b2_fixture.h
+.././box2d/include/box2d/b2_fixture.h
 b2_math.h
-../box2d/include/box2d/b2_math.h
+.././box2d/include/box2d/b2_math.h
 b2_shape.h
-../box2d/include/box2d/b2_shape.h
+.././box2d/include/box2d/b2_shape.h
 
-../box2d/include/box2d/b2_contact_manager.h
+.././box2d/include/box2d/b2_contact_manager.h
 b2_broad_phase.h
-../box2d/include/box2d/b2_broad_phase.h
+.././box2d/include/box2d/b2_broad_phase.h
 
-../box2d/include/box2d/b2_distance_joint.h
+.././box2d/include/box2d/b2_distance_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_draw.h
+.././box2d/include/box2d/b2_draw.h
 b2_math.h
-../box2d/include/box2d/b2_math.h
+.././box2d/include/box2d/b2_math.h
 
-../box2d/include/box2d/b2_dynamic_tree.h
+.././box2d/include/box2d/b2_dynamic_tree.h
 b2_collision.h
-../box2d/include/box2d/b2_collision.h
+.././box2d/include/box2d/b2_collision.h
 b2_growable_stack.h
-../box2d/include/box2d/b2_growable_stack.h
+.././box2d/include/box2d/b2_growable_stack.h
 
-../box2d/include/box2d/b2_edge_shape.h
+.././box2d/include/box2d/b2_edge_shape.h
 b2_shape.h
-../box2d/include/box2d/b2_shape.h
+.././box2d/include/box2d/b2_shape.h
 
-../box2d/include/box2d/b2_fixture.h
+.././box2d/include/box2d/b2_fixture.h
 b2_body.h
-../box2d/include/box2d/b2_body.h
+.././box2d/include/box2d/b2_body.h
 b2_collision.h
-../box2d/include/box2d/b2_collision.h
+.././box2d/include/box2d/b2_collision.h
 b2_shape.h
-../box2d/include/box2d/b2_shape.h
+.././box2d/include/box2d/b2_shape.h
 
-../box2d/include/box2d/b2_friction_joint.h
+.././box2d/include/box2d/b2_friction_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_gear_joint.h
+.././box2d/include/box2d/b2_gear_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_growable_stack.h
+.././box2d/include/box2d/b2_growable_stack.h
 b2_settings.h
-../box2d/include/box2d/b2_settings.h
+.././box2d/include/box2d/b2_settings.h
 string.h
 -
 
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 b2_math.h
-../box2d/include/box2d/b2_math.h
+.././box2d/include/box2d/b2_math.h
 
-../box2d/include/box2d/b2_math.h
+.././box2d/include/box2d/b2_math.h
 b2_settings.h
-../box2d/include/box2d/b2_settings.h
+.././box2d/include/box2d/b2_settings.h
 math.h
 -
 
-../box2d/include/box2d/b2_motor_joint.h
+.././box2d/include/box2d/b2_motor_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_mouse_joint.h
+.././box2d/include/box2d/b2_mouse_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_polygon_shape.h
+.././box2d/include/box2d/b2_polygon_shape.h
 b2_shape.h
-../box2d/include/box2d/b2_shape.h
+.././box2d/include/box2d/b2_shape.h
 
-../box2d/include/box2d/b2_prismatic_joint.h
+.././box2d/include/box2d/b2_prismatic_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_pulley_joint.h
+.././box2d/include/box2d/b2_pulley_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_revolute_joint.h
+.././box2d/include/box2d/b2_revolute_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_rope_joint.h
+.././box2d/include/box2d/b2_rope_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_settings.h
+.././box2d/include/box2d/b2_settings.h
 stddef.h
 -
 assert.h
@@ -228,113 +228,113 @@ assert.h
 float.h
 -
 
-../box2d/include/box2d/b2_shape.h
+.././box2d/include/box2d/b2_shape.h
 b2_math.h
-../box2d/include/box2d/b2_math.h
+.././box2d/include/box2d/b2_math.h
 b2_collision.h
-../box2d/include/box2d/b2_collision.h
+.././box2d/include/box2d/b2_collision.h
 
-../box2d/include/box2d/b2_stack_allocator.h
+.././box2d/include/box2d/b2_stack_allocator.h
 b2_settings.h
-../box2d/include/box2d/b2_settings.h
+.././box2d/include/box2d/b2_settings.h
 
-../box2d/include/box2d/b2_time_step.h
+.././box2d/include/box2d/b2_time_step.h
 b2_math.h
-../box2d/include/box2d/b2_math.h
+.././box2d/include/box2d/b2_math.h
 
-../box2d/include/box2d/b2_timer.h
+.././box2d/include/box2d/b2_timer.h
 b2_settings.h
-../box2d/include/box2d/b2_settings.h
+.././box2d/include/box2d/b2_settings.h
 
-../box2d/include/box2d/b2_weld_joint.h
+.././box2d/include/box2d/b2_weld_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_wheel_joint.h
+.././box2d/include/box2d/b2_wheel_joint.h
 b2_joint.h
-../box2d/include/box2d/b2_joint.h
+.././box2d/include/box2d/b2_joint.h
 
-../box2d/include/box2d/b2_world.h
+.././box2d/include/box2d/b2_world.h
 b2_block_allocator.h
-../box2d/include/box2d/b2_block_allocator.h
+.././box2d/include/box2d/b2_block_allocator.h
 b2_contact_manager.h
-../box2d/include/box2d/b2_contact_manager.h
+.././box2d/include/box2d/b2_contact_manager.h
 b2_math.h
-../box2d/include/box2d/b2_math.h
+.././box2d/include/box2d/b2_math.h
 b2_stack_allocator.h
-../box2d/include/box2d/b2_stack_allocator.h
+.././box2d/include/box2d/b2_stack_allocator.h
 b2_time_step.h
-../box2d/include/box2d/b2_time_step.h
+.././box2d/include/box2d/b2_time_step.h
 b2_world_callbacks.h
-../box2d/include/box2d/b2_world_callbacks.h
+.././box2d/include/box2d/b2_world_callbacks.h
 
-../box2d/include/box2d/b2_world_callbacks.h
+.././box2d/include/box2d/b2_world_callbacks.h
 b2_settings.h
-../box2d/include/box2d/b2_settings.h
+.././box2d/include/box2d/b2_settings.h
 
-../box2d/include/box2d/box2d.h
+.././box2d/include/box2d/box2d.h
 b2_settings.h
-../box2d/include/box2d/b2_settings.h
+.././box2d/include/box2d/b2_settings.h
 b2_draw.h
-../box2d/include/box2d/b2_draw.h
+.././box2d/include/box2d/b2_draw.h
 b2_timer.h
-../box2d/include/box2d/b2_timer.h
+.././box2d/include/box2d/b2_timer.h
 b2_chain_shape.h
-../box2d/include/box2d/b2_chain_shape.h
+.././box2d/include/box2d/b2_chain_shape.h
 b2_circle_shape.h
-../box2d/include/box2d/b2_circle_shape.h
+.././box2d/include/box2d/b2_circle_shape.h
 b2_edge_shape.h
-../box2d/include/box2d/b2_edge_shape.h
+.././box2d/include/box2d/b2_edge_shape.h
 b2_polygon_shape.h
-../box2d/include/box2d/b2_polygon_shape.h
+.././box2d/include/box2d/b2_polygon_shape.h
 b2_broad_phase.h
-../box2d/include/box2d/b2_broad_phase.h
+.././box2d/include/box2d/b2_broad_phase.h
 b2_dynamic_tree.h
-../box2d/include/box2d/b2_dynamic_tree.h
+.././box2d/include/box2d/b2_dynamic_tree.h
 b2_body.h
-../box2d/include/box2d/b2_body.h
+.././box2d/include/box2d/b2_body.h
 b2_contact.h
-../box2d/include/box2d/b2_contact.h
+.././box2d/include/box2d/b2_contact.h
 b2_fixture.h
-../box2d/include/box2d/b2_fixture.h
+.././box2d/include/box2d/b2_fixture.h
 b2_time_step.h
-../box2d/include/box2d/b2_time_step.h
+.././box2d/include/box2d/b2_time_step.h
 b2_world.h
-../box2d/include/box2d/b2_world.h
+.././box2d/include/box2d/b2_world.h
 b2_world_callbacks.h
-../box2d/include/box2d/b2_world_callbacks.h
+.././box2d/include/box2d/b2_world_callbacks.h
 b2_distance_joint.h
-../box2d/include/box2d/b2_distance_joint.h
+.././box2d/include/box2d/b2_distance_joint.h
 b2_friction_joint.h
-../box2d/include/box2d/b2_friction_joint.h
+.././box2d/include/box2d/b2_friction_joint.h
 b2_gear_joint.h
-../box2d/include/box2d/b2_gear_joint.h
+.././box2d/include/box2d/b2_gear_joint.h
 b2_motor_joint.h
-../box2d/include/box2d/b2_motor_joint.h
+.././box2d/include/box2d/b2_motor_joint.h
 b2_mouse_joint.h
-../box2d/include/box2d/b2_mouse_joint.h
+.././box2d/include/box2d/b2_mouse_joint.h
 b2_prismatic_joint.h
-../box2d/include/box2d/b2_prismatic_joint.h
+.././box2d/include/box2d/b2_prismatic_joint.h
 b2_pulley_joint.h
-../box2d/include/box2d/b2_pulley_joint.h
+.././box2d/include/box2d/b2_pulley_joint.h
 b2_revolute_joint.h
-../box2d/include/box2d/b2_revolute_joint.h
+.././box2d/include/box2d/b2_revolute_joint.h
 b2_rope_joint.h
-../box2d/include/box2d/b2_rope_joint.h
+.././box2d/include/box2d/b2_rope_joint.h
 b2_weld_joint.h
-../box2d/include/box2d/b2_weld_joint.h
+.././box2d/include/box2d/b2_weld_joint.h
 b2_wheel_joint.h
-../box2d/include/box2d/b2_wheel_joint.h
+.././box2d/include/box2d/b2_wheel_joint.h
 
-../engine/Camera.hpp
+.././engine/Camera.hpp
 Renderer.hpp
-../engine/Renderer.hpp
+.././engine/Renderer.hpp
 zVector2d.hpp
-../engine/zVector2d.hpp
+.././engine/zVector2d.hpp
 
-../engine/GamePadButtonCodes.hpp
+.././engine/GamePadButtonCodes.hpp
 
-../engine/GlobalSettings.hpp
+.././engine/GlobalSettings.hpp
 SDL2/SDL.h
 -
 string
@@ -342,59 +342,59 @@ string
 settings/SettingsStructs.h
 -
 hashTable.h
-../engine/hashTable.h
+.././engine/hashTable.h
 errno.h
 -
 zSingleton.hpp
-../engine/zSingleton.hpp
+.././engine/zSingleton.hpp
 zLogfile.hpp
-../engine/zLogfile.hpp
+.././engine/zLogfile.hpp
 GamePadButtonCodes.hpp
-../engine/GamePadButtonCodes.hpp
+.././engine/GamePadButtonCodes.hpp
 zStringTools.hpp
-../engine/zStringTools.hpp
+.././engine/zStringTools.hpp
 
-../engine/Quadrangle.hpp
+.././engine/Quadrangle.hpp
 zVector2d.hpp
-../engine/zVector2d.hpp
+.././engine/zVector2d.hpp
 zRect.hpp
-../engine/zRect.hpp
+.././engine/zRect.hpp
 
-../engine/Renderer.hpp
+.././engine/Renderer.hpp
 f_math.h
-../engine/f_math.h
+.././engine/f_math.h
 zSingleton.hpp
-../engine/zSingleton.hpp
+.././engine/zSingleton.hpp
 zGraphicObject.hpp
-../engine/zGraphicObject.hpp
+.././engine/zGraphicObject.hpp
 zMatrix4x4.hpp
-../engine/zMatrix4x4.hpp
+.././engine/zMatrix4x4.hpp
 shader/TextShader.hpp
-../engine/shader/TextShader.hpp
+.././engine/shader/TextShader.hpp
 shader/SpriteShader.hpp
-../engine/shader/SpriteShader.hpp
+.././engine/shader/SpriteShader.hpp
 shader/ParticleShader.hpp
-../engine/shader/ParticleShader.hpp
+.././engine/shader/ParticleShader.hpp
 shader/Color2DShader.hpp
-../engine/shader/Color2DShader.hpp
+.././engine/shader/Color2DShader.hpp
 shader/Colorplex2DShader.hpp
-../engine/shader/Colorplex2DShader.hpp
+.././engine/shader/Colorplex2DShader.hpp
 Quadrangle.hpp
-../engine/Quadrangle.hpp
+.././engine/Quadrangle.hpp
 limits
 -
 
-../engine/Timer.hpp
+.././engine/Timer.hpp
 SDL2/SDL.h
 -
 
-../engine/f_math.h
+.././engine/f_math.h
 math.h
 -
 stdlib.h
 -
 
-../engine/glew/glew.h
+.././engine/glew/glew.h
 stddef.h
 -
 inttypes.h
@@ -410,13 +410,13 @@ OpenGL/glu.h
 GL/glu.h
 -
 
-../engine/hashTable.h
+.././engine/hashTable.h
 string.h
 -
 list.h
-../engine/list.h
+.././engine/list.h
 
-../engine/list.h
+.././engine/list.h
 stdio.h
 -
 string.h
@@ -424,17 +424,17 @@ string.h
 stdlib.h
 -
 
-../engine/shader/Color2DShader.hpp
+.././engine/shader/Color2DShader.hpp
 zShaderProgram.hpp
-../engine/shader/zShaderProgram.hpp
+.././engine/shader/zShaderProgram.hpp
 
-../engine/shader/Colorplex2DShader.hpp
+.././engine/shader/Colorplex2DShader.hpp
 zShaderProgram.hpp
-../engine/shader/zShaderProgram.hpp
+.././engine/shader/zShaderProgram.hpp
 
-../engine/shader/ParticleShader.hpp
+.././engine/shader/ParticleShader.hpp
 zShaderProgram.hpp
-../engine/shader/zShaderProgram.hpp
+.././engine/shader/zShaderProgram.hpp
 engine/zVector2d.hpp
 -
 engine/zColor.hpp
@@ -442,73 +442,73 @@ engine/zColor.hpp
 assert.h
 -
 
-../engine/shader/SpriteShader.hpp
+.././engine/shader/SpriteShader.hpp
 zShaderProgram.hpp
-../engine/shader/zShaderProgram.hpp
+.././engine/shader/zShaderProgram.hpp
 
-../engine/shader/TextShader.hpp
+.././engine/shader/TextShader.hpp
 zShaderProgram.hpp
-../engine/shader/zShaderProgram.hpp
+.././engine/shader/zShaderProgram.hpp
 
-../engine/shader/zShaderProgram.hpp
+.././engine/shader/zShaderProgram.hpp
 ../glew/glew.h
-../engine/glew/glew.h
+.././engine/glew/glew.h
 string.h
 -
 stdio.h
 -
 ../zStringTools.hpp
-../engine/zStringTools.hpp
+.././engine/zStringTools.hpp
 ../zLogfile.hpp
-../engine/zLogfile.hpp
+.././engine/zLogfile.hpp
 ../zColor.hpp
-../engine/zColor.hpp
+.././engine/zColor.hpp
 
-../engine/zColor.hpp
+.././engine/zColor.hpp
 math.h
 -
 
-../engine/zFont.hpp
+.././engine/zFont.hpp
 zGlyphMap.hpp
-../engine/zGlyphMap.hpp
+.././engine/zGlyphMap.hpp
 zLogfile.hpp
-../engine/zLogfile.hpp
+.././engine/zLogfile.hpp
 
-../engine/zFramework.hpp
+.././engine/zFramework.hpp
 SDL2/SDL.h
 -
 glew/glew.h
-../engine/glew/glew.h
+.././engine/glew/glew.h
 stdio.h
 -
 list
 -
 zLogfile.hpp
-../engine/zLogfile.hpp
+.././engine/zLogfile.hpp
 assert.h
 -
 f_math.h
-../engine/f_math.h
+.././engine/f_math.h
 
-../engine/zGlyphMap.hpp
+.././engine/zGlyphMap.hpp
 zLogfile.hpp
-../engine/zLogfile.hpp
+.././engine/zLogfile.hpp
 zRect.hpp
-../engine/zRect.hpp
+.././engine/zRect.hpp
 glew/glew.h
-../engine/glew/glew.h
+.././engine/glew/glew.h
 ft2build.h
 -
 SDL2/SDL.h
 -
 
-../engine/zGraphicObject.hpp
+.././engine/zGraphicObject.hpp
 glew/glew.h
-../engine/glew/glew.h
+.././engine/glew/glew.h
 math.h
 -
 
-../engine/zLogfile.hpp
+.././engine/zLogfile.hpp
 stdio.h
 -
 string.h
@@ -516,57 +516,57 @@ string.h
 stdarg.h
 -
 zSingleton.hpp
-../engine/zSingleton.hpp
+.././engine/zSingleton.hpp
 
-../engine/zMatrix4x4.hpp
+.././engine/zMatrix4x4.hpp
 zVector2d.hpp
-../engine/zVector2d.hpp
+.././engine/zVector2d.hpp
 zVector3d.hpp
-../engine/zVector3d.hpp
+.././engine/zVector3d.hpp
 zVector4d.hpp
-../engine/zVector4d.hpp
+.././engine/zVector4d.hpp
 math.h
 -
 string.h
 -
 
-../engine/zRect.hpp
+.././engine/zRect.hpp
 zVector2d.hpp
-../engine/zVector2d.hpp
+.././engine/zVector2d.hpp
 f_math.h
-../engine/f_math.h
+.././engine/f_math.h
 
-../engine/zSingleton.hpp
+.././engine/zSingleton.hpp
 
-../engine/zStringTools.hpp
+.././engine/zStringTools.hpp
 string
 -
 zLogfile.hpp
-../engine/zLogfile.hpp
+.././engine/zLogfile.hpp
 
-../engine/zTextView.hpp
+.././engine/zTextView.hpp
 zFont.hpp
-../engine/zFont.hpp
+.././engine/zFont.hpp
 shader/zShaderProgram.hpp
-../engine/shader/zShaderProgram.hpp
+.././engine/shader/zShaderProgram.hpp
 zMatrix4x4.hpp
-../engine/zMatrix4x4.hpp
+.././engine/zMatrix4x4.hpp
 zColor.hpp
-../engine/zColor.hpp
+.././engine/zColor.hpp
 
-../engine/zVector2d.hpp
+.././engine/zVector2d.hpp
 math.h
 -
 
-../engine/zVector3d.hpp
+.././engine/zVector3d.hpp
 math.h
 -
 
-../engine/zVector4d.hpp
+.././engine/zVector4d.hpp
 math.h
 -
 
-../level/Level.hpp
+.././level/Level.hpp
 vector
 -
 arena/PhysicsWorld.hpp
@@ -584,51 +584,51 @@ engine/zVector2d.hpp
 arena/ConsoleParameters.hpp
 -
 
-../level/LevelCustom.hpp
+.././level/LevelCustom.hpp
 Level.hpp
-../level/Level.hpp
-WandererBipedal.hpp
-../level/WandererBipedal.hpp
+.././level/Level.hpp
+Wanderers.hpp
+.././level/Wanderers.hpp
 
-../level/LevelEmpty.hpp
+.././level/LevelEmpty.hpp
 Level.hpp
-../level/Level.hpp
+.././level/Level.hpp
 
-../level/LevelFactory.hpp
+.././level/LevelFactory.hpp
 arena/CommandRegister.hpp
 -
 engine/zSingleton.hpp
 -
 Level.hpp
-../level/Level.hpp
+.././level/Level.hpp
 LevelRandom.hpp
-../level/LevelRandom.hpp
+.././level/LevelRandom.hpp
 LevelCustom.hpp
-../level/LevelCustom.hpp
+.././level/LevelCustom.hpp
 LevelMaze.hpp
-../level/LevelMaze.hpp
+.././level/LevelMaze.hpp
 
-../level/LevelMaze.hpp
+.././level/LevelMaze.hpp
 Level.hpp
-../level/Level.hpp
+.././level/Level.hpp
+Wanderers.hpp
+.././level/Wanderers.hpp
+
+.././level/LevelRandom.hpp
+Level.hpp
+.././level/Level.hpp
 Wanderer.hpp
-../level/Wanderer.hpp
+.././level/Wanderer.hpp
 
-../level/LevelRandom.hpp
+.././level/LevelSVG.hpp
 Level.hpp
-../level/Level.hpp
-Wanderer.hpp
-../level/Wanderer.hpp
-
-../level/LevelSVG.hpp
-Level.hpp
-../level/Level.hpp
+.././level/Level.hpp
 dirent.h
 -
 SVGFile.hpp
-../level/SVGFile.hpp
+.././level/SVGFile.hpp
 
-../level/SVGFile.hpp
+.././level/SVGFile.hpp
 vector
 -
 arena/PhysicsWorld.hpp
@@ -646,23 +646,45 @@ engine/zStringTools.hpp
 arena/RectSpawn.hpp
 -
 
-../level/Wanderer.hpp
+.././level/Wanderer.hpp
 arena/PhysicsWorld.hpp
 -
 engine/zVector2d.hpp
 -
 
-../level/WandererBipedal.hpp
+.././level/WandererBipedal.hpp
 Wanderer.hpp
-../level/Wanderer.hpp
+.././level/Wanderer.hpp
+arena/PhysicsWorld.hpp
+-
+engine/zVector2d.hpp
+-
+engine/GlobalSettings.hpp
+-
+ctime
+-
 
-../settings/SettingsStructs.h
+.././level/Wanderers.hpp
+iostream
+-
+vector
+-
+list
+-
+Level.hpp
+.././level/Level.hpp
+Wanderer.hpp
+.././level/Wanderer.hpp
+WandererBipedal.hpp
+.././level/WandererBipedal.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/Arena.cpp
+.././settings/SettingsStructs.h
+
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena.cpp
 Arena.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Arena.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/Arena.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena.hpp
 iostream
 -
 engine/zFramework.hpp
@@ -680,63 +702,63 @@ time.h
 sys/stat.h
 -
 Command.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Command.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Command.hpp
 CommandRegister.hpp
-/home/junhui/arena2d/arena2d-sim/arena/CommandRegister.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/CommandRegister.hpp
 Console.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Console.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Console.hpp
 PhysicsWorld.hpp
-/home/junhui/arena2d/arena2d-sim/arena/PhysicsWorld.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/PhysicsWorld.hpp
 ConsoleParameters.hpp
-/home/junhui/arena2d/arena2d-sim/arena/ConsoleParameters.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/ConsoleParameters.hpp
 MeanBuffer.hpp
-/home/junhui/arena2d/arena2d-sim/arena/MeanBuffer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/MeanBuffer.hpp
 Environment.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Environment.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Environment.hpp
 StatsDisplay.hpp
-/home/junhui/arena2d/arena2d-sim/arena/StatsDisplay.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/StatsDisplay.hpp
 CSVWriter.hpp
-/home/junhui/arena2d/arena2d-sim/arena/CSVWriter.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/CSVWriter.hpp
 Python.h
 -
 script_sources.generated.h
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/Arena_cmd.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena_cmd.cpp
 Arena.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Arena.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/Arena_processEvents.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena_processEvents.cpp
 Arena.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Arena.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/Arena_py.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena_py.cpp
 Arena.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Arena.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/Arena_render.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena_render.cpp
 Arena.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Arena.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/Arena_update.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena_update.cpp
 Arena.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Arena.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/CSVWriter.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/CSVWriter.cpp
 CSVWriter.hpp
-/home/junhui/arena2d/arena2d-sim/arena/CSVWriter.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/CSVWriter.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/CSVWriter.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/CSVWriter.hpp
 vector
 -
 stdio.h
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/Command.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Command.cpp
 Command.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Command.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Command.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/Command.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Command.hpp
 string
 -
 string.h
@@ -748,11 +770,11 @@ list
 engine/zLogfile.hpp
 -
 CommandStatus.hpp
-/home/junhui/arena2d/arena2d-sim/arena/CommandStatus.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/CommandStatus.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/CommandRegister.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/CommandRegister.hpp
 Command.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Command.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Command.hpp
 engine/zLogfile.hpp
 -
 list
@@ -760,13 +782,13 @@ list
 unordered_map
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/CommandStatus.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/CommandStatus.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/Console.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Console.cpp
 Console.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Console.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Console.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/Console.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Console.hpp
 engine/zTextView.hpp
 -
 engine/zFramework.hpp
@@ -776,11 +798,11 @@ engine/Renderer.hpp
 list
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/ConsoleParameters.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/ConsoleParameters.cpp
 ConsoleParameters.hpp
-/home/junhui/arena2d/arena2d-sim/arena/ConsoleParameters.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/ConsoleParameters.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/ConsoleParameters.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/ConsoleParameters.hpp
 stdio.h
 -
 stdlib.h
@@ -790,11 +812,13 @@ string.h
 string
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/Environment.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Environment.cpp
 Environment.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Environment.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Environment.hpp
+iostream
+-
 
-/home/junhui/arena2d/arena2d-sim/arena/Environment.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Environment.hpp
 engine/zFramework.hpp
 -
 engine/GlobalSettings.hpp
@@ -802,35 +826,35 @@ engine/GlobalSettings.hpp
 engine/Camera.hpp
 -
 Robot.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Robot.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Robot.hpp
 MeanBuffer.hpp
-/home/junhui/arena2d/arena2d-sim/arena/MeanBuffer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/MeanBuffer.hpp
 ConsoleParameters.hpp
-/home/junhui/arena2d/arena2d-sim/arena/ConsoleParameters.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/ConsoleParameters.hpp
 level/LevelFactory.hpp
 -
 iostream
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/LidarCast.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/LidarCast.cpp
 LidarCast.hpp
-/home/junhui/arena2d/arena2d-sim/arena/LidarCast.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/LidarCast.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/LidarCast.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/LidarCast.hpp
 box2d/box2d.h
 -
 engine/f_math.h
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/MeanBuffer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/MeanBuffer.hpp
 SDL2/SDL_timer.h
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/PhysicsWorld.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/PhysicsWorld.cpp
 PhysicsWorld.hpp
-/home/junhui/arena2d/arena2d-sim/arena/PhysicsWorld.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/PhysicsWorld.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/PhysicsWorld.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/PhysicsWorld.hpp
 engine/Renderer.hpp
 -
 engine/zSingleton.hpp
@@ -852,11 +876,11 @@ engine/zColor.hpp
 list
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/RectSpawn.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/RectSpawn.cpp
 RectSpawn.hpp
-/home/junhui/arena2d/arena2d-sim/arena/RectSpawn.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/RectSpawn.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/RectSpawn.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/RectSpawn.hpp
 engine/zRect.hpp
 -
 engine/Renderer.hpp
@@ -870,27 +894,27 @@ engine/zVector2d.hpp
 box2d/box2d.h
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/Robot.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Robot.cpp
 Robot.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Robot.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Robot.hpp
 math.h
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/Robot.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Robot.hpp
 PhysicsWorld.hpp
-/home/junhui/arena2d/arena2d-sim/arena/PhysicsWorld.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/PhysicsWorld.hpp
 LidarCast.hpp
-/home/junhui/arena2d/arena2d-sim/arena/LidarCast.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/LidarCast.hpp
 engine/zColor.hpp
 -
 engine/GlobalSettings.hpp
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/StatsDisplay.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/StatsDisplay.cpp
 StatsDisplay.hpp
-/home/junhui/arena2d/arena2d-sim/arena/StatsDisplay.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/StatsDisplay.hpp
 
-/home/junhui/arena2d/arena2d-sim/arena/StatsDisplay.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/StatsDisplay.hpp
 engine/zFramework.hpp
 -
 engine/Renderer.hpp
@@ -902,33 +926,33 @@ engine/zTextView.hpp
 vector
 -
 
-/home/junhui/arena2d/arena2d-sim/arena/main.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/main.cpp
 Arena.hpp
-/home/junhui/arena2d/arena2d-sim/arena/Arena.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/arena/Arena.hpp
 
-/home/junhui/arena2d/arena2d-sim/build/generated/dynamicSettings.generated.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/build/generated/dynamicSettings.generated.cpp
 engine/GlobalSettings.hpp
 -
 
-/home/junhui/arena2d/arena2d-sim/build/generated/script_sources.generated.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/build/generated/script_sources.generated.cpp
 
-/home/junhui/arena2d/arena2d-sim/engine/Camera.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Camera.cpp
 Camera.hpp
-/home/junhui/arena2d/arena2d-sim/engine/Camera.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Camera.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/Camera.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Camera.hpp
 Renderer.hpp
-/home/junhui/arena2d/arena2d-sim/engine/Renderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Renderer.hpp
 zVector2d.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zVector2d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector2d.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/GamePadButtonCodes.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/GamePadButtonCodes.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/GlobalSettings.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/GlobalSettings.cpp
 GlobalSettings.hpp
-/home/junhui/arena2d/arena2d-sim/engine/GlobalSettings.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/GlobalSettings.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/GlobalSettings.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/GlobalSettings.hpp
 SDL2/SDL.h
 -
 string
@@ -936,85 +960,85 @@ string
 settings/SettingsStructs.h
 -
 hashTable.h
-/home/junhui/arena2d/arena2d-sim/engine/hashTable.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/hashTable.h
 errno.h
 -
 zSingleton.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zSingleton.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zSingleton.hpp
 zLogfile.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zLogfile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zLogfile.hpp
 GamePadButtonCodes.hpp
-/home/junhui/arena2d/arena2d-sim/engine/GamePadButtonCodes.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/GamePadButtonCodes.hpp
 zStringTools.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zStringTools.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zStringTools.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/ParticleEmitter.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/ParticleEmitter.cpp
 ParticleEmitter.hpp
-/home/junhui/arena2d/arena2d-sim/engine/ParticleEmitter.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/ParticleEmitter.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/ParticleEmitter.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/ParticleEmitter.hpp
 Renderer.hpp
-/home/junhui/arena2d/arena2d-sim/engine/Renderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Renderer.hpp
 zFramework.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zFramework.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zFramework.hpp
 zColor.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zColor.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zColor.hpp
 f_math.h
-/home/junhui/arena2d/arena2d-sim/engine/f_math.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/f_math.h
 
-/home/junhui/arena2d/arena2d-sim/engine/Quadrangle.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Quadrangle.hpp
 zVector2d.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zVector2d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector2d.hpp
 zRect.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zRect.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zRect.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/Renderer.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Renderer.cpp
 Renderer.hpp
-/home/junhui/arena2d/arena2d-sim/engine/Renderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Renderer.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/Renderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Renderer.hpp
 f_math.h
-/home/junhui/arena2d/arena2d-sim/engine/f_math.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/f_math.h
 zSingleton.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zSingleton.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zSingleton.hpp
 zGraphicObject.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zGraphicObject.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zGraphicObject.hpp
 zMatrix4x4.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zMatrix4x4.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zMatrix4x4.hpp
 shader/TextShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/TextShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/TextShader.hpp
 shader/SpriteShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/SpriteShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/SpriteShader.hpp
 shader/ParticleShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/ParticleShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/ParticleShader.hpp
 shader/Color2DShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/Color2DShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/Color2DShader.hpp
 shader/Colorplex2DShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/Colorplex2DShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/Colorplex2DShader.hpp
 Quadrangle.hpp
-/home/junhui/arena2d/arena2d-sim/engine/Quadrangle.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Quadrangle.hpp
 limits
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/SettingsKeys.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/SettingsKeys.cpp
 GlobalSettings.hpp
-/home/junhui/arena2d/arena2d-sim/engine/GlobalSettings.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/GlobalSettings.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/Timer.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Timer.cpp
 Timer.hpp
-/home/junhui/arena2d/arena2d-sim/engine/Timer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Timer.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/Timer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/Timer.hpp
 SDL2/SDL.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/f_math.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/f_math.h
 math.h
 -
 stdlib.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/glew/glew.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/glew/glew.h
 stddef.h
 -
 inttypes.h
@@ -1030,13 +1054,13 @@ OpenGL/glu.h
 GL/glu.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/hashTable.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/hashTable.h
 string.h
 -
 list.h
-/home/junhui/arena2d/arena2d-sim/engine/list.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/list.h
 
-/home/junhui/arena2d/arena2d-sim/engine/list.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/list.h
 stdio.h
 -
 string.h
@@ -1044,35 +1068,35 @@ string.h
 stdlib.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/Color2DShader.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/Color2DShader.cpp
 Color2DShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/Color2DShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/Color2DShader.hpp
 color2dShader.generated.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/Color2DShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/Color2DShader.hpp
 zShaderProgram.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/zShaderProgram.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/zShaderProgram.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/Colorplex2DShader.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/Colorplex2DShader.cpp
 Colorplex2DShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/Colorplex2DShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/Colorplex2DShader.hpp
 colorplex2dShader.generated.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/Colorplex2DShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/Colorplex2DShader.hpp
 zShaderProgram.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/zShaderProgram.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/zShaderProgram.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/ParticleShader.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/ParticleShader.cpp
 ParticleShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/ParticleShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/ParticleShader.hpp
 particleShader.generated.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/ParticleShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/ParticleShader.hpp
 zShaderProgram.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/zShaderProgram.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/zShaderProgram.hpp
 engine/zVector2d.hpp
 -
 engine/zColor.hpp
@@ -1080,113 +1104,113 @@ engine/zColor.hpp
 assert.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/SpriteShader.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/SpriteShader.cpp
 SpriteShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/SpriteShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/SpriteShader.hpp
 spriteShader.generated.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/SpriteShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/SpriteShader.hpp
 zShaderProgram.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/zShaderProgram.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/zShaderProgram.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/TextShader.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/TextShader.cpp
 TextShader.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/TextShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/TextShader.hpp
 textShader.generated.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/TextShader.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/TextShader.hpp
 zShaderProgram.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/zShaderProgram.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/zShaderProgram.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/zShaderProgram.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/zShaderProgram.cpp
 zShaderProgram.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/zShaderProgram.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/zShaderProgram.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/shader/zShaderProgram.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/zShaderProgram.hpp
 ../glew/glew.h
-/home/junhui/arena2d/arena2d-sim/engine/glew/glew.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/glew/glew.h
 string.h
 -
 stdio.h
 -
 ../zStringTools.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zStringTools.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zStringTools.hpp
 ../zLogfile.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zLogfile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zLogfile.hpp
 ../zColor.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zColor.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zColor.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zColor.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zColor.cpp
 zColor.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zColor.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zColor.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zColor.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zColor.hpp
 math.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/zFont.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zFont.cpp
 zFont.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zFont.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zFont.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zFont.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zFont.hpp
 zGlyphMap.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zGlyphMap.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zGlyphMap.hpp
 zLogfile.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zLogfile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zLogfile.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zFramework.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zFramework.cpp
 zFramework.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zFramework.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zFramework.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zFramework.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zFramework.hpp
 SDL2/SDL.h
 -
 glew/glew.h
-/home/junhui/arena2d/arena2d-sim/engine/glew/glew.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/glew/glew.h
 stdio.h
 -
 list
 -
 zLogfile.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zLogfile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zLogfile.hpp
 assert.h
 -
 f_math.h
-/home/junhui/arena2d/arena2d-sim/engine/f_math.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/f_math.h
 
-/home/junhui/arena2d/arena2d-sim/engine/zGlyphMap.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zGlyphMap.cpp
 zGlyphMap.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zGlyphMap.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zGlyphMap.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zGlyphMap.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zGlyphMap.hpp
 zLogfile.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zLogfile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zLogfile.hpp
 zRect.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zRect.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zRect.hpp
 glew/glew.h
-/home/junhui/arena2d/arena2d-sim/engine/glew/glew.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/glew/glew.h
 ft2build.h
 -
 SDL2/SDL.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/zGraphicObject.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zGraphicObject.cpp
 zGraphicObject.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zGraphicObject.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zGraphicObject.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zGraphicObject.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zGraphicObject.hpp
 glew/glew.h
-/home/junhui/arena2d/arena2d-sim/engine/glew/glew.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/glew/glew.h
 math.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/zLogfile.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zLogfile.cpp
 zLogfile.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zLogfile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zLogfile.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zLogfile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zLogfile.hpp
 stdio.h
 -
 string.h
@@ -1194,85 +1218,85 @@ string.h
 stdarg.h
 -
 zSingleton.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zSingleton.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zSingleton.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zMatrix4x4.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zMatrix4x4.cpp
 zMatrix4x4.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zMatrix4x4.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zMatrix4x4.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zMatrix4x4.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zMatrix4x4.hpp
 zVector2d.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zVector2d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector2d.hpp
 zVector3d.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zVector3d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector3d.hpp
 zVector4d.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zVector4d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector4d.hpp
 math.h
 -
 string.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/zRect.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zRect.cpp
 zRect.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zRect.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zRect.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zRect.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zRect.hpp
 zVector2d.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zVector2d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector2d.hpp
 f_math.h
-/home/junhui/arena2d/arena2d-sim/engine/f_math.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/f_math.h
 
-/home/junhui/arena2d/arena2d-sim/engine/zSingleton.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zSingleton.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zStringTools.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zStringTools.cpp
 zStringTools.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zStringTools.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zStringTools.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zStringTools.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zStringTools.hpp
 string
 -
 zLogfile.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zLogfile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zLogfile.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zTextView.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zTextView.cpp
 zTextView.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zTextView.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zTextView.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zTextView.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zTextView.hpp
 zFont.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zFont.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zFont.hpp
 shader/zShaderProgram.hpp
-/home/junhui/arena2d/arena2d-sim/engine/shader/zShaderProgram.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/shader/zShaderProgram.hpp
 zMatrix4x4.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zMatrix4x4.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zMatrix4x4.hpp
 zColor.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zColor.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zColor.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zVector2d.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector2d.cpp
 zVector2d.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zVector2d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector2d.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zVector2d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector2d.hpp
 math.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/zVector3d.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector3d.cpp
 zVector3d.hpp
-/home/junhui/arena2d/arena2d-sim/engine/zVector3d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector3d.hpp
 
-/home/junhui/arena2d/arena2d-sim/engine/zVector3d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector3d.hpp
 math.h
 -
 
-/home/junhui/arena2d/arena2d-sim/engine/zVector4d.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/engine/zVector4d.hpp
 math.h
 -
 
-/home/junhui/arena2d/arena2d-sim/level/Level.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.cpp
 Level.hpp
-/home/junhui/arena2d/arena2d-sim/level/Level.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/Level.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.hpp
 vector
 -
 arena/PhysicsWorld.hpp
@@ -1290,83 +1314,85 @@ engine/zVector2d.hpp
 arena/ConsoleParameters.hpp
 -
 
-/home/junhui/arena2d/arena2d-sim/level/LevelCustom.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelCustom.cpp
 LevelCustom.hpp
-/home/junhui/arena2d/arena2d-sim/level/LevelCustom.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelCustom.hpp
+math.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/math.h
 
-/home/junhui/arena2d/arena2d-sim/level/LevelCustom.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelCustom.hpp
 Level.hpp
-/home/junhui/arena2d/arena2d-sim/level/Level.hpp
-WandererBipedal.hpp
-/home/junhui/arena2d/arena2d-sim/level/WandererBipedal.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.hpp
+Wanderers.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderers.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelEmpty.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelEmpty.cpp
 LevelEmpty.hpp
-/home/junhui/arena2d/arena2d-sim/level/LevelEmpty.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelEmpty.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelEmpty.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelEmpty.hpp
 Level.hpp
-/home/junhui/arena2d/arena2d-sim/level/Level.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelFactory.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelFactory.cpp
 LevelFactory.hpp
-/home/junhui/arena2d/arena2d-sim/level/LevelFactory.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelFactory.hpp
 level/LevelEmpty.hpp
-/home/junhui/arena2d/arena2d-sim/level/level/LevelEmpty.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/level/LevelEmpty.hpp
 level/LevelSVG.hpp
-/home/junhui/arena2d/arena2d-sim/level/level/LevelSVG.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/level/LevelSVG.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelFactory.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelFactory.hpp
 arena/CommandRegister.hpp
 -
 engine/zSingleton.hpp
 -
 Level.hpp
-/home/junhui/arena2d/arena2d-sim/level/Level.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.hpp
 LevelRandom.hpp
-/home/junhui/arena2d/arena2d-sim/level/LevelRandom.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelRandom.hpp
 LevelCustom.hpp
-/home/junhui/arena2d/arena2d-sim/level/LevelCustom.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelCustom.hpp
 LevelMaze.hpp
-/home/junhui/arena2d/arena2d-sim/level/LevelMaze.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelMaze.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelMaze.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelMaze.cpp
 LevelMaze.hpp
-/home/junhui/arena2d/arena2d-sim/level/LevelMaze.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelMaze.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelMaze.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelMaze.hpp
 Level.hpp
-/home/junhui/arena2d/arena2d-sim/level/Level.hpp
-Wanderer.hpp
-/home/junhui/arena2d/arena2d-sim/level/Wanderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.hpp
+Wanderers.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderers.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelRandom.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelRandom.cpp
 LevelRandom.hpp
-/home/junhui/arena2d/arena2d-sim/level/LevelRandom.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelRandom.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelRandom.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelRandom.hpp
 Level.hpp
-/home/junhui/arena2d/arena2d-sim/level/Level.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.hpp
 Wanderer.hpp
-/home/junhui/arena2d/arena2d-sim/level/Wanderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderer.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelSVG.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelSVG.cpp
 LevelSVG.hpp
-/home/junhui/arena2d/arena2d-sim/level/LevelSVG.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelSVG.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/LevelSVG.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/LevelSVG.hpp
 Level.hpp
-/home/junhui/arena2d/arena2d-sim/level/Level.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.hpp
 dirent.h
 -
 SVGFile.hpp
-/home/junhui/arena2d/arena2d-sim/level/SVGFile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/SVGFile.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/SVGFile.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/SVGFile.cpp
 SVGFile.hpp
-/home/junhui/arena2d/arena2d-sim/level/SVGFile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/SVGFile.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/SVGFile.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/SVGFile.hpp
 vector
 -
 arena/PhysicsWorld.hpp
@@ -1384,99 +1410,71 @@ engine/zStringTools.hpp
 arena/RectSpawn.hpp
 -
 
-/home/junhui/arena2d/arena2d-sim/level/Wanderer.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderer.cpp
 Wanderer.hpp
-/home/junhui/arena2d/arena2d-sim/level/Wanderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderer.hpp
 
-/home/junhui/arena2d/arena2d-sim/level/Wanderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderer.hpp
 arena/PhysicsWorld.hpp
 -
 engine/zVector2d.hpp
 -
 
-/home/junhui/arena2d/arena2d-sim/level/WandererBipedal.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/WandererBipedal.cpp
 WandererBipedal.hpp
-/home/junhui/arena2d/arena2d-sim/level/WandererBipedal.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/WandererBipedal.hpp
+math.h
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/math.h
 
-/home/junhui/arena2d/arena2d-sim/level/WandererBipedal.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/WandererBipedal.hpp
 Wanderer.hpp
-/home/junhui/arena2d/arena2d-sim/level/Wanderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderer.hpp
+arena/PhysicsWorld.hpp
+-
+engine/zVector2d.hpp
+-
+engine/GlobalSettings.hpp
+-
+ctime
+-
 
-/home/junhui/arena2d/arena2d-sim/settings/SettingsDefault.cpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderers.cpp
+Wanderers.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderers.hpp
+iostream
+-
+
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderers.hpp
+iostream
+-
+vector
+-
+list
+-
+Level.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Level.hpp
+Wanderer.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/Wanderer.hpp
+WandererBipedal.hpp
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/level/WandererBipedal.hpp
+
+/home/junhui/study/Masterarbeit/arena_work/arena2D/arena2d-sim/settings/SettingsDefault.cpp
 engine/GlobalSettings.hpp
 -
 
 /usr/include/freetype2/freetype/config/ftheader.h
-x86_64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-x86_64-linux-gnux32/freetype2/freetype/config/ftheader.h
--
-i386-linux-gnu/freetype2/freetype/config/ftheader.h
--
-aarch64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-alpha-linux-gnu/freetype2/freetype/config/ftheader.h
--
-arm-linux-gnueabihf/freetype2/freetype/config/ftheader.h
--
-arm-linux-gnueabi/freetype2/freetype/config/ftheader.h
--
-hppa-linux-gnu/freetype2/freetype/config/ftheader.h
--
-ia64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-m68k-linux-gnu/freetype2/freetype/config/ftheader.h
--
-mipsel-linux-gnu/freetype2/freetype/config/ftheader.h
--
-mips64el-linux-gnuabin32/freetype2/freetype/config/ftheader.h
--
-mips64el-linux-gnuabi64/freetype2/freetype/config/ftheader.h
--
-mips-linux-gnu/freetype2/freetype/config/ftheader.h
--
-mips64-linux-gnuabin32/freetype2/freetype/config/ftheader.h
--
-mips64-linux-gnuabi64/freetype2/freetype/config/ftheader.h
--
-or1k-linux-gnu/freetype2/freetype/config/ftheader.h
--
-powerpc-linux-gnuspe/freetype2/freetype/config/ftheader.h
--
-powerpc64le-linux-gnu/freetype2/freetype/config/ftheader.h
--
-powerpc64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-powerpc-linux-gnu/freetype2/freetype/config/ftheader.h
--
-s390x-linux-gnu/freetype2/freetype/config/ftheader.h
--
-s390-linux-gnu/freetype2/freetype/config/ftheader.h
--
-sh4-linux-gnu/freetype2/freetype/config/ftheader.h
--
-sparc64-linux-gnu/freetype2/freetype/config/ftheader.h
--
-sparc-linux-gnu/freetype2/freetype/config/ftheader.h
--
-x86_64-kfreebsd-gnu/freetype2/freetype/config/ftheader.h
--
-i386-kfreebsd-gnu/freetype2/freetype/config/ftheader.h
--
-i386-gnu/freetype2/freetype/config/ftheader.h
--
 
 /usr/include/freetype2/ft2build.h
 freetype/config/ftheader.h
 -
 
-/usr/include/python3.8/Python.h
+/usr/include/python3.6m/Python.h
 patchlevel.h
-/usr/include/python3.8/patchlevel.h
+/usr/include/python3.6m/patchlevel.h
 pyconfig.h
-/usr/include/python3.8/pyconfig.h
+/usr/include/python3.6m/pyconfig.h
 pymacconfig.h
-/usr/include/python3.8/pymacconfig.h
+/usr/include/python3.6m/pymacconfig.h
 limits.h
 -
 stdio.h
@@ -1496,391 +1494,347 @@ stddef.h
 assert.h
 -
 pyport.h
-/usr/include/python3.8/pyport.h
+/usr/include/python3.6m/pyport.h
 pymacro.h
-/usr/include/python3.8/pymacro.h
+/usr/include/python3.6m/pymacro.h
+pyatomic.h
+/usr/include/python3.6m/pyatomic.h
 pymath.h
-/usr/include/python3.8/pymath.h
+/usr/include/python3.6m/pymath.h
 pytime.h
-/usr/include/python3.8/pytime.h
+/usr/include/python3.6m/pytime.h
 pymem.h
-/usr/include/python3.8/pymem.h
+/usr/include/python3.6m/pymem.h
 object.h
-/usr/include/python3.8/object.h
+/usr/include/python3.6m/object.h
 objimpl.h
-/usr/include/python3.8/objimpl.h
+/usr/include/python3.6m/objimpl.h
 typeslots.h
-/usr/include/python3.8/typeslots.h
+/usr/include/python3.6m/typeslots.h
 pyhash.h
-/usr/include/python3.8/pyhash.h
+/usr/include/python3.6m/pyhash.h
 pydebug.h
-/usr/include/python3.8/pydebug.h
+/usr/include/python3.6m/pydebug.h
 bytearrayobject.h
-/usr/include/python3.8/bytearrayobject.h
+/usr/include/python3.6m/bytearrayobject.h
 bytesobject.h
-/usr/include/python3.8/bytesobject.h
+/usr/include/python3.6m/bytesobject.h
 unicodeobject.h
-/usr/include/python3.8/unicodeobject.h
+/usr/include/python3.6m/unicodeobject.h
 longobject.h
-/usr/include/python3.8/longobject.h
+/usr/include/python3.6m/longobject.h
 longintrepr.h
-/usr/include/python3.8/longintrepr.h
+/usr/include/python3.6m/longintrepr.h
 boolobject.h
-/usr/include/python3.8/boolobject.h
+/usr/include/python3.6m/boolobject.h
 floatobject.h
-/usr/include/python3.8/floatobject.h
+/usr/include/python3.6m/floatobject.h
 complexobject.h
-/usr/include/python3.8/complexobject.h
+/usr/include/python3.6m/complexobject.h
 rangeobject.h
-/usr/include/python3.8/rangeobject.h
+/usr/include/python3.6m/rangeobject.h
 memoryobject.h
-/usr/include/python3.8/memoryobject.h
+/usr/include/python3.6m/memoryobject.h
 tupleobject.h
-/usr/include/python3.8/tupleobject.h
+/usr/include/python3.6m/tupleobject.h
 listobject.h
-/usr/include/python3.8/listobject.h
+/usr/include/python3.6m/listobject.h
 dictobject.h
-/usr/include/python3.8/dictobject.h
+/usr/include/python3.6m/dictobject.h
 odictobject.h
-/usr/include/python3.8/odictobject.h
+/usr/include/python3.6m/odictobject.h
 enumobject.h
-/usr/include/python3.8/enumobject.h
+/usr/include/python3.6m/enumobject.h
 setobject.h
-/usr/include/python3.8/setobject.h
+/usr/include/python3.6m/setobject.h
 methodobject.h
-/usr/include/python3.8/methodobject.h
+/usr/include/python3.6m/methodobject.h
 moduleobject.h
-/usr/include/python3.8/moduleobject.h
+/usr/include/python3.6m/moduleobject.h
 funcobject.h
-/usr/include/python3.8/funcobject.h
+/usr/include/python3.6m/funcobject.h
 classobject.h
-/usr/include/python3.8/classobject.h
+/usr/include/python3.6m/classobject.h
 fileobject.h
-/usr/include/python3.8/fileobject.h
+/usr/include/python3.6m/fileobject.h
 pycapsule.h
-/usr/include/python3.8/pycapsule.h
+/usr/include/python3.6m/pycapsule.h
 traceback.h
-/usr/include/python3.8/traceback.h
+/usr/include/python3.6m/traceback.h
 sliceobject.h
-/usr/include/python3.8/sliceobject.h
+/usr/include/python3.6m/sliceobject.h
 cellobject.h
-/usr/include/python3.8/cellobject.h
+/usr/include/python3.6m/cellobject.h
 iterobject.h
-/usr/include/python3.8/iterobject.h
+/usr/include/python3.6m/iterobject.h
 genobject.h
-/usr/include/python3.8/genobject.h
+/usr/include/python3.6m/genobject.h
 descrobject.h
-/usr/include/python3.8/descrobject.h
+/usr/include/python3.6m/descrobject.h
 warnings.h
-/usr/include/python3.8/warnings.h
+/usr/include/python3.6m/warnings.h
 weakrefobject.h
-/usr/include/python3.8/weakrefobject.h
+/usr/include/python3.6m/weakrefobject.h
 structseq.h
-/usr/include/python3.8/structseq.h
+/usr/include/python3.6m/structseq.h
 namespaceobject.h
-/usr/include/python3.8/namespaceobject.h
-picklebufobject.h
-/usr/include/python3.8/picklebufobject.h
+/usr/include/python3.6m/namespaceobject.h
 codecs.h
-/usr/include/python3.8/codecs.h
+/usr/include/python3.6m/codecs.h
 pyerrors.h
-/usr/include/python3.8/pyerrors.h
-cpython/initconfig.h
-/usr/include/python3.8/cpython/initconfig.h
+/usr/include/python3.6m/pyerrors.h
 pystate.h
-/usr/include/python3.8/pystate.h
-context.h
-/usr/include/python3.8/context.h
+/usr/include/python3.6m/pystate.h
 pyarena.h
-/usr/include/python3.8/pyarena.h
+/usr/include/python3.6m/pyarena.h
 modsupport.h
-/usr/include/python3.8/modsupport.h
-compile.h
-/usr/include/python3.8/compile.h
+/usr/include/python3.6m/modsupport.h
 pythonrun.h
-/usr/include/python3.8/pythonrun.h
+/usr/include/python3.6m/pythonrun.h
 pylifecycle.h
-/usr/include/python3.8/pylifecycle.h
+/usr/include/python3.6m/pylifecycle.h
 ceval.h
-/usr/include/python3.8/ceval.h
+/usr/include/python3.6m/ceval.h
 sysmodule.h
-/usr/include/python3.8/sysmodule.h
+/usr/include/python3.6m/sysmodule.h
 osmodule.h
-/usr/include/python3.8/osmodule.h
+/usr/include/python3.6m/osmodule.h
 intrcheck.h
-/usr/include/python3.8/intrcheck.h
+/usr/include/python3.6m/intrcheck.h
 import.h
-/usr/include/python3.8/import.h
+/usr/include/python3.6m/import.h
 abstract.h
-/usr/include/python3.8/abstract.h
+/usr/include/python3.6m/abstract.h
 bltinmodule.h
-/usr/include/python3.8/bltinmodule.h
+/usr/include/python3.6m/bltinmodule.h
+compile.h
+/usr/include/python3.6m/compile.h
 eval.h
-/usr/include/python3.8/eval.h
+/usr/include/python3.6m/eval.h
 pyctype.h
-/usr/include/python3.8/pyctype.h
+/usr/include/python3.6m/pyctype.h
 pystrtod.h
-/usr/include/python3.8/pystrtod.h
+/usr/include/python3.6m/pystrtod.h
 pystrcmp.h
-/usr/include/python3.8/pystrcmp.h
+/usr/include/python3.6m/pystrcmp.h
 dtoa.h
-/usr/include/python3.8/dtoa.h
+/usr/include/python3.6m/dtoa.h
 fileutils.h
-/usr/include/python3.8/fileutils.h
+/usr/include/python3.6m/fileutils.h
 pyfpe.h
-/usr/include/python3.8/pyfpe.h
-tracemalloc.h
-/usr/include/python3.8/tracemalloc.h
+/usr/include/python3.6m/pyfpe.h
 
-/usr/include/python3.8/abstract.h
-cpython/abstract.h
-/usr/include/python3.8/cpython/abstract.h
+/usr/include/python3.6m/abstract.h
 
-/usr/include/python3.8/bltinmodule.h
+/usr/include/python3.6m/bltinmodule.h
 
-/usr/include/python3.8/boolobject.h
+/usr/include/python3.6m/boolobject.h
 
-/usr/include/python3.8/bytearrayobject.h
+/usr/include/python3.6m/bytearrayobject.h
 stdarg.h
 -
 
-/usr/include/python3.8/bytesobject.h
+/usr/include/python3.6m/bytesobject.h
 stdarg.h
 -
 
-/usr/include/python3.8/cellobject.h
+/usr/include/python3.6m/cellobject.h
 
-/usr/include/python3.8/ceval.h
+/usr/include/python3.6m/ceval.h
 
-/usr/include/python3.8/classobject.h
+/usr/include/python3.6m/classobject.h
 
-/usr/include/python3.8/code.h
+/usr/include/python3.6m/code.h
 
-/usr/include/python3.8/codecs.h
+/usr/include/python3.6m/codecs.h
 
-/usr/include/python3.8/compile.h
+/usr/include/python3.6m/compile.h
 code.h
-/usr/include/python3.8/code.h
+/usr/include/python3.6m/code.h
 
-/usr/include/python3.8/complexobject.h
+/usr/include/python3.6m/complexobject.h
 
-/usr/include/python3.8/context.h
+/usr/include/python3.6m/descrobject.h
 
-/usr/include/python3.8/cpython/abstract.h
+/usr/include/python3.6m/dictobject.h
 
-/usr/include/python3.8/cpython/dictobject.h
+/usr/include/python3.6m/dtoa.h
 
-/usr/include/python3.8/cpython/fileobject.h
+/usr/include/python3.6m/dynamic_annotations.h
 
-/usr/include/python3.8/cpython/initconfig.h
+/usr/include/python3.6m/enumobject.h
 
-/usr/include/python3.8/cpython/object.h
+/usr/include/python3.6m/eval.h
 
-/usr/include/python3.8/cpython/objimpl.h
+/usr/include/python3.6m/fileobject.h
 
-/usr/include/python3.8/cpython/pyerrors.h
+/usr/include/python3.6m/fileutils.h
 
-/usr/include/python3.8/cpython/pylifecycle.h
+/usr/include/python3.6m/floatobject.h
 
-/usr/include/python3.8/cpython/pymem.h
+/usr/include/python3.6m/funcobject.h
 
-/usr/include/python3.8/cpython/pystate.h
-cpython/initconfig.h
-/usr/include/python3.8/cpython/cpython/initconfig.h
+/usr/include/python3.6m/genobject.h
 
-/usr/include/python3.8/cpython/sysmodule.h
+/usr/include/python3.6m/import.h
 
-/usr/include/python3.8/cpython/traceback.h
+/usr/include/python3.6m/intrcheck.h
 
-/usr/include/python3.8/cpython/tupleobject.h
+/usr/include/python3.6m/iterobject.h
 
-/usr/include/python3.8/cpython/unicodeobject.h
+/usr/include/python3.6m/listobject.h
 
-/usr/include/python3.8/descrobject.h
+/usr/include/python3.6m/longintrepr.h
 
-/usr/include/python3.8/dictobject.h
-cpython/dictobject.h
-/usr/include/python3.8/cpython/dictobject.h
+/usr/include/python3.6m/longobject.h
 
-/usr/include/python3.8/dtoa.h
+/usr/include/python3.6m/memoryobject.h
 
-/usr/include/python3.8/enumobject.h
+/usr/include/python3.6m/methodobject.h
 
-/usr/include/python3.8/eval.h
-
-/usr/include/python3.8/fileobject.h
-cpython/fileobject.h
-/usr/include/python3.8/cpython/fileobject.h
-
-/usr/include/python3.8/fileutils.h
-
-/usr/include/python3.8/floatobject.h
-
-/usr/include/python3.8/funcobject.h
-
-/usr/include/python3.8/genobject.h
-pystate.h
-/usr/include/python3.8/pystate.h
-
-/usr/include/python3.8/import.h
-
-/usr/include/python3.8/intrcheck.h
-
-/usr/include/python3.8/iterobject.h
-
-/usr/include/python3.8/listobject.h
-
-/usr/include/python3.8/longintrepr.h
-
-/usr/include/python3.8/longobject.h
-
-/usr/include/python3.8/memoryobject.h
-
-/usr/include/python3.8/methodobject.h
-
-/usr/include/python3.8/modsupport.h
+/usr/include/python3.6m/modsupport.h
 stdarg.h
 -
 
-/usr/include/python3.8/moduleobject.h
+/usr/include/python3.6m/moduleobject.h
 
-/usr/include/python3.8/namespaceobject.h
+/usr/include/python3.6m/namespaceobject.h
 
-/usr/include/python3.8/object.h
+/usr/include/python3.6m/object.h
+
+/usr/include/python3.6m/objimpl.h
 pymem.h
-/usr/include/python3.8/pymem.h
-cpython/object.h
-/usr/include/python3.8/cpython/object.h
+/usr/include/python3.6m/pymem.h
 
-/usr/include/python3.8/objimpl.h
-pymem.h
-/usr/include/python3.8/pymem.h
-cpython/objimpl.h
-/usr/include/python3.8/cpython/objimpl.h
+/usr/include/python3.6m/odictobject.h
 
-/usr/include/python3.8/odictobject.h
+/usr/include/python3.6m/osmodule.h
 
-/usr/include/python3.8/osmodule.h
+/usr/include/python3.6m/patchlevel.h
 
-/usr/include/python3.8/patchlevel.h
+/usr/include/python3.6m/pyarena.h
 
-/usr/include/python3.8/picklebufobject.h
-
-/usr/include/python3.8/pyarena.h
-
-/usr/include/python3.8/pycapsule.h
-
-/usr/include/python3.8/pyconfig.h
-x86_64-linux-gnu/python3.8/pyconfig.h
--
-x86_64-linux-gnux32/python3.8/pyconfig.h
--
-i386-linux-gnu/python3.8/pyconfig.h
--
-aarch64-linux-gnu/python3.8/pyconfig.h
--
-alpha-linux-gnu/python3.8/pyconfig.h
--
-arm-linux-gnueabihf/python3.8/pyconfig.h
--
-arm-linux-gnueabi/python3.8/pyconfig.h
--
-hppa-linux-gnu/python3.8/pyconfig.h
--
-ia64-linux-gnu/python3.8/pyconfig.h
--
-m68k-linux-gnu/python3.8/pyconfig.h
--
-mipsisa32r6el-linux-gnu/python3.8/pyconfig.h
--
-mipsisa64r6el-linux-gnuabin32/python3.8/pyconfig.h
--
-mipsisa64r6el-linux-gnuabi64/python3.8/pyconfig.h
--
-mipsisa32r6-linux-gnu/python3.8/pyconfig.h
--
-mipsisa64r6-linux-gnuabin32/python3.8/pyconfig.h
--
-mipsisa64r6-linux-gnuabi64/python3.8/pyconfig.h
--
-mipsel-linux-gnu/python3.8/pyconfig.h
--
-mips64el-linux-gnuabin32/python3.8/pyconfig.h
--
-mips64el-linux-gnuabi64/python3.8/pyconfig.h
--
-mips-linux-gnu/python3.8/pyconfig.h
--
-mips64-linux-gnuabin32/python3.8/pyconfig.h
--
-mips64-linux-gnuabi64/python3.8/pyconfig.h
--
-or1k-linux-gnu/python3.8/pyconfig.h
--
-powerpc-linux-gnuspe/python3.8/pyconfig.h
--
-powerpc64le-linux-gnu/python3.8/pyconfig.h
--
-powerpc64-linux-gnu/python3.8/pyconfig.h
--
-powerpc-linux-gnu/python3.8/pyconfig.h
--
-s390x-linux-gnu/python3.8/pyconfig.h
--
-s390-linux-gnu/python3.8/pyconfig.h
--
-sh4-linux-gnu/python3.8/pyconfig.h
--
-sparc64-linux-gnu/python3.8/pyconfig.h
--
-sparc-linux-gnu/python3.8/pyconfig.h
--
-riscv64-linux-gnu/python3.8/pyconfig.h
--
-riscv32-linux-gnu/python3.8/pyconfig.h
--
-x86_64-kfreebsd-gnu/python3.8/pyconfig.h
--
-i386-kfreebsd-gnu/python3.8/pyconfig.h
--
-i386-gnu/python3.8/pyconfig.h
--
-
-/usr/include/python3.8/pyctype.h
-
-/usr/include/python3.8/pydebug.h
-
-/usr/include/python3.8/pyerrors.h
-stdarg.h
--
-cpython/pyerrors.h
-/usr/include/python3.8/cpython/pyerrors.h
-
-/usr/include/python3.8/pyfpe.h
-
-/usr/include/python3.8/pyhash.h
-
-/usr/include/python3.8/pylifecycle.h
-cpython/pylifecycle.h
-/usr/include/python3.8/cpython/pylifecycle.h
-
-/usr/include/python3.8/pymacconfig.h
-
-/usr/include/python3.8/pymacro.h
-
-/usr/include/python3.8/pymath.h
+/usr/include/python3.6m/pyatomic.h
+dynamic_annotations.h
+/usr/include/python3.6m/dynamic_annotations.h
 pyconfig.h
-/usr/include/python3.8/pyconfig.h
+/usr/include/python3.6m/pyconfig.h
+stdatomic.h
+-
 
-/usr/include/python3.8/pymem.h
+/usr/include/python3.6m/pycapsule.h
+
+/usr/include/python3.6m/pyconfig.h
+x86_64-linux-gnu/python3.6m/pyconfig.h
+-
+x86_64-linux-gnux32/python3.6m/pyconfig.h
+-
+i386-linux-gnu/python3.6m/pyconfig.h
+-
+aarch64-linux-gnu/python3.6m/pyconfig.h
+-
+alpha-linux-gnu/python3.6m/pyconfig.h
+-
+arm-linux-gnueabihf/python3.6m/pyconfig.h
+-
+arm-linux-gnueabi/python3.6m/pyconfig.h
+-
+hppa-linux-gnu/python3.6m/pyconfig.h
+-
+ia64-linux-gnu/python3.6m/pyconfig.h
+-
+m68k-linux-gnu/python3.6m/pyconfig.h
+-
+mipsisa32r6el-linux-gnu/python3.6m/pyconfig.h
+-
+mipsisa64r6el-linux-gnuabin32/python3.6m/pyconfig.h
+-
+mipsisa64r6el-linux-gnuabi64/python3.6m/pyconfig.h
+-
+mipsisa32r6-linux-gnu/python3.6m/pyconfig.h
+-
+mipsisa64r6-linux-gnuabin32/python3.6m/pyconfig.h
+-
+mipsisa64r6-linux-gnuabi64/python3.6m/pyconfig.h
+-
+mipsel-linux-gnu/python3.6m/pyconfig.h
+-
+mips64el-linux-gnuabin32/python3.6m/pyconfig.h
+-
+mips64el-linux-gnuabi64/python3.6m/pyconfig.h
+-
+mips-linux-gnu/python3.6m/pyconfig.h
+-
+mips64-linux-gnuabin32/python3.6m/pyconfig.h
+-
+mips64-linux-gnuabi64/python3.6m/pyconfig.h
+-
+or1k-linux-gnu/python3.6m/pyconfig.h
+-
+powerpc-linux-gnuspe/python3.6m/pyconfig.h
+-
+powerpc64le-linux-gnu/python3.6m/pyconfig.h
+-
+powerpc64-linux-gnu/python3.6m/pyconfig.h
+-
+powerpc-linux-gnu/python3.6m/pyconfig.h
+-
+s390x-linux-gnu/python3.6m/pyconfig.h
+-
+s390-linux-gnu/python3.6m/pyconfig.h
+-
+sh4-linux-gnu/python3.6m/pyconfig.h
+-
+sparc64-linux-gnu/python3.6m/pyconfig.h
+-
+sparc-linux-gnu/python3.6m/pyconfig.h
+-
+riscv64-linux-gnu/python3.6m/pyconfig.h
+-
+riscv32-linux-gnu/python3.6m/pyconfig.h
+-
+x86_64-kfreebsd-gnu/python3.6m/pyconfig.h
+-
+i386-kfreebsd-gnu/python3.6m/pyconfig.h
+-
+i386-gnu/python3.6m/pyconfig.h
+-
+
+/usr/include/python3.6m/pyctype.h
+
+/usr/include/python3.6m/pydebug.h
+
+/usr/include/python3.6m/pyerrors.h
+stdarg.h
+-
+
+/usr/include/python3.6m/pyfpe.h
+signal.h
+-
+setjmp.h
+-
+math.h
+-
+
+/usr/include/python3.6m/pyhash.h
+
+/usr/include/python3.6m/pylifecycle.h
+
+/usr/include/python3.6m/pymacconfig.h
+
+/usr/include/python3.6m/pymacro.h
+
+/usr/include/python3.6m/pymath.h
+pyconfig.h
+/usr/include/python3.6m/pyconfig.h
+
+/usr/include/python3.6m/pymem.h
 pyport.h
-/usr/include/python3.8/pyport.h
-cpython/pymem.h
-/usr/include/python3.8/cpython/pymem.h
+/usr/include/python3.6m/pyport.h
 
-/usr/include/python3.8/pyport.h
+/usr/include/python3.6m/pyport.h
 pyconfig.h
-/usr/include/python3.8/pyconfig.h
+/usr/include/python3.6m/pyconfig.h
 inttypes.h
 -
 stdlib.h
@@ -1907,70 +1861,62 @@ sys/types.h
 -
 sys/termio.h
 -
+termios.h
+-
+osreldate.h
+-
 ctype.h
 -
 wctype.h
 -
-
-/usr/include/python3.8/pystate.h
-pythread.h
-/usr/include/python3.8/pythread.h
-cpython/pystate.h
-/usr/include/python3.8/cpython/pystate.h
-
-/usr/include/python3.8/pystrcmp.h
-
-/usr/include/python3.8/pystrtod.h
-
-/usr/include/python3.8/pythonrun.h
-
-/usr/include/python3.8/pythread.h
-pthread.h
+android/api-level.h
 -
 
-/usr/include/python3.8/pytime.h
+/usr/include/python3.6m/pystate.h
+
+/usr/include/python3.6m/pystrcmp.h
+
+/usr/include/python3.6m/pystrtod.h
+
+/usr/include/python3.6m/pythonrun.h
+
+/usr/include/python3.6m/pytime.h
 pyconfig.h
-/usr/include/python3.8/pyconfig.h
+/usr/include/python3.6m/pyconfig.h
 object.h
-/usr/include/python3.8/object.h
+/usr/include/python3.6m/object.h
 
-/usr/include/python3.8/rangeobject.h
+/usr/include/python3.6m/rangeobject.h
 
-/usr/include/python3.8/setobject.h
+/usr/include/python3.6m/setobject.h
 
-/usr/include/python3.8/sliceobject.h
+/usr/include/python3.6m/sliceobject.h
 
-/usr/include/python3.8/structseq.h
+/usr/include/python3.6m/structseq.h
 
-/usr/include/python3.8/sysmodule.h
-cpython/sysmodule.h
-/usr/include/python3.8/cpython/sysmodule.h
+/usr/include/python3.6m/sysmodule.h
 
-/usr/include/python3.8/traceback.h
-cpython/traceback.h
-/usr/include/python3.8/cpython/traceback.h
+/usr/include/python3.6m/traceback.h
+pystate.h
+/usr/include/python3.6m/pystate.h
 
-/usr/include/python3.8/tracemalloc.h
+/usr/include/python3.6m/tupleobject.h
 
-/usr/include/python3.8/tupleobject.h
-cpython/tupleobject.h
-/usr/include/python3.8/cpython/tupleobject.h
+/usr/include/python3.6m/typeslots.h
 
-/usr/include/python3.8/typeslots.h
-
-/usr/include/python3.8/unicodeobject.h
+/usr/include/python3.6m/unicodeobject.h
 stdarg.h
 -
 ctype.h
 -
+time.h
+-
 wchar.h
 -
-cpython/unicodeobject.h
-/usr/include/python3.8/cpython/unicodeobject.h
 
-/usr/include/python3.8/warnings.h
+/usr/include/python3.6m/warnings.h
 
-/usr/include/python3.8/weakrefobject.h
+/usr/include/python3.6m/weakrefobject.h
 
 generated/color2dShader.generated.h
 

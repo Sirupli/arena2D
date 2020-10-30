@@ -56,6 +56,7 @@ typedef struct{
 	int num_obstacles; 			// number of static obstacles
 	float dynamic_obstacle_size;// size of dynamic obstacle
 	int num_dynamic_obstacles;	// number of dynamic obstacles in static_dynamic level
+        float max_time_chatting;	// maximum time for chatting between two wanderers
 	float obstacle_speed;		// in m/s for dynamic obstacles
 	float goal_size;			// diameter of circular goal to reach
 	string svg_path;			// path to folder where svg files are stored
@@ -64,6 +65,7 @@ typedef struct{
 typedef struct{
 	float max_time;				// maximum time per episode (actual time, so physics.time_step influences maximum number of steps per episode)
 	int episode_over_on_hit; 	// if set to 1 episode ends if an obstacle is hit
+	int episode_over_on_human; 	// if set to 1 episode ends if a human is too close
 	float reward_goal;			// reward for reaching goal
 	float reward_towards_goal;	// reward when distance to goal decreases
 	float reward_away_from_goal;// reward when distance to goal increases

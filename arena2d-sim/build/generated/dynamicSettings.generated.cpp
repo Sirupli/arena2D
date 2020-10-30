@@ -229,6 +229,12 @@ void GlobalSettings::initSymbolTable()
 	option->data = &(_settings.training.episode_over_on_hit);
 	h_add(_hashTable, "training.episode_over_on_hit", 29, option, sizeof(sSettingsOption));
 
+	//training.episode_over_on_human
+	option = (sSettingsOption*)malloc(sizeof(sSettingsOption));
+	option->type = SETTINGS_TYPE_INT;
+	option->data = &(_settings.training.episode_over_on_human);
+	h_add(_hashTable, "training.episode_over_on_human", 31, option, sizeof(sSettingsOption));
+
 	//training.reward_goal
 	option = (sSettingsOption*)malloc(sizeof(sSettingsOption));
 	option->type = SETTINGS_TYPE_FLOAT;
@@ -252,6 +258,24 @@ void GlobalSettings::initSymbolTable()
 	option->type = SETTINGS_TYPE_FLOAT;
 	option->data = &(_settings.training.reward_hit);
 	h_add(_hashTable, "training.reward_hit", 20, option, sizeof(sSettingsOption));
+
+	//training.safety_distance_human
+	option = (sSettingsOption*)malloc(sizeof(sSettingsOption));
+	option->type = SETTINGS_TYPE_FLOAT;
+	option->data = &(_settings.training.safety_distance_human);
+	h_add(_hashTable, "training.safety_distance_human", 31, option, sizeof(sSettingsOption));
+
+	//training.reward_exceed_safety_distance
+	option = (sSettingsOption*)malloc(sizeof(sSettingsOption));
+	option->type = SETTINGS_TYPE_FLOAT;
+	option->data = &(_settings.training.reward_exceed_safety_distance);
+	h_add(_hashTable, "training.reward_exceed_safety_distance", 39, option, sizeof(sSettingsOption));
+
+	//training.num_obs_humans
+	option = (sSettingsOption*)malloc(sizeof(sSettingsOption));
+	option->type = SETTINGS_TYPE_FLOAT;
+	option->data = &(_settings.training.num_obs_humans);
+	h_add(_hashTable, "training.num_obs_humans", 24, option, sizeof(sSettingsOption));
 
 	//training.reward_time_out
 	option = (sSettingsOption*)malloc(sizeof(sSettingsOption));
@@ -487,6 +511,12 @@ void GlobalSettings::initSymbolTable()
 	option->data = &(_settings.stage.num_dynamic_obstacles);
 	h_add(_hashTable, "stage.num_dynamic_obstacles", 28, option, sizeof(sSettingsOption));
 
+	//stage.max_time_chatting
+	option = (sSettingsOption*)malloc(sizeof(sSettingsOption));
+	option->type = SETTINGS_TYPE_FLOAT;
+	option->data = &(_settings.stage.max_time_chatting);
+	h_add(_hashTable, "stage.max_time_chatting", 24, option, sizeof(sSettingsOption));
+
 	//stage.obstacle_speed
 	option = (sSettingsOption*)malloc(sizeof(sSettingsOption));
 	option->type = SETTINGS_TYPE_FLOAT;
@@ -564,6 +594,7 @@ void GlobalSettings::writeToFile(FILE * f)
 	zStringTools::fromFloat(_settings.training.max_time, float_buffer);
 	fprintf(f, "\tmax_time = %s   # maximum time per episode (actual time, so physics.time_step influences maximum number of steps per episode)\n", float_buffer);
 	fprintf(f, "\tepisode_over_on_hit = %d   # if set to 1 episode ends if an obstacle is hit\n", _settings.training.episode_over_on_hit);
+	fprintf(f, "\tepisode_over_on_human = %d   # if set to 1 episode ends if a human is too close\n", _settings.training.episode_over_on_human);
 	zStringTools::fromFloat(_settings.training.reward_goal, float_buffer);
 	fprintf(f, "\treward_goal = %s   # reward for reaching goal\n", float_buffer);
 	zStringTools::fromFloat(_settings.training.reward_towards_goal, float_buffer);
@@ -572,6 +603,12 @@ void GlobalSettings::writeToFile(FILE * f)
 	fprintf(f, "\treward_away_from_goal = %s   # reward when distance to goal increases\n", float_buffer);
 	zStringTools::fromFloat(_settings.training.reward_hit, float_buffer);
 	fprintf(f, "\treward_hit = %s   # reward for hitting obstacle\n", float_buffer);
+	zStringTools::fromFloat(_settings.training.safety_distance_human, float_buffer);
+	fprintf(f, "\tsafety_distance_human = %s   # safty distance to human, which should be always fullfilled\n", float_buffer);
+	zStringTools::fromFloat(_settings.training.reward_exceed_safety_distance, float_buffer);
+	fprintf(f, "\treward_exceed_safety_distance = %s   #float reward_distance_to_human_increased;  // reward when distance to human increases\n", float_buffer);
+	zStringTools::fromFloat(_settings.training.num_obs_humans, float_buffer);
+	fprintf(f, "\tnum_obs_humans = %s   # maximum number of humans the agent can observe inside the camera view\n", float_buffer);
 	zStringTools::fromFloat(_settings.training.reward_time_out, float_buffer);
 	fprintf(f, "\treward_time_out = %s   # reward when episode timed out (after max_time seconds)\n", float_buffer);
 	fprintf(f, "\tnum_envs = %d   # number of parallel environments\n", _settings.training.num_envs);
@@ -668,6 +705,8 @@ void GlobalSettings::writeToFile(FILE * f)
 	zStringTools::fromFloat(_settings.stage.dynamic_obstacle_size, float_buffer);
 	fprintf(f, "\tdynamic_obstacle_size = %s   # size of dynamic obstacle\n", float_buffer);
 	fprintf(f, "\tnum_dynamic_obstacles = %d   # number of dynamic obstacles in static_dynamic level\n", _settings.stage.num_dynamic_obstacles);
+	zStringTools::fromFloat(_settings.stage.max_time_chatting, float_buffer);
+	fprintf(f, "\tmax_time_chatting = %s   # maximum time for chatting between two wanderers\n", float_buffer);
 	zStringTools::fromFloat(_settings.stage.obstacle_speed, float_buffer);
 	fprintf(f, "\tobstacle_speed = %s   # in m/s for dynamic obstacles\n", float_buffer);
 	zStringTools::fromFloat(_settings.stage.goal_size, float_buffer);

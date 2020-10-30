@@ -26,7 +26,8 @@ public:
 	/* update
 	 */
 	void update() override{
-		wanderers.update();
+               if(_dynamic){
+		wanderers.update();}
 	}
 
 	/* render spawn area
@@ -50,16 +51,16 @@ public:
 	/* check if robot had contact with a human
  	 * @return true if contact with human and false otherwise
 	 */
-	bool checkHumanContact(b2Fixture * other_fixture) override{
-		return wanderers.checkHumanContact(other_fixture);
-	}
+	//bool checkHumanContact(b2Fixture * other_fixture) override{
+	//	return wanderers.checkHumanContact(other_fixture);
+	//}
 
 	// from here all the functions are from old version
 	//b2Body* generateRandomBody(float min_radius, float max_radius, zRect * aabb);
         b2Body* generateRandomWalls11(int index, zRect * aabb);
    	b2Body* generateRandomWalls22(int index, int numm, zRect * aabb);
    	
-   	void getClosestHumanDistance(float & l2_h, float & angle_h)
+   	//void getClosestHumanDistance(float & l2_h, float & angle_h);
 
 	/* get the closest human 
 	 * @return Box2D fixture of the goal or NULL if goal does not exist
@@ -75,9 +76,11 @@ public:
 	 * @param relative distance and angle to the robot of the closest human 
 	 */
 
-        void getClosestHumanDistanceAngle(float & l2_h, float & angle_h){
-                   wanderers.getClosestHumanDistance(l2_h,angle_h);             
-        }
+        //void getClosestHumanDistanceAngle(float & l2_h, float & angle_h){
+           //        wanderers.getClosestHumanDistance(l2_h,angle_h);             
+        //}
+        /* get dynamic flag*/
+        bool getDynamicFlag() override {return _dynamic;}
 
 
 

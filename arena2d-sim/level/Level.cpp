@@ -192,3 +192,132 @@ void Level::renderGoalSpawn()
 	Z_SHADER->setColor(zColor(LEVEL_GOAL_SPAWN_COLOR));
 	_goalSpawnArea.render();
 }
+
+//corridor spawning avoid center spawning at same center like other obstacles
+bool Level::obstacleSpawnUntilValid(RectSpawn *static_spawn, const std::list<b2Vec2 *> &existing_positions, b2Vec2 &p) {
+    bool spawn_found = false;
+    //printf("obstacleSpawnUntilValid\n");
+    int count = 0;
+    while (!spawn_found && count < 200) {
+        count++;
+        spawn_found = true;
+        static_spawn->getRandomPoint(p);
+        bool boundary_cond = true;
+        while (boundary_cond) {
+            if (p.y < 1.55 && p.x > -1.2 && p.y > -1 && p.x > -1.4) {
+                boundary_cond = false;
+            } else {
+                static_spawn->getRandomPoint(p);
+            }
+        }
+        for (auto &existing_position : existing_positions) {
+            b2Vec2 posi(existing_position->x, existing_position->y);
+            if ((posi - p).Length() < _SETTINGS->stage.max_obstacle_size + 0.5) {
+                spawn_found = false;
+                break;
+            }
+        }
+    }
+    if (!spawn_found) {
+        printf("##################### No place found after 100 TRIES ############\n");
+        printf("##################### No place found after 100 TRIES ############\n");
+        printf("##################### No place found after 100 TRIES ############\n");
+        printf("##################### No place found after 100 TRIES ############\n");
+    }
+    return spawn_found;
+}
+
+
+
+
+
+bool Level::obstacleSpawnUntilValid(RectSpawn *static_spawn, const std::list<zRect *> &existing_boxes, b2Vec2 &p,
+                                    int obstacle_type) {
+    int scale_factor = 2.5;
+    bool spawn_found = false;
+    //printf("obstacleSpawnUntilValid\n");
+    int count = 0;
+    float max_random_size = (_SETTINGS->stage.max_obstacle_size / 2);
+    float max_horizontal_width = scale_factor * (_SETTINGS->stage.max_obstacle_size / 2);
+    float max_horizontal_height = scale_factor * _levelDef.robot->getRadius() * 2;
+    float max_vertial_height = scale_factor * (_SETTINGS->stage.max_obstacle_size / 2);
+    float max_vertical_width = scale_factor * _levelDef.robot->getRadius() * 2;
+    while (!spawn_found && count < 200) {
+        count++;
+        spawn_found = true;
+        static_spawn->getRandomPoint(p);
+        bool boundary_cond = true;
+        while (boundary_cond) {
+            zRect center;
+            if (obstacle_type == 2) {
+                center.x = 0 + max_horizontal_width/2.0f;
+                center.y = 0;
+                center.w = max_horizontal_width/2.0f + 0.4f;
+                center.h = 0.9f;
+            } else if (obstacle_type == 4 ) {
+                center.x = 0;
+                center.y = 0 + max_vertial_height/2.0f;
+                center.w = 0.9f;
+                center.h = max_vertial_height/2.0f + 0.4f;
+            } else {
+                center.x = 0;
+                center.y = 0;
+                center.w = 0.9f;
+                center.h = 0.9f;
+            }
+
+            zVector2D pointi;
+            pointi.x = p.x;
+            pointi.y = p.y;
+            if (!center.checkPoint(pointi) &&
+            p.y < 1.55 && p.x > -1.2 && p.y > -1 && p.x > -1.4) {
+                boundary_cond = false;
+            } else {
+                static_spawn->getRandomPoint(p);
+            }
+        }
+        //if (obstacle_type == 2 || obstacle_type == 4 )  {
+            for (auto &existing_box : existing_boxes) {
+                if (obstacle_type == 2) {
+                    //horizontal
+                    zRect hori;
+                    hori.x = p.x - max_horizontal_width/2.0f;
+                    hori.y = p.y + max_horizontal_height/2.0f;
+                    hori.w = max_horizontal_width;
+                    hori.h = max_horizontal_height;
+                    if (zRect::intersect(hori, *existing_box)) {
+                        spawn_found = false;
+                        break;
+                    }
+                } else if (obstacle_type == 4) {
+                    //vertical
+                    zRect verti;
+                    verti.x = p.x - max_vertical_width/2.0f;
+                    verti.y = p.y - max_vertial_height/2.0f;
+                    verti.w = max_vertical_width;
+                    verti.h = max_vertial_height;
+                    if (zRect::intersect(verti, *existing_box)) {
+                        spawn_found = false;
+                        break;
+                    }
+                } else {
+                    zRect randi;
+                    randi.x = p.x + max_random_size/2.0f;
+                    randi.y = p.y + max_random_size/2.0f;
+                    randi.w = max_random_size;
+                    randi.h = max_random_size;
+                    if (zRect::intersect(randi, *existing_box)) {
+                        spawn_found = false;
+                        break;
+                    }
+                }
+//                if (p.x <= existing_box->x + existing_box->w && p.x >= existing_box->x &&
+//                    p.y <= existing_box->y + existing_box->h && p.y >= existing_box->y) {
+//                    spawn_found = false;
+//                    break;
+//                }
+           // }
+        }
+    }
+    return spawn_found;
+}

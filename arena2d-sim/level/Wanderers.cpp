@@ -1,5 +1,5 @@
 #include "Wanderers.hpp"
-
+#include <iostream>
 void Wanderers::freeWanderers(){
     // free all wanderers
     for(int i = 0; i < _wanderers.size(); i++){
@@ -23,6 +23,8 @@ void Wanderers::reset(RectSpawn & _dynamicSpawn){
     _last_observed_wanderers.clear();
     _infos_of_wanderers.clear();
     _observed_wanderers.clear();
+    velocity_linear_h = _SETTINGS->stage.obstacle_speed;
+    velocity_angle_h = 0.f;
 
     calculateDistanceAngle();
     getClosestWanderers();
@@ -100,14 +102,12 @@ void Wanderers::calculateDistanceAngle(){
         //robot_facing.rotate(robot_transform.q.GetAngle());// robot facing vector
         //float angle = f_deg(zVector2D::signedAngle(robot_facing, zVector2D(robot_to_wanderer.x, robot_to_wanderer.y)));// angle between robot facing vector and robot to wanderer
         
-        _wanderers_pos = _levelDef.robot->getBody()->GetLocalPoint(_wanderers[i]->getPosition());
+        b2Vec2 _wanderers_pos = _levelDef.robot->getBody()->GetLocalPoint(_wanderers[i]->getPosition());
+        
         float dist = _wanderers_pos.Length()- _levelDef.robot->getRadius() - _wanderers[i]->getRadius();
 	float angle = f_deg(zVector2D::signedAngle(zVector2D(0, 1), zVector2D(_wanderers_pos.x, _wanderers_pos.y)));
-        if(_last_infos_of_wanderers.size()!=0 &&_last_infos_of_wanderers!=NULL){
-              get_velocities(float & velocity_linear_h,float & velocity_angle_h,i)
-        }else{
-              velocity_linear_h = _SETTINGS->stage.obstacle_speed;
-              velocity_angle_h = 0.f;
+        if(_last_infos_of_wanderers.size()!=0){
+              get_velocities(velocity_linear_h,velocity_angle_h,i,dist, angle);
         }
         _infos_of_wanderers.push_back(WandererInfo(i, dist, angle,velocity_linear_h,velocity_angle_h));
 
@@ -129,6 +129,7 @@ void Wanderers::getClosestWanderers(){
             //}
         }
     }
+    
 }
 /*
 void Wanderers::get_last_observed_distances(std::vector<float> & last_distance,std::vector<float> & last_angle){
@@ -149,12 +150,12 @@ void Wanderers::get_observed_distances(std::vector<float> & distance,std::vector
     }
 }
 */
-void Wanderers::get_velocities(float & velocity_linear,float & velocity_angle,int i){
+void Wanderers::get_velocities(float & velocity_linear,float & velocity_angle,int i,float dist,float angle){
    
-        for(std::list<WandererInfo>::iterator it = _infos_of_wanderers.begin(); it != _infos_of_wanderers.end(); it++){
-            if(it->index == _last_infos_of_wanderers[i].index){
-                velocity_linear=fabs(it->distance-_last_infos_of_wanderers[i].distance)/_SETTINGS->physics.time_step;
-                velocity_angle==fabs(it->angle-_last_infos_of_wanderers[i].angle)/_SETTINGS->physics.time_step;
+        for(std::list<WandererInfo>::iterator it = _last_infos_of_wanderers.begin(); it != _last_infos_of_wanderers.end(); it++){
+            if(it->index == i){
+                velocity_linear=fabs(it->distance-dist)/_SETTINGS->physics.time_step;
+                velocity_angle==fabs(it->angle-angle)/_SETTINGS->physics.time_step;
             }
         }
     
@@ -177,13 +178,16 @@ void Wanderers::get_distances(std::vector<float> & distance){
 }
 */
 void Wanderers::getWandererData(std::vector<float> & data){
+    data.clear();
     for(int i = 0; i < _SETTINGS->training.num_obs_humans; i++){
-
+        
         data.push_back(_observed_wanderers[i].distance);		// distance to closest
         data.push_back(_observed_wanderers[i].angle);		        // angle to closest (relative from robot)
-        data.push_back(_observed_wanderers[i].velocity_linear_h);       // linear relative velocity
-        data.push_back(_observed_wanderers[i].velocity_angle_h);        // angular velocity
+        data.push_back(_observed_wanderers[i].velocity_linear);       // linear relative velocity
+        data.push_back(_observed_wanderers[i].velocity_angle);        // angular velocity
     }
+    //cout<<_observed_wanderers[0].distance<<" ";
+    
 }
 /*
 bool Wanderers::checkHumanContact(b2Fixture* other_fixture){

@@ -1,1 +1,1 @@
-/usr/bin/cc -rdynamic CMakeFiles/shadergenerator.dir/engine/generator/shadergenerator.c.o -o shadergenerator 
+/usr/bin/cc   -rdynamic CMakeFiles/shadergenerator.dir/engine/generator/shadergenerator.c.o  -o shadergenerator 

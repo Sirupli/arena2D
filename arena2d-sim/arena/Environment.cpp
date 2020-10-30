@@ -1,6 +1,7 @@
 /* Author: Cornelius Marx */
 #include "Environment.hpp"
 //#include <engine/f_math.h>
+//#include <iostream>
 // EnvironmentThread
 EnvironmentThread::EnvironmentThread(){
 	state = WAITING;
@@ -128,7 +129,7 @@ void Environment::pre_step(const Twist & t)
 	_reward = 0.0f;
 	_action = t;
 	getGoalDistance(_distance, _angle);
-        if(_level.dynamic!=NULL&&_level.dynamic==True){
+        if(_level->getDynamicFlag()){
               getClosestHumanDistance(_distance_h,_angle_h);
         }
 }
@@ -166,10 +167,10 @@ void Environment::post_step()
 	
 	float distance_h_after=0.f;
 	float angle_h_after=0.f;
-	if(_level != NULL&&_level.dynamic!=NULL&&_level.dynamic==True){
+	if(_level != NULL&&_level->getDynamicFlag()){
 	
               getClosestHumanDistance(distance_h_after,angle_h_after);
-              
+              //cout<<distance_h_after<<angle_h_after<<endl;
               
               if(distance_h_after<_trainingSettings.safety_distance_human){
                  _reward += _trainingSettings.reward_exceed_safety_distance;

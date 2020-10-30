@@ -4,13 +4,13 @@
 #include <iostream>
 #include <vector>
 #include <list>
-#include <arena/Evaluation.hpp>
+
 
 #include "Level.hpp"
 #include "Wanderer.hpp"
 #include "WandererBipedal.hpp"
 
-extern Evaluation _evaluation;
+//extern Evaluation _evaluation;
 
 
 #define WANDERER_ID_HUMAN 0
@@ -28,8 +28,8 @@ struct WandererInfo {
     float velocity_linear;
     float velocity_angle;
 
-    WandererInfo(int _index, float _distance, float _angle, float _velocity_linear, float _velocity_angle): index(_index), distance(_distance),angle(_angle),\ 
-                                                                                                            velocity_linear(_velocity_linear),velocity_angle(){}
+    WandererInfo(int _index, float _distance, float _angle, float _velocity_linear, float _velocity_angle): index(_index),distance(_distance),angle(_angle),
+                                                                                                            velocity_linear(_velocity_linear),velocity_angle(_velocity_angle) {}
     
     /* to sort WandererInfo based on the distances */
     bool operator <(const WandererInfo & obj) const {
@@ -63,20 +63,20 @@ public:
 	 */
     void update();
 
-    /* get the old distances of all wanderers, which were inside the camera_view of the robot before the last action was executed
-	 * @param old_distance push old observed distances of wanderers into this vector
+    /* get the last distances of all wanderers, which were inside the camera_view of the robot before the last action was executed
+	 * @param last_distance push last observed distances of wanderers into this vector
 	 */
-    void get_old_observed_distances(std::vector<float> & old_distance);
+    void get_last_observed_distances(std::vector<float> & last_distance);
 
     /* get the current distances of all wanderers, which were inside the camera_view of the robot before the last action was executed
 	 * @param distance push current observed distances of wanderers into this vector
 	 */
     void get_observed_distances(std::vector<float> & distance);
 
-    /* get the old distances of all wanderers before the last action was executed
-	 * @param old_distance push old distances of wanderers into this vector
+    /* get the last distances of all wanderers before the last action was executed
+	 * @param last_distance push last distances of wanderers into this vector
 	 */
-    void get_old_distances(std::vector<float> & old_distance);
+    void get_last_distances(std::vector<float> & last_distance);
 
     /* get the current distances of all wanderers
 	 * @param distance push current distances of wanderers into this vector
@@ -102,8 +102,9 @@ public:
     /*get relative linear velocity and relative angle velocity dynamic obstacles to robot
      *@param relative velocity to the robot of the dynamic obstacles
      *@param index of dynamic obstacles
+     *@param current step relative distance and angle (human to robot)
      */
-    void get_velocities(float & velocity_linear,float & velocity_angle, int i)
+    void get_velocities(float & velocity_linear,float & velocity_angle, int i, float dist,float angle);
 
     
 private:
@@ -127,23 +128,23 @@ private:
     /* save current wanderer information, used for sorting according to distance */
     std::list<WandererInfo> _infos_of_wanderers;
 
-    /* save old wanderer information, befor last robot action */
-    std::list<WandererInfo> _old_infos_of_wanderers;
+    /* save last wanderer information, befor last robot action */
+    std::list<WandererInfo> _last_infos_of_wanderers;
 
     /* save current wanderer information inside the camera_view */
     std::vector<WandererInfo> _observed_wanderers;
 
-    /* save old wanderer information inside the camera_view */
-    std::vector<WandererInfo> _old_observed_wanderers;
+    /* save last wanderer information inside the camera_view */
+    std::vector<WandererInfo> _last_observed_wanderers;
 
     /* save distances of wanderers for the evaluation */
     //std::list<float> _distance_evaluation;
 
     /* save relative velocities linear of human*/
-    float & velocity_linear_h;
+    float velocity_linear_h;
 
     /* save relative velocities angle of human*/
-    float & velocity_angle_h;
+    float velocity_angle_h;
 };
 
 #endif

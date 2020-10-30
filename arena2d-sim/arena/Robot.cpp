@@ -12,8 +12,8 @@ Robot::Robot(b2World * world): _lidarBuffer(0){
 	fix.filter.categoryBits = COLLIDE_CATEGORY_PLAYER;
 
 	// main body
-	//b.position = b2Vec2(0, 0);
-	b.position = b2Vec2(-0.5, -0.5);
+	b.position = b2Vec2(0, 0);
+	//b.position = b2Vec2(-0.5, -0.5);
 	_base = world->CreateBody(&b);
 	b2PolygonShape shape;
 	b2Vec2 verts[8];
@@ -308,8 +308,8 @@ void Robot::performAction(const Twist & t)
 void Robot::getClosestPointDistance(float & l2, float & angle){
        if(_lidar!=NULL){
             int i = _lidar->getClosestIndex();
-            float *_distances=_lidar->getDistances();
+            const float *_distances=_lidar->getDistances();
             l2=_distances[i];
-            angle=_lidar->getAngleFromIndex(i)
+            angle=_lidar->getAngleFromIndex(i);
        }
 }

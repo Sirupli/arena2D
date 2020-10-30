@@ -1,9 +1,9 @@
 video{
-	resolution_w = 2141   # window width
-	resolution_h = 1097   # window height
-	window_x = 4258   # window x position on startup -1 for centered
-	window_y = 1423   # window y position on startup -1 for centered
-	maximized = 1   # start window maximized 1/0
+	resolution_w = 1389   # window width
+	resolution_h = 759   # window height
+	window_x = 298   # window x position on startup -1 for centered
+	window_y = 144   # window y position on startup -1 for centered
+	maximized = 0   # start window maximized 1/0
 	msaa = 4   # multisampling anti-aliasing 2,4,8,16
 	vsync = 0   # vertical synchronization 1/0
 	fps = 60   # video frames per second
@@ -23,7 +23,7 @@ gui{
 	camera_follow = 0   # if == 1 camera follows robot, (if == 2, rotation is also taken into acount)
 	camera_x = 0.0   # initial position of camera
 	camera_y = 0.0   # initial position of camera
-	camera_zoom = 0.45   # initial zoom of camera (zoom actually means scaling of the view -> camera_zoom < 1 means zooming out)
+	camera_zoom = 0.266272   # initial zoom of camera (zoom actually means scaling of the view -> camera_zoom < 1 means zooming out)
 	camera_rotation = 0.0   # view rotation in degree
 	camera_zoom_factor = 1.3   # how does scaling increase/decrease with each zoom step
 }
@@ -49,7 +49,7 @@ training{
 	max_time = 150.0   # maximum time per episode (actual time, so physics.time_step influences maximum number of steps per episode)
 	episode_over_on_hit = 1   # if set to 1 episode ends if an obstacle is hit
 	episode_over_on_human = 1   # if set to 1 episode ends if a human is too close
-	reward_goal = 95.0   # reward for reaching goal
+	reward_goal = 90.0   # reward for reaching goal
 	reward_towards_goal = 0.2   # reward when distance to goal decreases
 	reward_away_from_goal = -0.2   # reward when distance to goal increases
 	reward_hit = -90.0   # reward for hitting obstacle

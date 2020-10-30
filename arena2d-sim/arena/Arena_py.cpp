@@ -1,5 +1,5 @@
 #include "Arena.hpp"
-
+//#include <iostream>
 const char * PYAGENT_FUNC_NAMES[PYAGENT_FUNC_NUM] = {
 	"pre_step",
 	"post_step",
@@ -62,6 +62,7 @@ int Arena::getPyObservationSize(){
 	}
 	int num_samples;
 	_envs[0].getScan(num_samples);
+        //cout<<num_samples+4+additional_data.size()<<" ";
 	return num_samples+4+additional_data.size();
 }
 

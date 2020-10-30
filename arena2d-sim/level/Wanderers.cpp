@@ -19,8 +19,8 @@ void Wanderers::reset(RectSpawn & _dynamicSpawn){
                                                 0.1, 0.05, 60.0f, WANDERER_ID_HUMAN));
     }
     //reset all lists
-    _old_infos_of_wanderers.clear();
-    _old_observed_wanderers.clear();
+    _last_infos_of_wanderers.clear();
+    _last_observed_wanderers.clear();
     _infos_of_wanderers.clear();
     _observed_wanderers.clear();
 
@@ -79,13 +79,13 @@ void Wanderers::update(){
 
 void Wanderers::calculateDistanceAngle(){
     //clear and update all observation vectors of wanderers
-    _old_infos_of_wanderers.clear();
-    _old_observed_wanderers.clear();
-    _old_infos_of_wanderers = _infos_of_wanderers;
-    _old_observed_wanderers = _observed_wanderers;
+    _last_infos_of_wanderers.clear();
+    _last_observed_wanderers.clear();
+    _last_infos_of_wanderers = _infos_of_wanderers;
+    _last_observed_wanderers = _observed_wanderers;
     _infos_of_wanderers.clear();
     _observed_wanderers.clear();
-    _distance_evaluation.clear();
+    //_distance_evaluation.clear();
 
     //calculate distance and angle of all wanderers relativ to robot
     for(int i = 0; i < _wanderers.size(); i++){
@@ -103,8 +103,13 @@ void Wanderers::calculateDistanceAngle(){
         _wanderers_pos = _levelDef.robot->getBody()->GetLocalPoint(_wanderers[i]->getPosition());
         float dist = _wanderers_pos.Length()- _levelDef.robot->getRadius() - _wanderers[i]->getRadius();
 	float angle = f_deg(zVector2D::signedAngle(zVector2D(0, 1), zVector2D(_wanderers_pos.x, _wanderers_pos.y)));
-        
-        _infos_of_wanderers.push_back(WandererInfo(i, dist, angle));
+        if(_last_infos_of_wanderers.size()!=0 &&_last_infos_of_wanderers!=NULL){
+              get_velocities(float & velocity_linear_h,float & velocity_angle_h,i)
+        }else{
+              velocity_linear_h = _SETTINGS->stage.obstacle_speed;
+              velocity_angle_h = 0.f;
+        }
+        _infos_of_wanderers.push_back(WandererInfo(i, dist, angle,velocity_linear_h,velocity_angle_h));
 
     }
 
@@ -113,7 +118,6 @@ void Wanderers::calculateDistanceAngle(){
 void Wanderers::getClosestWanderers(){
     //sort by distances
     _infos_of_wanderers.sort();
-
     //Get only Wanderers inside the camera view
     //float half_camera_angle = _SETTINGS->robot.camera_angle/2.;
     int i = 0;
@@ -126,49 +130,59 @@ void Wanderers::getClosestWanderers(){
         }
     }
 }
-
-void Wanderers::get_old_observed_distances(std::vector<float> & old_distance){
-    for(int i = 0; i < _old_observed_wanderers.size(); i++){
-        old_distance.push_back(_old_observed_wanderers[i].distance);
+/*
+void Wanderers::get_last_observed_distances(std::vector<float> & last_distance,std::vector<float> & last_angle){
+    for(int i = 0; i < _last_observed_wanderers.size(); i++){
+        last_distance.push_back(_last_observed_wanderers[i].distance);
+        last_angle.push_back(_last_observed_wanderers[i].angle);
     }
 }
 
-void Wanderers::get_observed_distances(std::vector<float> & distance){
-    for(int i = 0; i < _old_observed_wanderers.size(); i++){
+void Wanderers::get_observed_distances(std::vector<float> & distance,std::vector<float> & angle){
+    for(int i = 0; i < _last_observed_wanderers.size(); i++){
         for(std::list<WandererInfo>::iterator it = _infos_of_wanderers.begin(); it != _infos_of_wanderers.end(); it++){
-            if(it->index == _old_observed_wanderers[i].index){
+            if(it->index == _last_observed_wanderers[i].index){
                 distance.push_back(it->distance);
+                angle.push_back(it->angle);
             }
         }
     }
 }
-
-void Wanderers::get_old_distances(std::vector<float> & old_distance){
-    for(std::list<WandererInfo>::iterator it_old = _old_infos_of_wanderers.begin(); it_old != _old_infos_of_wanderers.end(); it_old++){
-        old_distance.push_back(it_old->distance);
+*/
+void Wanderers::get_velocities(float & velocity_linear,float & velocity_angle,int i){
+   
+        for(std::list<WandererInfo>::iterator it = _infos_of_wanderers.begin(); it != _infos_of_wanderers.end(); it++){
+            if(it->index == _last_infos_of_wanderers[i].index){
+                velocity_linear=fabs(it->distance-_last_infos_of_wanderers[i].distance)/_SETTINGS->physics.time_step;
+                velocity_angle==fabs(it->angle-_last_infos_of_wanderers[i].angle)/_SETTINGS->physics.time_step;
+            }
+        }
+    
+}
+/*
+void Wanderers::get_last_distances(std::vector<float> & last_distance){
+    for(std::list<WandererInfo>::iterator it_last = _last_infos_of_wanderers.begin(); it_last != _last_infos_of_wanderers.end(); it_last++){
+        last_distance.push_back(it_last->distance);
     }
 }
 
 void Wanderers::get_distances(std::vector<float> & distance){
-    for(std::list<WandererInfo>::iterator it_old = _old_infos_of_wanderers.begin(); it_old != _old_infos_of_wanderers.end(); it_old++){
+    for(std::list<WandererInfo>::iterator it_last = _last_infos_of_wanderers.begin(); it_last != _last_infos_of_wanderers.end(); it_last++){
         for(std::list<WandererInfo>::iterator it = _infos_of_wanderers.begin(); it != _infos_of_wanderers.end(); it++){
-            if(it->index == it_old->index){
+            if(it->index == it_last->index){
                 distance.push_back(it->distance);
             }
         }
     }
 }
-
+*/
 void Wanderers::getWandererData(std::vector<float> & data){
     for(int i = 0; i < _SETTINGS->training.num_obs_humans; i++){
-        if(i < _observed_wanderers.size()){
-            data.push_back(_observed_wanderers[i].distance);		// distance to closest
-	    data.push_back(_observed_wanderers[i].angle);		// angle to closest (relative from robot)
-        }else{
-            //Fill with default values
-            data.push_back(2*_SETTINGS->stage.level_size);		// largest distance in level
-	    data.push_back(0.);		                                // wanderer is in front of robot
-        }
+
+        data.push_back(_observed_wanderers[i].distance);		// distance to closest
+        data.push_back(_observed_wanderers[i].angle);		        // angle to closest (relative from robot)
+        data.push_back(_observed_wanderers[i].velocity_linear_h);       // linear relative velocity
+        data.push_back(_observed_wanderers[i].velocity_angle_h);        // angular velocity
     }
 }
 /*

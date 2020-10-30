@@ -169,8 +169,8 @@ public:
 	  */
 	 Robot * getRobot(){return _robot;}
 
-	/*get sharp corner of the robot trail*/
-	int getSharpCorner(){return _robot->getSharpCorner();}
+	 /*get sharp corner of the robot trail*/
+	 int getSharpCorner(){return _robot->getSharpCorner();}
 	
 	/*get relative angular velocity and relative linear velocity (human to robot)
          * @param velocity is set to the relative velocity from robot to the closest human

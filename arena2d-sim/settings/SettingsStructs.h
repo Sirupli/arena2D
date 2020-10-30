@@ -70,7 +70,7 @@ typedef struct{
 	float reward_hit;			// reward for hitting obstacle
 	float safety_distance_human;              // safty distance to human, which should be always fullfilled
         float reward_exceed_safety_distance;       // reward when distance to human shorter than safety distance	
-	float reward_distance_to_human_increased;  // reward when distance to human increases
+	//float reward_distance_to_human_increased;  // reward when distance to human increases
 	float num_obs_humans;                    // maximum number of humans the agent can observe inside the camera view
 	float reward_time_out;		// reward when episode timed out (after max_time seconds)
 	int num_envs;				// number of parallel environments

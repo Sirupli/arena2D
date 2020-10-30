@@ -93,7 +93,7 @@ void LevelMaze::renderGoalSpawn()
 }
 
 /*
-float LevelMaze::getReward()
+float LevelMaze::getRelativeVelocity()
 {
 	float reward = 0;
 	_closestDistance_old.clear();

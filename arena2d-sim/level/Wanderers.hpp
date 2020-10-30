@@ -25,8 +25,11 @@ struct WandererInfo {
     int index;
     float distance;
     float angle;
+    float velocity_linear;
+    float velocity_angle;
 
-    WandererInfo(int _index, float _distance, float _angle): index(_index), distance(_distance), angle(_angle) {}
+    WandererInfo(int _index, float _distance, float _angle, float _velocity_linear, float _velocity_angle): index(_index), distance(_distance),angle(_angle),\ 
+                                                                                                            velocity_linear(_velocity_linear),velocity_angle(){}
     
     /* to sort WandererInfo based on the distances */
     bool operator <(const WandererInfo & obj) const {
@@ -96,6 +99,11 @@ public:
 	 */
 
     //void getClosestHumanDistance(float & l2_h, float & angle_h)
+    /*get relative linear velocity and relative angle velocity dynamic obstacles to robot
+     *@param relative velocity to the robot of the dynamic obstacles
+     *@param index of dynamic obstacles
+     */
+    void get_velocities(float & velocity_linear,float & velocity_angle, int i)
 
     
 private:
@@ -129,7 +137,13 @@ private:
     std::vector<WandererInfo> _old_observed_wanderers;
 
     /* save distances of wanderers for the evaluation */
-    std::list<float> _distance_evaluation;
+    //std::list<float> _distance_evaluation;
+
+    /* save relative velocities linear of human*/
+    float & velocity_linear_h;
+
+    /* save relative velocities angle of human*/
+    float & velocity_angle_h;
 };
 
 #endif

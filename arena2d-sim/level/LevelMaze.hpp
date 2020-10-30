@@ -76,12 +76,7 @@ public:
 	 */
 
         void getClosestHumanDistanceAngle(float & l2_h, float & angle_h){
-             if(_dynamic){
-                   wanderers.getClosestHumanDistance(l2_h,angle_h);
-             }else{
-                  l2_h=2*_SETTINGS->stage.level_size;
-             
-             }
+                   wanderers.getClosestHumanDistance(l2_h,angle_h);             
         }
 
 

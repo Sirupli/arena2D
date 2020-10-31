@@ -23,7 +23,7 @@ gui{
 	camera_follow = 0   # if == 1 camera follows robot, (if == 2, rotation is also taken into acount)
 	camera_x = 0.0   # initial position of camera
 	camera_y = 0.0   # initial position of camera
-	camera_zoom = 0.8   # initial zoom of camera (zoom actually means scaling of the view -> camera_zoom < 1 means zooming out)
+	camera_zoom = 0.3   # initial zoom of camera (zoom actually means scaling of the view -> camera_zoom < 1 means zooming out)
 	camera_rotation = 0.0   # view rotation in degree
 	camera_zoom_factor = 1.3   # how does scaling increase/decrease with each zoom step
 }

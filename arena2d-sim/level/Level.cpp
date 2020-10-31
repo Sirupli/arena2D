@@ -124,6 +124,7 @@ void Level::randomGoalSpawnUntilValidForMaze(RectSpawn * goal_spawn)
 		spawn->getRandomPoint(spawn_position);
 		count++;
 	}while(!checkValidGoalSpawn_Walls(robot_position,spawn_position) && count < 100);
+	//std::cout<<count<<"n";
 	spawnGoal(spawn_position);
 }
 

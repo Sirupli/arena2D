@@ -79,7 +79,7 @@ void LevelMaze::reset(bool robot_position_reset)
                 wanderers.reset(_dynamicSpawn);
 	}
 
-	randomGoalSpawnUntilValid();
+	randomGoalSpawnUntilValidForMaze();
 
 }
 

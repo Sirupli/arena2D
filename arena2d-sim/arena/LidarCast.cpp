@@ -1,5 +1,5 @@
 #include "LidarCast.hpp"
-
+#include<iostream>
 LidarCast::LidarCast(int num_samples, float max_distance, float start_angle, float end_angle, float noise, b2Body * filter_body):  _numSamples(num_samples), _maxDistance(max_distance), _startAngle(start_angle), _endAngle(end_angle), _noise(noise), _filterBody(filter_body)
 {
 	_distances = new float[_numSamples];        
@@ -25,15 +25,15 @@ float LidarCast::getAngleFromIndex(int i)
 	return _startAngle + delta_angle*f;
 }
 
-void LidarCast::scan(const b2World * world, const b2Vec2 & start_point, float zero_angle)
+void LidarCast::scan(const b2World * world, const b2Vec2 start_point, float zero_angle)
 {
 	_closestPoint = -1;
 	_points[0] = start_point;
 	for(int i = 0; i < _numSamples; i++) {
 		float angle = zero_angle + getAngleFromIndex(i);
 		b2Vec2 end_point = start_point + (_maxDistance+0.001)*b2Vec2(cos(angle), sin(angle));
-		_lastPoint = end_point;
-		world->RayCast((b2RayCastCallback*)this, start_point, end_point);
+		_lastPoint = end_point;             
+		world->RayCast((b2RayCastCallback*)this, start_point, end_point);	
 		_distances[i] = (_lastPoint-start_point).Length();
 		_points[i+1] = _lastPoint;
 		if(_closestPoint < 0 || _distances[_closestPoint] > _distances[i])

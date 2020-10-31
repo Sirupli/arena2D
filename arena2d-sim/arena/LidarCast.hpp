@@ -25,7 +25,7 @@ public:
 	// perform scan in given world from given start_point, sample index increases counter clock wise
 	// @angle_first_sample: angle of the first ray (sample with index 0), an angle of 0degrees corresponds to the direction (1x, 0y)
 	// @proportional_random_offset: if > 0 a random offset +- is applied to the sampled distance (equal distribution)
-	void scan(const b2World * world, const b2Vec2 & start_point, float zero_angle);
+	void scan(const b2World * world, const b2Vec2 start_point, float zero_angle);
 	// getter
 	const float* getDistances(){return _distances;}
         const float* getDistancesBetweenPoints(){return _distancesBetweenPoints;}

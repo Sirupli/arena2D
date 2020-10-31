@@ -2,7 +2,7 @@
 
 #ifndef LEVEL_H
 #define LEVEL_H
-
+//#include<iostream>
 #include <vector>
 #include <arena/PhysicsWorld.hpp>
 #include <arena/Robot.hpp>
@@ -125,10 +125,17 @@ protected:
    	 */
 
 	bool checkValidGoalSpawn_Walls(const b2Vec2 & robot_pos,const b2Vec2 & spawn_pos){
-	      float distance_min = +_SETTINGS->stage.goal_size/2.f+_levelDef.robot->getRadius()*2.f;
+	      float distance_min = +_SETTINGS->stage.goal_size/2+_levelDef.robot->getRadius()*2.f;
+              //std::cout<<distance_min<<" "<<std::endl;
 	      bool r_g=(robot_pos-spawn_pos).Length() > (_SETTINGS->stage.goal_size/2.f+_levelDef.robot->getRadius());
-	      bool X_area = (fabs(spawn_pos.x) > 1.025 + distance_min) || (((fabs(spawn_pos.x) > 0.025 + distance_min)||(fabs(spawn_pos.y) > 1.025 + _SETTINGS->stage.goal_size)) && (fabs(spawn_pos.x) < 0.975 - distance_min));
-	      bool Y_area = (fabs(spawn_pos.y) > 1.025 + distance_min) || (((fabs(spawn_pos.y) > 0.025 + distance_min)||(fabs(spawn_pos.x) > 1.025 + _SETTINGS->stage.goal_size)) && (fabs(spawn_pos.y) < 0.975 - distance_min));
+              bool X_1=fabs(spawn_pos.x) > 1.025 + distance_min;
+              bool X_y=(fabs(spawn_pos.y) < 0.975 - distance_min)||(fabs(spawn_pos.y) > 1.025 + distance_min);
+              bool X_2=(fabs(spawn_pos.x) < 0.975 - distance_min)||(fabs(spawn_pos.x) > 0.025 + distance_min);
+	      bool X_area = X_y && (X_1 || X_2);
+	      bool Y_1=fabs(spawn_pos.y) > 1.025 + distance_min;
+	      bool Y_x=(fabs(spawn_pos.x) < 0.975 - distance_min)||(fabs(spawn_pos.x) > 1.025 + distance_min);
+	      bool Y_2=(fabs(spawn_pos.y) < 0.975 - distance_min)||(fabs(spawn_pos.y) > 0.025 + distance_min);
+	      bool Y_area = Y_x && (Y_1||Y_2);
 	      return ((X_area && Y_area) && r_g);
 	}
 
@@ -213,3 +220,4 @@ protected:
 };
 
 #endif
+

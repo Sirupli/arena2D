@@ -155,6 +155,11 @@ public:
 	 * @return total reward
 	 */
 	float getTotalReward(){return _totalReward;}
+	
+	/* get episode Time from current episode norm to 5 to be comparable to other oberservations
+	 * @return normed episode Time
+	 */
+	float getEpisodeTime(){return 5*(_episodeTime/_trainingSettings.max_time);}
 
 	/* initialize training
 	 */

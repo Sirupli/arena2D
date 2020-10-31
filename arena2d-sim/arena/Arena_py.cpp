@@ -25,28 +25,34 @@ PyObject* Arena::packPyObservation(int env_index)
 	if(robot != NULL){
 		robot->getClosestPointDistance(angle_closest_point, distance_closest_point);
 	}
+	
+	// get normed episode Time to tell the robot how long is gone
+	
+	float _normedEpisodeTime= _envs[env_index].getEpisodeTime();
 
-	// creating new list that contains all the oservational data (distance and laser samples + additional data)
-	PyObject * obs = PyList_New(num_samples+4+additional_data.size());
-
+	// creating new list that contains all the oservational data (normed episode Time, distance and laser samples + additional data)
+	PyObject * obs = PyList_New(num_samples+5+additional_data.size());
+        // pack normed episode time
+        PyList_SET_ITEM(obs, 0, PyFloat_FromDouble(_normedEpisodeTime));
 	// pack goal position
 	float angle = 0;
-	float distance = 0;
+	float distance = 0;	
 	_envs[env_index].getGoalDistance(distance, angle);
-	PyList_SET_ITEM(obs, 0, PyFloat_FromDouble(distance));
-	PyList_SET_ITEM(obs, 1, PyFloat_FromDouble(angle));
+	PyList_SET_ITEM(obs, 1, PyFloat_FromDouble(distance));
+	PyList_SET_ITEM(obs, 2, PyFloat_FromDouble(angle));
 	// pack augmented data provided by robot        
-	PyList_SET_ITEM(obs, 2, PyFloat_FromDouble(distance_closest_point));
-	PyList_SET_ITEM(obs, 3, PyFloat_FromDouble(angle_closest_point));
+	PyList_SET_ITEM(obs, 3, PyFloat_FromDouble(distance_closest_point));
+	PyList_SET_ITEM(obs, 4, PyFloat_FromDouble(angle_closest_point));
+	
 	// pack laser samples
 	for(int i = 0; i < num_samples; i++){
-		PyList_SET_ITEM(obs, 4+i, PyFloat_FromDouble(laser_data[i]));
+		PyList_SET_ITEM(obs, 5+i, PyFloat_FromDouble(laser_data[i]));
 	}
 
 	// pack additional data
 	int num_additional=(int)additional_data.size();
 	for(int i = 0; i < num_additional; i++){
-		PyList_SET_ITEM(obs, num_samples+4+i, PyFloat_FromDouble(additional_data[i]));	
+		PyList_SET_ITEM(obs, num_samples+5+i, PyFloat_FromDouble(additional_data[i]));	
 	}
         // pack relative angular velocity and relative linear velocity (human to robot) Todo
         
@@ -63,7 +69,7 @@ int Arena::getPyObservationSize(){
 	int num_samples;
 	_envs[0].getScan(num_samples);
         //cout<<num_samples+4+additional_data.size()<<" ";
-	return num_samples+4+additional_data.size();
+	return num_samples+5+additional_data.size();
 }
 
 PyObject* Arena::packAllPyObservation()

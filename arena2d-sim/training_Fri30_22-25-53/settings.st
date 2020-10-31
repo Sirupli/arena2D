@@ -1,9 +1,9 @@
 video{
-	resolution_w = 2141   # window width
-	resolution_h = 1097   # window height
-	window_x = 4258   # window x position on startup -1 for centered
-	window_y = 1423   # window y position on startup -1 for centered
-	maximized = 1   # start window maximized 1/0
+	resolution_w = 1853   # window width
+	resolution_h = 1025   # window height
+	window_x = 67   # window x position on startup -1 for centered
+	window_y = 55   # window y position on startup -1 for centered
+	maximized = 0   # start window maximized 1/0
 	msaa = 4   # multisampling anti-aliasing 2,4,8,16
 	vsync = 0   # vertical synchronization 1/0
 	fps = 60   # video frames per second
@@ -23,7 +23,7 @@ gui{
 	camera_follow = 0   # if == 1 camera follows robot, (if == 2, rotation is also taken into acount)
 	camera_x = 0.0   # initial position of camera
 	camera_y = 0.0   # initial position of camera
-	camera_zoom = 0.8   # initial zoom of camera (zoom actually means scaling of the view -> camera_zoom < 1 means zooming out)
+	camera_zoom = 0.280102   # initial zoom of camera (zoom actually means scaling of the view -> camera_zoom < 1 means zooming out)
 	camera_rotation = 0.0   # view rotation in degree
 	camera_zoom_factor = 1.3   # how does scaling increase/decrease with each zoom step
 }

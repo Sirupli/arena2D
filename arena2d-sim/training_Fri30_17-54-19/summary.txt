@@ -1,8 +1,0 @@
-### Training Summary ###
-Script:   arena2d-agents/DQN_MEM/agent_train_gru.py
-Started:  Fri Oct 30 17:54:19 2020
-Episodes: 1378
-Time:     4h 31m 21s
-
-# Agent Info #
--
